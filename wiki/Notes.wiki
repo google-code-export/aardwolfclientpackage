@@ -1,3 +1,3 @@
 This page contains notes, grumblings, snippets, and whatever else seems worth holding on to at the moment...
 
-  * The situation with resizing miniwindows is bad. I don't want to have to jury rig a second invisible miniwindow that does nothing but stick to the corner of another miniwindow just so I can resize without losing callbacks because it was decided arbitrarily that the callbacks should get erased. The issue has been filed here: http://mushclient.com/forum/?id=10204&page=999 Let's hope that a Resize function gets implemented quickly, because I really don't want to have to work around this one. The right solution is too simple. The workaround is too ugly. With that said, there is a path forward for resizing in the horrible event that this doesn't get resolved in the client soon. The code will just be uglier.
+  * Resizing works awesomely now. It's still an ugly hack, but it works. Let's hope that Nick adds that Resize command.
