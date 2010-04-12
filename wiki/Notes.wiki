@@ -1,5 +1,3 @@
-This page contains notes, grumblings, snippets, and whatever else seems worth holding on to at the moment...
-
 ===In order to make the Chat Capture plugin work...===
 you need to first make sure that the Dina font is properly installed (See http://mushclient.com/forum/bbshowpost.php?id=9659). Then download all of the files available under [http://code.google.com/p/aardwolfclientpackage/downloads/list the Downloads tab] and put them where they need to go.
 
