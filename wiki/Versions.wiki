@@ -14,6 +14,8 @@ The Aardwolf MUSHclient Package is a collection of add-ons to MUSHclient. The Aa
 
 Mostly because I'm lazy and forgetful. I don't trust myself to always make sure that plugin version numbers update properly, so I mostly don't bother with them. Maybe I'll change my mind on this later, but if you want to make sure that you have the latest plugins, get the latest package.
 
-So let's be clear...
+= I'm still confused. Can you show me an example? =
+
+Ok...
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/Versions.png
