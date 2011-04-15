@@ -16,4 +16,4 @@ board personal
 note write fiendish
 }}}
 
-If you find *any* bugs in the package or if you have any ultra cool ideas for new features, please don't hesitate to submit them, no matter how trivial, by going to the [https://code.google.com/p/aardwolfclientpackage/issues/list Issues page] and submitting a New Issue.
+*Bug reports and feature requests*, no matter how trivial, should be submitted by going to [https://code.google.com/p/aardwolfclientpackage/issues/list Issues page] and filing a New Issue.
