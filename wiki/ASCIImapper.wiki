@@ -1,11 +1,13 @@
 #summary ASCII overhead map
+= ASCII overhead map info =
+This plugin shows an overhead view of the local area by capturing the game's map output to a miniwindow.
 
-= What does the ascii map look like? =
+== What does the ascii map look like? ==
 It probably looks something like this:
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/ascii_map1.png
 
-= What happens if I right-click on the ascii map? =
+== What happens if I right-click on the ascii map? ==
 Why are you asking me? Try it out!
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/ascii_map2.png
