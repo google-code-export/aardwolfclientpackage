@@ -1,0 +1,7 @@
+#summary About the author
+
+= Hey, this package is really great! Who can I thank? =
+
+The Aardwolf MUSHclient Package and this website is (for the most part) developed and maintained by Fiendish with contributions from others (Original GMCP code from Lasher, gmcp mapper additions by Spartacus, etc). Fiendish will accept in-game donations of gold and trivia points, but you shouldn't feel obligated.
+
+MUSHclient itself was written by Nick Gammon. ([http://mushclient.com/scripts/forum.php?bbsection_id=1 Click here to visit the MUSHclient forums])
