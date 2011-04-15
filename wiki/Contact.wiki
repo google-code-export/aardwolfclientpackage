@@ -5,3 +5,11 @@
 The Aardwolf MUSHclient Package and this website is (for the most part) developed and maintained by Fiendish with contributions from others (Original GMCP code from Lasher, gmcp mapper additions by Spartacus, etc). Fiendish will accept in-game donations of gold and trivia points, but you shouldn't feel obligated.
 
 MUSHclient itself was written by Nick Gammon. ([http://mushclient.com/scripts/forum.php?bbsection_id=1 Click here to visit the MUSHclient forums])
+
+= I have a question that only Fiendish can answer. How do I get in contact with him? =
+
+There are three ways you can do this. In order of probability of success, they are:
+
+  # tech I have a question that only Fiendish can answer
+  # tell Fiendish Hey, I'm using aard mushclient snapshot r`<number_goes_here>` and I'd like to know...
+  # board personal;note write Fiendish
