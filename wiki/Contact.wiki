@@ -8,7 +8,7 @@ MUSHclient itself was written by Nick Gammon. ([http://mushclient.com/scripts/fo
 
 = I have a question that only Fiendish can answer. How do I get in contact with him? =
 
-There are three ways you can do this. In order of probability of success, they are:
+There are three ways you can do this. In order of increasing probability of success, they are:
 
   # tech I have a question that only Fiendish can answer
   # tell Fiendish Hey, I'm using aard mushclient snapshot r`<number_goes_here>` and I'd like to know...
