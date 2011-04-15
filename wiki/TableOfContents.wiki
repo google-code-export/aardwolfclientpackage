@@ -3,7 +3,7 @@
   * [Contact Who makes this?]
 
   * [PluginList Special plugins included in the package]
-    Optional Plugins
+   Optional Plugins
     * [ASCIImapper ASCII overhead view]
     * [GMCPmapper GMCP driven world mapper]
     * [ChannelCapture Channel capture window]
@@ -16,6 +16,6 @@
     * [Layout Main output windower]
     * [NewConnection New user welcome screen]
     * [HelperAliases Some helper aliases]
-    Required Plugins (do not remove!)
+   Required Plugins (do not remove!)
     * [GMCPHandler GMCP handler]
     * [RepaintBuffer Repaint call optimizer]
