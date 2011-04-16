@@ -14,7 +14,7 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/colorcopysourc
 
 Ctrl+C would result in
 
-<code language="sh">
+<code language="C">
 Zcrim stops holding Aylorian Academy portal.
 Zcrim holds The Head of Medusa in his hand.</code>
 
