@@ -6,4 +6,4 @@ Allows you to copy text from the main output with Aardwolf color codes inserted 
 
 == How do I use it? ==
 
-When you select text from the main output, use Ctrl+D instead of Ctrl+C.
+When you select text from the main output, use Ctrl+D instead of Ctrl+C to capture color codes while copying.
