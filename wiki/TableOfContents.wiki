@@ -1,7 +1,7 @@
   * [Introduction Introduction]
   * [Versions Version Numbering]
   * [Contact Who makes this?]
-  * [AllPlugins Special plugins included in the package]
+  * Special plugins included in the package
     * Optional Plugins
       * [ASCIImapper ASCII overhead view]
       * [GMCPmapper GMCP driven world mapper]
