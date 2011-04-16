@@ -14,10 +14,8 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/colorcopysourc
 
 Ctrl+C would result in
 
-{{{
-Zcrim stops holding Aylorian Academy portal.
-Zcrim holds The Head of Medusa in his hand.
-}}}
+<code>Zcrim stops holding Aylorian Academy portal.
+Zcrim holds The Head of Medusa in his hand.</code>
 
 And Ctrl+D would result in
 
