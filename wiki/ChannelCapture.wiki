@@ -18,6 +18,10 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlogright.pn
 
 If any text inside the log window is selected, this text will be copied to the clipboard either with or without Aardwolf color codes inserted. More on selecting later.
 
+==== Copy All ====
+
+Copies the entire capture buffer to the clipboard. This is like Copy Selected but grabs everything instead of just the selected text.
+
 ==== Change Font ====
 
 This ought to be self-explanatory.
@@ -49,3 +53,21 @@ If the Remove Timestamps option is not enabled, your chosen timestamp will be in
 If the Remove Color Codes option is not enabled, the log will include Aardwolf color codes in colored text.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comloglogging.png
+
+== How else can I interact with the channel capture window? ==
+
+Aside from the standard resizing (drag the bottom-right corner) and moving (drag the title bar), there are a few other things you can do.
+
+==== Scroll up and down ====
+
+You can scroll up and down inside the channel capture window by any of the following methods:
+
+  * mouse-wheel scrolling with the cursor placed inside the miniwindow
+  * clicking on the up/down arrows at the top-right and bottom-right of the miniwindow
+  * dragging the miniwindow's scrollbar shuttle
+
+==== Select captured text ====
+
+The channel capture miniwindow, through the magic of awesomeness, supports selecting arbitrary bits of text with the mouse. Just select it as you would select text anywhere else. After you have text selected, you can copy the selection to the clipboard with or without Aardwolf color codes via the right-click menu.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlogselect.png
