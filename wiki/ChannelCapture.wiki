@@ -1,0 +1,51 @@
+#summary Channel capture window
+
+= Channel capture miniwindow =
+
+== What does the channel capture window look like? ==
+
+It should look something like this:
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlog.png
+
+== What options are available if I right-click? == 
+
+The channel capture window has many different right-click options.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlogright.png
+
+==== Copy Selected / Copy Selected Without Colors ====
+
+If any text inside the log window is selected, this text will be copied to the clipboard either with or without Aardwolf color codes inserted. More on selecting later.
+
+==== Change Font ====
+
+This ought to be self-explanatory.
+
+==== Turn Echo Off ====
+
+By default, all lines that get captured to the communication log window also get shown in the main output. Use this option if you want captured lines to not show in the main output.
+
+==== Timestamp > ====
+
+You'll notice in the above example images that captured messages are marked with the date and time. You can change the format of this timestamp, or disable it, by choosing one of the options in this sub-menu.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlogtimestamp.png
+
+==== Capture Other Info > ====
+
+Some informational messages on Aardwolf do not present themselves in the form of channels with GMCP data. Other things may be annoying under certain circumstances. Control of those bits go here.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlogother.png
+
+INFO:, Global Quest:, Remort Auction:, and speech from mobs can be optionally captured by enabling or disabling the right options. If you are in a clan with members who all have gold donation triggers, you might also desire to specifically disable the capturing of clan donation messages.
+
+==== Logging to File > ====
+
+The channel capture plugin has the ability to record a log of all captured messages to a text file in the MUSHclient\logs folder.
+
+If the Remove Timestamps option is not enabled, your chosen timestamp will be included in the log.
+
+If the Remove Color Codes option is not enabled, the log will include Aardwolf color codes in colored text.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comloglogging.png
