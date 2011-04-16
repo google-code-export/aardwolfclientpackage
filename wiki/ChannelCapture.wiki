@@ -2,6 +2,8 @@
 
 = Channel capture miniwindow =
 
+This plugin captures channels and other bits of information to a floating miniwindow so that you can follow conversations more easily.
+
 == What does the channel capture window look like? ==
 
 It should look something like this:
