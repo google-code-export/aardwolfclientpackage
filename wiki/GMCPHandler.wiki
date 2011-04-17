@@ -9,5 +9,5 @@ http://www.aardwolf.com/wiki/index.php/Clients/GMCP
 
 == How do I use GMCP in my plugins? ==
 
-See this guide on the Aardwolf wiki:
+See this guide on the Aardwolf wiki:<BR>
 http://www.aardwolf.com/wiki/index.php/Clients/MushclientGMCP
