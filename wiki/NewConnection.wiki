@@ -1,0 +1,15 @@
+#summary new user welcome screen
+
+= `aard_new_connection.xml` =
+A welcome message for new users of the Aardwolf MUSHclient Package that provides a very brief introduction to the client.
+
+== I've forgotten what it said. Can you remind me? ==
+This is what the welcome message looks like.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/newconnection.png
+
+== I'm stuck at the welcome screen. How do I make it go away? ==
+Click on the `[x]` in the top right corner.
+
+== This stupid screen shows up every time I launch MUSHclient! Make it go away! ==
+This may sound crazy, but did you try READING it?
