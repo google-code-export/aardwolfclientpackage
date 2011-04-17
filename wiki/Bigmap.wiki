@@ -15,7 +15,7 @@ If you happen to be on Mesolar, it will probably look something like this
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmap.png
 
-== Hey, my GMCP mapper got replaced by this bigmap picture. What gives? ==
+== Hey, my GMCP mapper got replaced by this bigmap picture when I walk onto the continents. What gives? ==
 That is a major feature of this plugin. If you really don't like it, see below for options to change this behavior.
 
 == How do I change this plugin's behavior? ==
@@ -26,3 +26,6 @@ To get a brief description of the available bigmap commands, type
 bigmap help
 }}}
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmaphelp.png
+
+== I got a message saying "To activate this continent map, walk onto the continent and type: 'bigmap update'. What does that mean? ==
+Before you can see the pretty continent picture like shown above, the plugin has to generate it based on the bigmap information from the game. Just do what it says.
