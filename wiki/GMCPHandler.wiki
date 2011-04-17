@@ -6,3 +6,8 @@ This plugin is responsible for receiving GMCP information from the game. Every p
 
 For more information on GMCP, see:<BR>
 http://www.aardwolf.com/wiki/index.php/Clients/GMCP
+
+== How do I use GMCP in my plugins? ==
+
+See this guide on the Aardwolf wiki:
+http://www.aardwolf.com/wiki/index.php/Clients/MushclientGMCP
