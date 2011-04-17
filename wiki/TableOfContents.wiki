@@ -2,7 +2,7 @@
   * [Versions Version Numbering]
   * [Contact Who makes this?]
   * Special items included in the package
-    * Optional Plugins
+    * Feature Plugins
       * [ASCIImapper ASCII overhead view]
       * [GMCPmapper GMCP driven world mapper]
       * [ChannelCapture Channel capture window]
