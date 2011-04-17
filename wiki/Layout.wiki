@@ -1,6 +1,6 @@
 #summary main output windower
 
-= Main Output Window Area =
+= aard_layout.xml =
 
 Sets up the main output as a movable, resizable region instead of filling the whole client. It creates a desktop-like space that automatically adjusts the line wrap column when the main output area is resized.
 
