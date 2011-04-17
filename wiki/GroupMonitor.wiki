@@ -1,0 +1,5 @@
+#summary group monitor
+
+= aard_group_monitor_gmcp.xml =
+
+this page is a work in progress
