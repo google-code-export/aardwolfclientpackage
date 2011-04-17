@@ -1,0 +1,5 @@
+#summary stats monitor
+
+= `aard_statmon_gmcp.xml` =
+
+this page is a work in progress
