@@ -1,5 +1,0 @@
-#summary aardwolf color code functions
-
-= `aardwolf_colors.lua` =
-
-this page is a work in progress
