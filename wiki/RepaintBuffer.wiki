@@ -23,7 +23,7 @@ This plugin allows for deferred updates for better performance when running a lo
 Uh...I think so? :)
 
 == How do I use it in my plugins? ==
-If you're fine with using Redraw(), use it. If you're at all considering using Repaint(), though, do this instead:
+If you're fine with using Redraw() given the described constraints, use that. If you're at all considering using Repaint(), though, do this instead:
 {{{
 BroadcastPlugin (999, "repaint")
 }}}
