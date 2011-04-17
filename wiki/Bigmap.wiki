@@ -1,0 +1,28 @@
+#summary bigmap window
+
+= `Aardwolf_Bigmap_Graphical.xml` =
+
+Display a graphical view of the continent bigmap. Optionally merge this display with the GMCP mapper window (this is the default behavior).
+
+== What's a bigmap? ==
+Back when the continents were created, Lasher decided that it would be nice to give people a way to visually appreciate them better. The 'bigmap' command lets you see the continent that you're currently on. See the in-game help file:
+{{{
+help bigmap
+}}}
+
+== What does this look like? ==
+If you happen to be on Mesolar, it will probably look something like this
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmap.png
+
+== Hey, my GMCP mapper got replaced by this bigmap picture. What gives? ==
+That is a major feature of this plugin. If you really don't like it, see below for options to change this behavior.
+
+== How do I change this plugin's behavior? ==
+Right click functionality isn't enabled on this one just yet, but there are a few commands for switching between different operation modes.
+
+Start by typing
+{{{
+bigmap help
+}}}
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmaphelp.png
