@@ -22,5 +22,15 @@ Many! To see the entire list, type
 mapper help
 }}}
 
-== Hey, where am I on the mapper? ==
+== Where am I on the mapper? ==
 Your current position is the room box in the middle with the bold outline in the color specified as "Our room" in the configuration menu.
+
+== Can I right click anywhere? ==
+You can right click on any of the rooms currently being displayed. This will bring up a small menu of room-related options.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/gmcpmapperright.png
+
+== How do I get details about a room? ==
+If you hover the mouse over any room, you will see a bubble pop up with information about that room.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/gmcpmapperbubble.png
