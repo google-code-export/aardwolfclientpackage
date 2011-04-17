@@ -1,0 +1,26 @@
+#summary gmcp mapper
+
+= `aard_GMCP_mapper.xml (also aardmapper.lua)` =
+
+A dynamically updated mapper that stores room information in a SQLite database.
+
+== What does it look like? ==
+Probably something like this
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/gmcpmapper.png
+
+== Are there any configuration options? ==
+Oh, yeah. Tons of them! See that little box in the top left corner of the mapper that looks like `[*]`? Click on that to bring up a display configuration menu. (Click on the `[x]` to close it again.)
+
+In this menu, all of the items are clickable. If the item is a color, then a color picker dialog will come up. If the item is a number, then a number input dialog will come up. And so on.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/gmcpmapperconfig.png
+
+== Are there any special commands for using the mapper? ==
+Many! To see the entire list, type
+{{{
+mapper help
+}}}
+
+== Hey, where am I on the mapper? ==
+Your current position is the room box in the middle with the bold outline in the color specified as "Our room" in the configuration menu.
