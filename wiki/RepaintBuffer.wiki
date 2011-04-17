@@ -1,0 +1,5 @@
+#summary repaint buffer
+
+= `aard_repaint_buffer.xml` =
+
+this page is a work in progress
