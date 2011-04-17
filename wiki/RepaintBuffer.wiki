@@ -17,7 +17,7 @@ This is explained in the documentation for Redraw and Repaint...
   "Redraw will cause the window to be redrawn at the next appropriate opportunity. Note that the main window is not actually redrawn at this point, however it is scheduled for redraw next time through the main event loop."
 
 == So what does it do? ==
-This plugin allows for deferred drawing for better performance when running a lot of plugins at once like Redraw and also the higher priority of Repaint that causes it to happen at all instead of never when under load.
+This plugin allows for deferred updates for better performance when running a lot of plugins at once like with Redraw and also the higher priority of Repaint that causes it to happen at all instead of never when under load.
 
 == Does it work? ==
 Uh...I think so? :)
