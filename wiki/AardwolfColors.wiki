@@ -15,7 +15,7 @@ The reverse of !StylesToColoursOneLine. This takes a string containing Aardwolf 
 ==== `strip_colours (text)` ====
 Takes a string containing Aardwolf color codes and removes all of the color codes from it.
 
-== How do I use it in a plugin? ==
+== How do I use this in a plugin? ==
 If your plugin lives in the plugins folder, put this line somewhere in the main script body of your plugin:
 {{{
 dofile (GetPluginInfo (GetPluginID(), 20) .. "aardwolf_colors.lua")
