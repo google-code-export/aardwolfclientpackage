@@ -1,3 +1,5 @@
+#summary introduction page
+
 = Introduction =
 
 So you've followed the instructions at http://www.aardwolf.com/play/downloadmc.htm and either you downloaded the official quasi-monthly release of the Aardwolf MUSHclient Package, or you've gone to get the latest development snapshot from the [https://code.google.com/p/aardwolfclientpackage/downloads/list Downloads] link above, and now you have a shiny new MUSHclient folder. Congratulations! You're well on your way to an enhanced Aardwolf experience. 
