@@ -25,3 +25,9 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/mushclientyesw
 == So how do I move this output area around and resize it? ==
 
 Even though this is not actually a miniwindow ([http://mushclient.com/scripts/doc.php?function=TextRectangle click here for boring technical details]), resizing and moving are done basically in the same way as with all of the miniwindow plugins. The bottom right corner has a widget for resizing, and there's a draggable part across the top of the box for moving it around. Just look for where the mouse cursor changes to a hand.
+
+== I can't see the resize widget! It went off the screen! Help! ==
+Try typing:
+{{{
+resetaard
+}}}
