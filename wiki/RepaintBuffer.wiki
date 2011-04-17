@@ -2,7 +2,7 @@
 
 = `aard_repaint_buffer.xml` =
 
-Executes a single Repaint call if multiple repaint requests are issued by various plugins in rapid succession.
+Executes a single Repaint call if multiple repaint requests are issued by various plugins in rapid succession. Required by included plugins for screen updates. Do not disable or remove this!
 
 == Why does this exist? ==
 Updating the screen in MUSHclient is a tricky art that involves juggling performance concerns with a desire for frequent immediate display refreshes. The problem I tried to address is as follows:
