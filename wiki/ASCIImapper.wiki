@@ -1,5 +1,5 @@
 #summary ASCII overhead map
-= ASCII overhead map window =
+= `aard_ASCII_map.xml` =
 This plugin shows an overhead view of the local area by capturing the game's map output to a miniwindow.
 
 == What does the ascii map look like? ==
