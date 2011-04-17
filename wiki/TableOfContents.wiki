@@ -2,7 +2,7 @@
   * [Versions Version Numbering]
   * [Contact Who makes this?]
   * [Upgrading How do I upgrade from an old version?]
-  * Special items included in the package
+  * What's included in the package?
     * Featured Plugins
       * [ASCIImapper ASCII overhead view]
       * [GMCPmapper GMCP driven world mapper]
