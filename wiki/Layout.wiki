@@ -18,6 +18,10 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/mushclientyesw
 
 == Where is the scroll bar? I don't see it anymore. ==
 
-Actually, you do. It's just not attached anymore. Sorry. Look over at the very far right side of your MUSHclient window. This is just the way that MUSHclient's !TextRectangle feature works. `*shrug*`
+Actually, you do, but it's not attached to the text area anymore. Sorry. Look over at the very far right side of your MUSHclient window. Actually, that's exactly the same place it was before. This is just how MUSHclient's !TextRectangle feature works. `*shrug*`
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/mushclientyeswindowscroll.png
+
+== So how do I move this output area around and resize it? ==
+
+Even though this is not actually a miniwindow ([http://mushclient.com/scripts/doc.php?function=TextRectangle click here for boring technical details]), resizing and moving are done basically in the same way as with all of the miniwindow plugins. The bottom right corner has a widget for resizing, and there's a draggable part across the top of the box for moving it around. Just look for where the mouse cursor changes to a hand.
