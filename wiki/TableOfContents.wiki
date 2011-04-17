@@ -3,7 +3,7 @@
   * [Contact Who makes this?]
   * [Upgrading How do I upgrade from a previous version?]
   * Special items included in the package
-    * Feature Plugins
+    * Featured Plugins
       * [ASCIImapper ASCII overhead view]
       * [GMCPmapper GMCP driven world mapper]
       * [ChannelCapture Channel capture window]
