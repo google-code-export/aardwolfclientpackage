@@ -1,7 +1,7 @@
   * [Introduction Introduction]
   * [Versions Version Numbering]
   * [Contact Who makes this?]
-  * Special plugins included in the package
+  * Special items included in the package
     * Optional Plugins
       * [ASCIImapper ASCII overhead view]
       * [GMCPmapper GMCP driven world mapper]
@@ -15,6 +15,8 @@
       * [Layout Main output windower]
       * [NewConnection New user welcome screen]
       * [HelperAliases Some helper aliases]
-    * Required Plugins (do not remove!)
+    * Required Plugins (do not uninstall!)
       * [GMCPHandler GMCP handler]
       * [RepaintBuffer Repaint call optimizer]
+    * Useful bits for programmers
+      * [AardwolfColors Aardwolf color code functions]
