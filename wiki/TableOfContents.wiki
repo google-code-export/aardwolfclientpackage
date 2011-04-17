@@ -1,6 +1,7 @@
   * [Introduction Introduction]
   * [Versions Version Numbering]
   * [Contact Who makes this?]
+  * [Upgrading How do I upgrade from a previous version?]
   * Special items included in the package
     * Feature Plugins
       * [ASCIImapper ASCII overhead view]
