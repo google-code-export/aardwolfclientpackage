@@ -2,7 +2,7 @@
 
 = `aard_GMCP_mapper.xml (also aardmapper.lua)` =
 
-A dynamically updated mapper that stores room information in a SQLite database.
+A dynamically updated mapper that enables rapid navigation by storing room information in a SQLite database.
 
 == What does it look like? ==
 Probably something like this
