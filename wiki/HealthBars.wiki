@@ -1,5 +1,0 @@
-#summary health bars
-
-= aard_health_bars_gmcp.xml =
-
-this page is a work in progress
