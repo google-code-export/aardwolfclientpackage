@@ -7,11 +7,11 @@ Executes a single Repaint call if multiple repaint requests are issued by variou
 == Why does this exist? ==
 Updating the screen in MUSHclient is a tricky art that involves juggling performance concerns with a desire for frequent immediate display refreshes. The problem I tried to address is as follows:
 
-  * Calls to [http://mushclient.com/scripts/doc.php?function=Redraw Redraw()] may not get addressed soon enough due to heavy plugin processing.
-  * Calls to [http://mushclient.com/scripts/doc.php?function=Repaint Repaint()] will always get addressed immediately, even if Repaint was already just called a single millisecond before.
-  * Calls to [http://mushclient.com/scripts/doc.php?function=Repaint Repaint()] have performance consequences, slowing down the operation of MUSHclient if used too frequently.
+  * Calls to Redraw() may not get addressed soon enough due to heavy plugin processing.
+  * Calls to Repaint() will always get addressed immediately, even if Repaint was already just called a single millisecond before.
+  * Calls to Repaint() have performance consequences, slowing down the operation of MUSHclient if used too frequently.
 
-This is explained in the documentation for Redraw and Repaint...
+This is explained in the documentation for [http://mushclient.com/scripts/doc.php?function=Redraw Redraw] and [http://mushclient.com/scripts/doc.php?function=Repaint Repaint]...
 
   "Unnecessary calls to Repaint will slow the program down."<BR>
   "Redraw will cause the window to be redrawn at the next appropriate opportunity. Note that the main window is not actually redrawn at this point, however it is scheduled for redraw next time through the main event loop."
