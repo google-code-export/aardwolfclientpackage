@@ -19,5 +19,12 @@ This is explained in the documentation for [http://mushclient.com/scripts/doc.ph
 == So what does it do? ==
 This plugin allows for deferred updates for better performance when running a lot of plugins at once like with Redraw and also the higher priority of Repaint that causes it to happen at all instead of never when under load.
 
+== How do I use it in my plugins? ==
+
+Instead of calling Repaint(), do this instead:
+{{{
+BroadcastPlugin (999, "repaint")
+}}}
+
 == Does it work? ==
 Uh...I think so? :)
