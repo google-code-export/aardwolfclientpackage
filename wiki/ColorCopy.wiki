@@ -1,6 +1,6 @@
 #summary copy color codes
 
-= aard_Copy_Colour_codes.xml =
+= !aard_Copy_Colour_codes.xml =
 
 Allows you to copy text from the main output with Aardwolf color codes inserted in the right places.
 
