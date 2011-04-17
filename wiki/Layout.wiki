@@ -1,0 +1,17 @@
+#summary main output windower
+
+= Main Output Window Area =
+
+Sets up the main output as a movable, resizable region instead of filling the whole client. It creates a desktop-like space that automatically adjusts the line wrap column when the main output area is resized.
+
+= What's this about? =
+
+Well, you see, normally MUSHclient looks like this...
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/mushclientnowindow.png
+
+The text is always attached to the far left and goes all the way up to the top, and control of where the lines wrap is hidden behind a configuration screen that isn't very intuitive.
+
+With this plugin, however, the main output area can be moved away from the top left if desired (this is especially useful if you want to put other miniwindows across the top of the screen without losing text behind them that will mess with scrolling up), and the line wrap column automatically adjusts to fit the width of the area chosen by the user.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/mushclientyeswindow.png
