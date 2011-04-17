@@ -16,10 +16,11 @@ The reverse of !StylesToColoursOneLine. This takes a string containing Aardwolf 
 Takes a string containing Aardwolf color codes and removes all of the color codes from it.
 
 == Cool! How do I use it in a plugin? ==
-Put this line somewhere in the script section of your plugin:
+If your plugin lives in the plugins folder, put this line somewhere in the main script body of your plugin:
 {{{
 dofile (GetPluginInfo (GetPluginID(), 20) .. "aardwolf_colors.lua")
 }}}
+Then use the provided functions as if they were part of your plugin.
 
 == Why do you use both the American and British spellings of "color"? ==
 Because screw you, that's why!
