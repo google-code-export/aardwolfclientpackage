@@ -10,10 +10,16 @@ A lua snippet file that provides functions for handling Aardwolf color codes to 
 Converts all or part of a single line of MUSHclient style runs into a string containing Aardwolf color codes, starting at column start_column and ending at column end_column. To convert the entire line use 1 for start_column and some sufficiently high number for end_column like 99999.
 
 ==== `ColoursToStyles (text)` ====
-The reverse of StylesToColoursOneLine. This takes a string containing Aardwolf color codes and generates a sequence of MUSHclient style runs.
+The reverse of !StylesToColoursOneLine. This takes a string containing Aardwolf color codes and generates a sequence of MUSHclient style runs.
 
 ==== `strip_colours (text)` ====
 Takes a string containing Aardwolf color codes and removes all of the color codes from it.
+
+== Cool! How do I use it in a plugin? ==
+Put this line somewhere in the script section of your plugin:
+{{{
+dofile (GetPluginInfo (GetPluginID(), 20) .. "aardwolf_colors.lua")
+}}}
 
 == Why do you use both the American and British spellings of "color"? ==
 Because screw you, that's why!
