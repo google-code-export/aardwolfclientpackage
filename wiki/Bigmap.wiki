@@ -18,7 +18,7 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmap.png
 == Hey, my GMCP mapper got replaced by this bigmap picture when I walk onto the continents. What gives? ==
 That is a major feature of this plugin. If you really don't like it, see below for options to change this behavior.
 
-== How do I change this plugin's behavior? ==
+== How do I change this plugin's behavior? / How do I get the old GMCP mapper view back on continents? ==
 Right click functionality isn't enabled on this one just yet, but there are a few commands for switching between different operation modes.
 
 To get a brief description of the available bigmap commands, type
