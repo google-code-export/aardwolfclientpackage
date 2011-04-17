@@ -21,7 +21,7 @@ That is a major feature of this plugin. If you really don't like it, see below f
 == How do I change this plugin's behavior? ==
 Right click functionality isn't enabled on this one just yet, but there are a few commands for switching between different operation modes.
 
-Start by typing
+To get a brief description of the available bigmap commands, type
 {{{
 bigmap help
 }}}
