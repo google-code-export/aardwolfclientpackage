@@ -28,4 +28,4 @@ bigmap help
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmaphelp.png
 
 == I got a message saying "To activate this continent map, walk onto the continent and type: 'bigmap update'. What does that mean? ==
-Before you can see the pretty continent picture like shown above, the plugin has to generate it based on the bigmap information from the game. Just do what it says.
+Before you can see the pretty continent picture like shown above, the plugin has to generate it based on the bigmap information from the game. Just do what the message says.
