@@ -1,0 +1,55 @@
+#summary group monitor window
+
+= `aard_group_monitor_gmcp.xml` =
+
+Displays the status of all of your current group members.
+
+== What does it look like? ==
+
+There are a number of different similar forms the group monitor window can take. The long answer is that it depends on how you've sized the window, because the plugin attempts to automatically arrange group members to fit logically into the available space. The organization algorithm it follows is that it starts with a single column, and then if there is enough room for additional columns it will create new columns if the creation of those columns would also reduce the number of rows.
+
+==== My head exploded. Can you show examples? ====
+
+Let's say you have 4 people including yourself in a group. It might look something like this:
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/group1.png
+
+But you could also resize the window so that it is shorter and wider. Then the group members could display like this instead:
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/group2.png
+
+Or you could go even wider and shorter. Then you could end up with this:
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/group3.png
+
+== My group is really big and I don't have a ton of space on my screen. Is there anything I can do? ==
+
+There are two things you can do, both involve using the right-click menu, so let's investigate those options.
+
+== What are the right-click options? ==
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/groupright.png
+
+==== Show Help ====
+Prints out the following bit of helpful information for using this plugin.
+{{{
+        +--------------- Group Monitor Plugin Info ----------------+
+        
+          * Resizing the group window will cause visible player 
+            entries to automatically wrap to fit the space based
+            on the number of columns that can go into the width.
+        
+          * Most of the color configuration options are pretty
+            self-explanatory, and adjust the border and fill
+            colors of the gauge bars. Alignment colors affect the
+            colorization of names of the players in the group.
+        
+        +----------------------------------------------------------+
+}}}
+==== Change Font ====
+Changes the font.
+
+==== Show Self In Group ====
+You may choose to not show yourself in the group monitor window, since you already get personal status bars as a separate floating window.
+
+==== 
