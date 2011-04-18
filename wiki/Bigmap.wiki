@@ -15,6 +15,13 @@ If you happen to be on Mesolar, it will probably look something like this
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmap.png
 
+== Where am I on the bigmap? ==
+You are here:
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmapme.png
+
+The inner ring shows your current room. The outer ring shows the range that you can see on the ASCII overhead map.
+
 == Hey, my GMCP mapper got replaced by this bigmap picture when I walk onto the continents. What gives? ==
 That is a major feature of this plugin. If you really don't like it, see below for options to change this behavior.
 
