@@ -11,7 +11,7 @@
       * [GroupMonitor Group monitor window]
       * [HealthBars Graphical health bars]
       * [StatMon Stats window]
-      * [Bigmap Graphical 'bigmap' display]
+      * [Bigmap 'bigmap' display]
       * [TickTimer Tick timer]
       * [Layout Main output windower]
       * [NewConnection New user welcome screen]
