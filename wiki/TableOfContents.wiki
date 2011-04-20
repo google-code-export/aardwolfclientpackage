@@ -3,7 +3,7 @@
   * [Contact Who makes this?]
   * [Upgrading How do I upgrade from an old version?]
   * I'm used to a different client. Where do I begin?
-    * [GettingStarted Getting Started With MUSHclient]
+    * [GettingStarted Tweaks for MUSHclient]
     * [Triggers Writing Triggers]
     * [Aliases Writing Aliases]
   * What's included in the package?
