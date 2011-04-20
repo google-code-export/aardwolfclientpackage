@@ -2,6 +2,9 @@
   * [Versions Version Numbering]
   * [Contact Who makes this?]
   * [Upgrading How do I upgrade from an old version?]
+  * I'm used to a different client. Where do I begin?
+    * [Triggers Writing Triggers]
+    * [Aliases Writing Aliases]
   * What's included in the package?
     * Featured Plugins
       * [ASCIImapper ASCII overhead view]
