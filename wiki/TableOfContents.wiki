@@ -2,7 +2,7 @@
   * [Versions Version Numbering]
   * [Contact Who makes this?]
   * [Upgrading How do I upgrade from an old version?]
-  * I'm used to a different client. Where do I begin?
+  * I'm used to a different client. How do I...?
     * [GettingStarted MUSHclient Tweaks FAQ]
     * [Triggers Writing Triggers]
     * [Aliases Writing Aliases]
