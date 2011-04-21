@@ -4,7 +4,7 @@
 
 Scripting is a complicated subject that has been addressed by documentation for MUSHclient itself. See the following pages for help on writing triggers:
 
-  * [http://www.mushclient.com/forum/bbshowpost.php?bbsubject_id=6030 Introduction to scripting]
+  * [http://www.mushclient.com/forum/?id=6030 Introduction to scripting]
   * [http://www.mushclient.com/forum/?id=8086 Making a simple trigger]
   * [http://www.mushclient.com/forum/?id=8411 Making a script to count mobs killed]
   * [http://www.mushclient.com/forum/?id=9626 YouTube video showing how to make a trigger]
