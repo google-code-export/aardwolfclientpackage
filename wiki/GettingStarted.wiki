@@ -2,7 +2,7 @@
 
 = MUSHclient Tweaks =
 
-For the most part, as configured by default, you should be able to just run the program and start playing without any changes.
+For the most part, as configured by default, you should be able to just run the program and start playing without any changes. But maybe you want to customize things a little bit to match your taste, and you don't know quite where to look.
 
 == If I want to make configuration changes and triggers and stuff, where do I look? ==
 
