@@ -24,8 +24,7 @@ It will match on
 HELLO This is a pattern FROM THE FUTURE!!!
 }}}
 
-Because zMUD's standard pattern format if treated as a regular expression is sloppy and begins and ends with implicit `".*"`<BR>
-( http://www.cs.tut.fi/~jkorpela/perl/regexp.html )
+Because zMUD's standard pattern format if treated as a [http://www.cs.tut.fi/~jkorpela/perl/regexp.html regular expression] is sloppy and begins and ends with implicit `".*"`
 
 MUSHclient works differently. MUSHclient's standard pattern format treats your pattern as if it begins with `"^"` and ends with `"$"`. There is no implicit allowance for extra garbage outside of the pattern. In MUSHclient if you want to catch
 
