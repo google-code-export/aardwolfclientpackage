@@ -8,7 +8,7 @@ Displays graphical status bars for Health, Mana, Moves, Experience, Enemy Health
 When you first load the client package, it should look something like this...<BR>
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbars.png
 
-== When I first load it? What other display options are there?
+== When I first load it? What other display options are there? ==
 
 There are many display customization options accessible through the right-click menu.
 
