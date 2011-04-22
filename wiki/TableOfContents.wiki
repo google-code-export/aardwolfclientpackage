@@ -22,6 +22,6 @@
       * [HelperAliases Some helper aliases]
     * Required Plugins (do not uninstall!)
       * [GMCPHandler GMCP handler]
-      * [RepaintBuffer Repaint call optimizer]
+      * [RepaintBuffer Repaint buffer]
     * Useful bits for programmers
       * [AardwolfColors Aardwolf color code functions]
