@@ -1,4 +1,5 @@
   * [Introduction Introduction]
+  * [WhatMakesThisSpecial What makes this package special?]
   * [Versions Version Numbering]
   * [Contact Who makes this?]
   * [Upgrading How do I upgrade from an old version?]
