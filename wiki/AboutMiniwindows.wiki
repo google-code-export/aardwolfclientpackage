@@ -8,7 +8,7 @@ Ok. Let's cover this in two sections...
 
 == Miniwindows in the Aardwolf MUSHclient Package ==
 
-Miniwindows in the package all share certain characteristics with each other that are introduced in tips #2 and #3 of the center of the welcome message box that pops up the first time you run the package.
+Miniwindows in the package all share certain characteristics with each other that are introduced in tips #2 and #3 of the center of the [NewConnection welcome message box] that pops up the first time you run the package.
 
 https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/newconnectioncircled.png
 
