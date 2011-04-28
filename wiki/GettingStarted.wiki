@@ -1,4 +1,4 @@
-#summary MUSHclient tweaks
+#summary MUSHclient Tweaks FAQ
 
 = MUSHclient Tweaks FAQ =
 
