@@ -1,5 +1,6 @@
   * [Introduction Introduction]
   * [WhatMakesThisSpecial What makes this package special?]
+  * [AboutMiniwindows Teach me about miniwindows!]
   * [Versions Version Numbering]
   * [Contact Who makes this?]
   * [Upgrading How do I upgrade from an old version?]
