@@ -1,0 +1,21 @@
+#summary About miniwindows
+
+= Teach me about miniwindows! =
+
+Ok. Let's cover this in two sections...
+  # The practical interaction with miniwindow plugins in the Aardwolf MUSHclient Package.
+  # A technical overview of what it means to call something a miniwindow.
+
+== Miniwindows in the Aardwolf MUSHclient Package ==
+
+Miniwindows in the package all share certain characteristics with each other that are introduced in tips #2 and #3 of the center of the welcome message box that pops up the first time you run the package.
+
+https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/newconnectioncircled.png
+
+== Miniwindows: A Technical Overview ==
+
+A "miniwindow" is the MUSHclient term for using a region of the screen for graphics, text, and mouse-event handlers that are technically part of but visually distinct from the main text output from the game.
+
+[http://mushclient.com/mushclient/mw_intro.htm Click here for an introduction to using miniwindows in your own scripts.]
+
+Miniwindows are not actually windows, though they can be made to behave like windows. They are in fact technically just elaborate blocks of pixels drawn on top of the main output area. The very first miniwindows were all stuck in place, fixed size, and nearly monochromatic. As time went on and developers got more used to the idea, we started inventing cool new features until eventually they started being less like fixed rectangular blocks and more like actual windows with intricate graphics and mouse event handlers. Advanced miniwindows today can simulate resizing and dragging and highlighting text, even though technically they are still just blocks of pixels pretending to be windows.
