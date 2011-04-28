@@ -12,6 +12,27 @@ Miniwindows in the package all share certain characteristics with each other tha
 
 https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/newconnectioncircled.png
 
+==== Dragging/Moving ====
+
+All of the miniwindows in this package can be moved around the screen, so that you can organize your layout any way you want.
+
+http://www.aardwolf.com/play/screenshots.htm has many screenshots with examples of this.
+
+In order to move the miniwindows around, find the part of the miniwindow where the mouse cursor changes to a hand and then click and drag. The hand looks like this: 
+
+
+https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/handcursor.png
+
+==== Resizing ====
+
+Nearly every miniwindow in this package is in some way resizable to your own preference by dragging the resize widget in the lower-right corner of the miniwindow. The resize widget looks like this: 
+
+https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/resizer.png 
+
+When you move the mouse over the resize widget, the cursor will change to a pair of opposing diagonal arrows to indicate that the miniwindow can be resized by dragging there, like this: 
+
+https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/resizecursor.png
+
 == Miniwindows: A Technical Overview ==
 
 A "miniwindow" is the MUSHclient term for using a region of the screen for graphics, text, and mouse-event handlers that are technically part of but visually distinct from the main text output from the game.
