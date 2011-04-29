@@ -1,5 +1,3 @@
-#summary What makes this package special?
-
 = What makes this package special? =
 
 There are three major ways you can experience Aardwolf:
