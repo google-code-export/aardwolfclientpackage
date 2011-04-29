@@ -1,6 +1,4 @@
-#summary bigmap window
-
-= `Aardwolf_Bigmap_Graphical.xml` =
+= The bigmap window - `Aardwolf_Bigmap_Graphical.xml` =
 
 Display a graphical view of the continent bigmap. Optionally merge this display with the GMCP mapper window (this is the default behavior).
 
