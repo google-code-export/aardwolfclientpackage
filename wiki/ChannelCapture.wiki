@@ -1,6 +1,4 @@
-#summary Channel capture window
-
-= aard_channels_fiendish.xml =
+= Channel capture window - `aard_channels_fiendish.xml` =
 
 This plugin captures channels and other bits of information to a floating miniwindow so that you can follow conversations more easily.
 
