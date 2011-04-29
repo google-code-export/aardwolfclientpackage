@@ -1,5 +1,3 @@
-#summary About miniwindows
-
 = Teach me about miniwindows! =
 
 Ok. Let's cover this in two sections...
