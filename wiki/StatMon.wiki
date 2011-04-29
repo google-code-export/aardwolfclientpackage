@@ -1,6 +1,4 @@
-#summary stats display
-
-= `aard_statmon_gmcp.xml` =
+= Stats window - `aard_statmon_gmcp.xml` =
 
 Displays your current stats in a miniwindow.
 
