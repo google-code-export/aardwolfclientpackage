@@ -41,7 +41,7 @@ Check "Copy selection to Clipboard".
 
 ==== Can I get Aardwolf color codes with that? ====
 
-Nope. Sorry. But see [ColorCopy the copy with color codes plugin].
+Nope. Sorry. But see the page on [ColorCopy the included plugin for copying with color codes].
 
 == Can I disable F1 as being the program help macro? ==
 
