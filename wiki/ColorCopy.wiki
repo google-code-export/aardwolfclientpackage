@@ -21,3 +21,7 @@ And Ctrl+D would result in
 <pre>
  @wZcrim stops holding @YAylorian @CAcademy @Wportal@w.
  @wZcrim holds The @RH@read @wof @GM@gedusa@w in his hand.@w</pre>
+
+== Will it also copy xterm 256 colors? ==
+
+Yes. xterm color support is provided for this plugin automatically by the special [https://code.google.com/p/aardwolfclientpackage/wiki/AardwolfColors color code handler] included in the package.
