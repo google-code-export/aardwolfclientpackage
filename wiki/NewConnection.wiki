@@ -1,6 +1,4 @@
-#summary new user welcome screen
-
-= `aard_new_connection.xml` =
+= New user welcome - `aard_new_connection.xml` =
 A welcome message for new users of the Aardwolf MUSHclient Package that provides a very brief introduction to the client.
 
 == I've forgotten what it said. Can you remind me? ==
