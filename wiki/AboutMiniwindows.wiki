@@ -12,26 +12,31 @@ Miniwindows in the package all share certain characteristics with each other tha
 
 https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/newconnectioncircled.png
 
-==== Dragging/Moving ====
+=== Dragging/Moving ===
 
 All of the miniwindows in this package can be moved around the screen, so that you can organize your layout any way you want.
 
 http://www.aardwolf.com/play/screenshots.htm has many screenshots with examples of this.
 
-In order to move the miniwindows around, find the part of the miniwindow where the mouse cursor changes to a hand and then click and drag. The hand looks like this: 
+In order to move the miniwindows around, find the part of the miniwindow where the mouse cursor changes to a hand and then click and drag. The hand looks like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/handcursor.png" align=top>
+
+=== Resizing ===
+
+Nearly every miniwindow in this package is in some way resizable to your own preference by dragging the resize widget in the lower-right corner of the miniwindow. The resize widget looks like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/resizer.png" align=top>
+
+When you move the mouse over the resize widget, the cursor will change to a pair of opposing diagonal arrows to indicate that the miniwindow can be resized by dragging there, like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/resizecursor.png" align=top>
+
+=== Right click Pop-up Menus ===
+
+All of the miniwindows in this package have special menus that pop up when you right-click on them. These windows can contain configuration options and other commands that let you interact with the plugin in useful ways.
+
+Here's just one example:
+
+https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlogright.png
+
+=== Controllable Z Order ===
 
 
-https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/handcursor.png
-
-==== Resizing ====
-
-Nearly every miniwindow in this package is in some way resizable to your own preference by dragging the resize widget in the lower-right corner of the miniwindow. The resize widget looks like this: 
-
-https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/resizer.png 
-
-When you move the mouse over the resize widget, the cursor will change to a pair of opposing diagonal arrows to indicate that the miniwindow can be resized by dragging there, like this: 
-
-https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/resizecursor.png
 
 == Miniwindows: A Technical Overview ==
 
