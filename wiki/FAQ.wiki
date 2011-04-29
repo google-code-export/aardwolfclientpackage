@@ -42,3 +42,12 @@ Check "Copy selection to Clipboard".
 ==== Can I get Aardwolf color codes with that? ====
 
 Nope. Sorry. But see [ColorCopy the copy with color codes plugin].
+
+== Can I disable F1 as being the program help macro? ==
+
+Yes, though that's stored in a different place than most configuration settings.
+Go to File->Global Preferences... and click on the General tab. Then check the box for "F1, F6 are macros". This will also let you use F1 as your own custom macro if you want.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/filemenu.png
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/preferencesgeneral.png
