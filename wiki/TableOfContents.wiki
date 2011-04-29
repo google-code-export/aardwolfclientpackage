@@ -21,7 +21,6 @@
       * [TickTimer Tick timer]
       * [Layout Main output windower]
       * [NewConnection New user welcome screen]
-      * [HelperAliases Some helper aliases]
     * Required Plugins (do not uninstall!)
       * [GMCPHandler GMCP handler]
       * [RepaintBuffer Repaint buffer]
