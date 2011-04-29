@@ -1,6 +1,4 @@
-#summary aardwolf color functions
-
-= `aardwolf_colors.lua` =
+= Aardwolf color functions - `aardwolf_colors.lua` =
 
 A lua snippet file that provides functions for handling Aardwolf color codes to any plugin that wants to use them.
 
