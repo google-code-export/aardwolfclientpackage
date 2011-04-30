@@ -34,6 +34,8 @@ Here's just one example of why this addition makes sense.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmapcompare.png
 
+I think the value of bigmap is obvious here.
+
 == How do I change this plugin's behavior? / How do I get the standard GMCP mapper tile view back on continents? ==
 Right click functionality isn't enabled on this one just yet, but there are a few commands for switching between different operation modes.
 
