@@ -39,7 +39,7 @@ Are you confused about this?
 
 https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmapcompare.png
 
-Original versions of the package did not yet include the [Bigmap merged Bigmap plugin]. If you absolutely need access to the old gmcp map tiles on the continents (to add notes or change exits by mouse) you can toggle the bigmap view by typing:
+Original versions of the package did not yet include the ability to show what is called the 'bigmap'. If you absolutely need access to the old gmcp map tiles on the continents (to add notes or change exits by mouse) you can toggle the bigmap view by typing:
 {{{
 bigmap off
 }}}
@@ -47,3 +47,5 @@ and
 {{{
 bigmap on
 }}}
+
+For more information on this see the page for [Bigmap the merged Bigmap plugin].
