@@ -45,7 +45,7 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmaphelp.png
 
 ==== bigmap on/off ====
 
-The key useful commands here are *bigmap off* and *bigmap on*. The off command makes the mapper view go back to the old display of showing individual room tiles that you can right-click on to change exits and add notes and stuff. The on command makes the bigmap view come back, like for when you are done making manual exit changes.
+The key useful commands here are *bigmap off* and *bigmap on*. The off command makes the mapper view go back to the old display of showing individual room tiles that you can right-click on to change exits and add notes and stuff. The on command makes the bigmap view come back, like for when you are done making manual changes.
 
 == I got a message saying "To activate this continent map, walk onto the continent and type: 'bigmap update'. What does that mean? ==
 Before you can see the pretty continent picture like shown above, the plugin has to generate it based on the bigmap information from the game. This is how we do that. Just do what the message says.
