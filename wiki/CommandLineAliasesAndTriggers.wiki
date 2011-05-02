@@ -94,11 +94,10 @@ Say you want to make an alias where the pattern is:
 {{{
 h *
 }}}
-and you want the result to be:
+and you want the result to be (where %1 is the target you want to heal):
 {{{
 cast 'heal' %1
 }}}
-Where %1 is the target you want to heal.
 
 You would now be able to type:
 {{{
