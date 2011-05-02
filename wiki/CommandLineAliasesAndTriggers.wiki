@@ -87,3 +87,30 @@ https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/aliasesconfig
 https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/aliasesconfig2.png
 
 You should now have both aliases in place. Click OK to go back to the game.
+
+== Now how do I use these aliases? ==
+
+Say you want to make an alias where the pattern is:
+{{{
+h *
+}}}
+and you want the result to be:
+{{{
+cast 'heal' %1
+}}}
+Where %1 is the target you want to heal.
+
+You would now be able to type:
+{{{
+#alias {h *} {cast 'heal' %1}
+}}}
+
+And then you could, for example, do:
+{{{
+h self
+}}}
+
+which would result in sending:
+{{{
+cast 'heal' self
+}}}
