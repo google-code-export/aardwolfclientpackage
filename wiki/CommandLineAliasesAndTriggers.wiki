@@ -14,7 +14,11 @@ for adding new simple aliases, and
 }}}
 for adding new simple triggers.
 
-If you are using the world file included in recent versions of the Aardwolf MUSHclient Package, then you may already have these aliases. You can check by going to the Aliases configuration screen by pressing Shift+Ctrl+9 or by going to Game->Configure->Aliases... as shown here:
+If you are using the world file included in recent versions of the Aardwolf MUSHclient Package, then you may already have these aliases. 
+
+== How do I check to see if I have these aliases already? ==
+
+You can check by going to the Aliases configuration screen by pressing Shift+Ctrl+9 or by going to Game->Configure->Aliases... as shown here:
 
 https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/gamemenu.png
 
