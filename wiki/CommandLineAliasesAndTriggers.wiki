@@ -2,7 +2,7 @@
 
 MUSHclient does not by default have a mechanism for creating aliases and triggers from the command line. This is likely because of a combination of the possible complexity of setting up any given alias or trigger and the fact that more and more people are moving towards using plugins for everything. 
 
-But the fact remains that sometimes a player wants to be able to set up simple aliases and triggers quickly and easily without dealing with the rather complicated interface and without having to write a full plugin. 
+But the fact remains that sometimes a player wants to be able to set up simple aliases and triggers quickly and easily without dealing with the rather complicated interface and without having to write a full plugin.
 
 It is possible to add this functionality to MUSHclient by adding two aliases:
 {{{
@@ -13,6 +13,12 @@ for adding new simple aliases, and
 #trigger {*} {*}
 }}}
 for adding new simple triggers.
+
+If you are using the world file included in recent versions of the Aardwolf MUSHclient Package, then you may already have these aliases. You can check by going to the Aliases configuration screen by pressing Shift+Ctrl+9 or by going to Game->Configure->Aliases... as shown here:
+
+https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/gamemenu.png
+
+== I don't have these aliases yet. How do I make them? ==
 
 The process for adding these is as follows:
 
@@ -68,9 +74,7 @@ ColourNote ("white", "green", "Added trigger to match on '%1', sending '%2'")
 </aliases>
 }}}
 
-2. Go back to MUSHclient and bring up the Aliases configuration screen by pressing Shift+Ctrl+9 or going to Game->Configure->Aliases... as shown here:
-
-https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/gamemenu.png
+2. Go back to MUSHclient and bring up the Aliases configuration screen by pressing Shift+Ctrl+9 or by going to Game->Configure->Aliases... as shown earlier.
 
 3. On the Aliases configuration screen, find the Paste button and click it:
 
