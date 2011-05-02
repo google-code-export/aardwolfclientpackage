@@ -26,7 +26,7 @@ https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/gamemenu.png
 
 The process for adding these is as follows:
 
-1. Select all of the text in the box below and copy it
+1. Select all of the text in the box below and copy it. Typically this is done either with Ctrl+C or by right-clicking on the selected text and choosing "Copy".
 {{{
 <aliases>
   <alias
