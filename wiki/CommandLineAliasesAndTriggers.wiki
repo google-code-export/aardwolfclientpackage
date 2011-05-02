@@ -16,7 +16,7 @@ for adding new simple triggers.
 
 The process for adding these is as follows:
 
-  1. Select all of the text in the box below and copy it
+1. Select all of the text in the box below and copy it
 {{{
 <aliases>
   <alias
@@ -68,11 +68,11 @@ ColourNote ("white", "green", "Added trigger to match on '%1', sending '%2'")
 </aliases>
 }}}
 
-  2. Go back to MUSHclient and bring up the Aliases configuration screen by pressing Shift+Ctrl+9 or going to Game->Configure->Aliases... as shown here:
+2. Go back to MUSHclient and bring up the Aliases configuration screen by pressing Shift+Ctrl+9 or going to Game->Configure->Aliases... as shown here:
 
 https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/gamemenu.png
 
-  3. On the Aliases configuration screen, find the Paste button and click it:
+3. On the Aliases configuration screen, find the Paste button and click it:
 
 https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/aliasesconfig.png
 
