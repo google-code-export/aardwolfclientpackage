@@ -41,3 +41,9 @@ Then you would need to make your pattern something like
 }}}
 
 Or switch to using [http://mushclient.com/scripts/doc.php?general=regexp regular expressions].
+
+= How do I make multi-state triggers? =
+
+See this forum post explaining how to translate the zMUD/CMUD multi-state trigger concept into MUSHclient triggers:
+
+http://www.mushclient.com/forum/bbshowpost.php?bbsubject_id=10338
