@@ -10,7 +10,7 @@ Scripting is a complicated subject that has been addressed by documentation for 
   * [http://www.mushclient.com/scripts/doc.php?general=function_list Scripting function list]
   * [http://www.mushclient.com/scripts/doc.php Complete online documentation for MUSHclient]
 
-= I tried making a trigger but it isn't firing. The pattern is the same as what I use in zMUD. What am I doing wrong? =
+== I tried making a trigger but it isn't firing. The pattern is the same as what I use in zMUD. What am I doing wrong? ==
 
 In zMUD, if you make a pattern that looks like
 
@@ -42,7 +42,7 @@ Then you would need to make your pattern something like
 
 Or switch to using [http://mushclient.com/scripts/doc.php?general=regexp regular expressions].
 
-= How do I make multi-state triggers? =
+== How do I make multi-state triggers? ==
 
 See this forum post explaining how to translate the zMUD/CMUD multi-state trigger concept into MUSHclient triggers:
 
