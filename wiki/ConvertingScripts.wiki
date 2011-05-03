@@ -6,4 +6,4 @@ Very basic aliases and triggers should be relatively easy to transfer over using
 
 But for anything complex, or for anything that makes use of special client interfaces, you're going to have to go through the process of learning what is called the API or application programming interface of MUSHclient. See the [Triggers Writing Triggers] and [Aliases Writing Aliases] pages for guidance.
 
-You may find it useful to head on over the [http://www.mushclient.com/forum/?bbsection_id=1 MUSHclient forums], where people are usually very willing to offer detailed assistance.
+If you can't figure something out and nobody on Aardwolf is able to provide guidance, you should head on over to the [http://www.mushclient.com/forum/?bbsection_id=1 MUSHclient forums]. The people there are usually very willing to offer detailed assistance.
