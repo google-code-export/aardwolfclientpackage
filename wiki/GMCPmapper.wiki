@@ -19,6 +19,85 @@ Many! To see the entire list, type
 {{{
 mapper help
 }}}
+and you'll see:
+{{{
+[MUSHclient mapper, version 2.5]
+AUTOMATIC MAPPER ... Originally by Nick Gammon
+** This plugin is a GMCP version of the ATCP mapper by Nick Gammon.
+** GMCP specific code added by Lasher.
+** A few major new features contributed by Spartacus.
+** Many bugs squashed and improvements made by Fiendish.
+
+The window can be dragged to a new location by dragging the room name.
+Your current room is always in the center with a bolder border.
+LH-click on a room to speed-walk to it. RH-click on a room for options. 
+LH-click on the "*" button on the upper-left corner to configure it.
+
+===== ACTIONS ====================>
+
+mapper backup                   --> Create new archived backups of your map
+                                  > database in a db_backups directory,
+                                  > preserving a few prior backups
+mapper backups <off/on>         --> Turn off or on automatic database backups.
+                                  > The default setting is on
+mapper help                     --> This help (click the "?" button on the
+                                  > top right)
+mapper zoom out                 --> Zoom out
+mapper zoom in                  --> Zoom in
+mapper hide                     --> Hide map
+mapper show                     --> Show map
+mapper addnote                  --> Add a new note to the current room (don't
+                                  > have to click on the mapper window)
+mapper purgezone <area>         --> Remove an area from the map database
+
+===== CUSTOM EXIT ACTIONS ========>
+
+mapper cexits                   --> List known custom exits
+mapper cexits <here/area>       --> List known custom exits only in this or
+                                  > another area
+mapper cexit <command>          --> Follow and link a custom exit (e.g. mapper
+                                  > cexit ride bucket)
+mapper delete cexits            --> Remove the custom exits from this room
+mapper purge cexits             --> Remove all custom exits
+
+===== PORTAL ACTIONS =============>
+
+mapper portals                  --> List known hand-held portals
+mapper portal <command>         --> Link a hand-held portal alias to here as a
+                                  > custom exit (ie mapper portal port amulet)
+mapper portallevel <ind> <lvl>  --> Change the level lock on a stored portal
+                                  > command (0 means no minimum level) index is
+                                  > found with the 'portals list' command you do
+                                  > not manually account for tiers
+mapper delete portal <command>  --> Remove the specified hand-held portal alias
+mapper purge portals            --> Remove all hand-held portal aliases
+
+===== FINDING THINGS =============>
+
+mapper notes                    --> Show nearby rooms that you marked with notes
+mapper area <text>              --> Full-text search limited to the current zone
+mapper find <text>              --> Full-text search  (eg. shop OR baker)
+mapper list <text>              --> Find rooms without the known-path limitation
+                                  > of "area" and "find"
+mapper shop                     --> Show nearby shops/banks etc.
+mapper train                    --> Show nearby trainers
+mapper quest                    --> Show nearby quest-givers
+mapper where <room>             --> Show directions to a room
+
+===== EXPLORING ==================>
+
+mapper thisroom                 --> Show details about the current room
+mapper areas                    --> Show a list of all mapped areas
+mapper areas <name>             --> Show a list of mapped areas partially
+                                  > matching "name"
+mapper unmapped                 --> List unmapped exit counts for know areas
+mapper unmapped <here/area>     --> List unmapped exits in this or another area
+
+===== MOVING =====================>
+
+mapper goto <room>              --> Walk to a room by its room number
+mapper resume                   --> initiate a new run to the previous target
+}}}
 
 == Where am I on the mapper? ==
 Your current position is the room box in the middle with the bold outline in the color specified as "Our room" in the configuration menu.
