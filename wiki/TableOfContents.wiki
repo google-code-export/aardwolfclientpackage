@@ -4,7 +4,7 @@
   * [Versions Version Numbering]
   * [Contact Who makes this?]
   * [Upgrading How do I upgrade from an old version?]
-  * [MacLinux Will it work in Linux? On a Mac?]
+  * [MacLinux Running in Linux/MacOS]
   * I'm used to a different client. How do I...?
     * [FAQ FAQ]
     * [Triggers Writing Triggers]
