@@ -7,7 +7,7 @@ I (Fiendish) run the Aardwolf MUSHclient Package on both Linux and Mac OS (intel
 
 == Running MUSHclient in Wine ==
 ==== What is Wine? ====
-[www.winehq.org WineHQ] describes it in the following basic way: "Wine lets you run Windows software on other operating systems. With Wine, you can install and run these applications just like you would in Windows."
+[http://www.winehq.org WineHQ] describes it in the following basic way: "Wine lets you run Windows software on other operating systems. With Wine, you can install and run these applications just like you would in Windows."
 
 You can also see the [https://secure.wikimedia.org/wikipedia/en/wiki/Wine_(software) Wikipedia entry for Wine_(software)] to learn more.
 
