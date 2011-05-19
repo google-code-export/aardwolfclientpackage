@@ -19,8 +19,8 @@ Installing Wine in Linux is extremely straightforward with one minor caveat. If 
 Installing Wine in Linux is as simple and straightforward as installing anything else from the command line. Just open up a terminal and, for example...
 
 In Ubuntu you can type:
-  sudo apt-get install wine
+  `sudo apt-get install wine`
 In Fedora you can type:
-  sudo yum install wine
+  `sudo yum install wine`
 In Gentoo you can type:
-  sudo emerge wine
+  `sudo emerge wine`
