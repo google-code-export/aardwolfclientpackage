@@ -4,6 +4,7 @@
   * [Versions Version Numbering]
   * [Contact Who makes this?]
   * [Upgrading How do I upgrade from an old version?]
+  * [WINE Will it work in Linux? On a Mac?]
   * I'm used to a different client. How do I...?
     * [FAQ FAQ]
     * [Triggers Writing Triggers]
