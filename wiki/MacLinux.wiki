@@ -1,0 +1,25 @@
+= Using the Aardwolf MUSHclient Package on a Mac or Linux PC =
+
+== It looks like MUSHclient is a Windows app. Is there a version for Mac or Linux? ==
+The state of computers today is that Windows has had market dominance for so long that a lot of very smart people have spent a lot of time making it so that Windows apps can be run on Mac and Linux operating systems. Two primary methods are explained below -- running through [MacLinux#Running_MUSHclient_in_Wine Wine] and running inside a virtual machine.
+
+I (Fiendish) run the Aardwolf MUSHclient Package on both Linux and Mac OS (intel). So yes, it is indeed possible to run this on all three major platforms. And it's pretty easy with a few small caveats that will be explained.
+
+== Running MUSHclient in Wine ==
+==== What is Wine? ====
+[www.winehq.org WineHQ] describes it in the following basic way: "Wine lets you run Windows software on other operating systems. With Wine, you can install and run these applications just like you would in Windows."
+
+You can also see the [https://secure.wikimedia.org/wikipedia/en/wiki/Wine_(software) Wikipedia entry for Wine_(software)] to learn more.
+
+==== How do I install Wine in Linux? ====
+
+Installing Wine in Linux is extremely straightforward with one minor caveat. If you are using an Intel graphics driver version between 2.12 and 2.15 (as of this writing) you'll probably need to use an old version of Wine (wine1.0 rather than wine1.3), because of a bug in the Intel driver. It affects, for example, my Lenovo Thinkpad x201i running Ubuntu 10.10.
+<BR>See here: [https://bugs.freedesktop.org/show_bug.cgi?id=28798]
+
+Installing Wine in Linux is as simple and straightforward as installing anything else from the command line. Just open up a terminal and, for example...<BR>
+In Ubuntu you can type:
+  sudo apt-get install wine
+In Fedora you can type:
+  sudo yum install wine
+In Gentoo you can type:
+  sudo emerge wine
