@@ -24,3 +24,5 @@ In Fedora you can type:
   `sudo yum install wine`
 In Gentoo you can type:
   `sudo emerge wine`
+
+==== How do I install Wine on a Mac? ====
