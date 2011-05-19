@@ -16,7 +16,8 @@ You can also see the [https://secure.wikimedia.org/wikipedia/en/wiki/Wine_(softw
 Installing Wine in Linux is extremely straightforward with one minor caveat. If you are using an Intel graphics driver version between 2.12 and 2.15 (as of this writing) you'll probably need to use an old version of Wine (wine1.0 rather than wine1.3), because of a bug in the Intel driver. It affects, for example, my Lenovo Thinkpad x201i running Ubuntu 10.10. If you have ATI or NVIDIA graphics, you should be fine with the latest version of Wine.
 <BR>See here: [https://bugs.freedesktop.org/show_bug.cgi?id=28798]
 
-Installing Wine in Linux is as simple and straightforward as installing anything else from the command line. Just open up a terminal and, for example...<BR>
+Installing Wine in Linux is as simple and straightforward as installing anything else from the command line. Just open up a terminal and, for example...
+
 In Ubuntu you can type:
   sudo apt-get install wine
 In Fedora you can type:
