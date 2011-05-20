@@ -6,7 +6,7 @@ This plugin handles keeping track of the Z ordering of the miniwindow plugins in
 See the Wikipedia entry on Z-order here: https://secure.wikimedia.org/wikipedia/en/wiki/Z-order
 
 === How do I make my own miniwindow plugins make use of your Z-ordering system? ===
-If you want another miniwindow to fit into the Z-order system, there are only a few steps...
+If you want another miniwindow to fit into the Z-order system, there are only a few steps (the following assumes the name of your window is stored in a variable called win)...
 
   * The name of your miniwindow must only contain numbers, letters, and the underscore character. Using the plugin UID as your miniwindow name is fine, for example.
   * After any call to `WindowCreate` and BEFORE you subsequently call `WindowShow`, you need to do
