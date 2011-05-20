@@ -6,13 +6,14 @@ This plugin handles keeping track of the Z ordering of the miniwindow plugins in
 See the Wikipedia entry on Z-order here: https://secure.wikimedia.org/wikipedia/en/wiki/Z-order
 
 === How do I make my own miniwindow plugins make use of your Z-ordering system? ===
-If you want a miniwindow to fit into the Z-order system, there are only a few steps.
+If you want another miniwindow to fit into the Z-order system, there are only a few steps...
 
+  * Your miniwindow must be named according to the rules for variable names for `SetVariable` with one exception -- the name may start with a number rather than a letter (using plugin UID as your miniwindow name is fine, for example)
   * After any call to `WindowCreate` and BEFORE you subsequently call `WindowShow`, you need to do
   {{{
   CallPlugin("462b665ecb569efbf261422f", "registerMiniwindow", win)
   }}}
-  * You need to create an `OnPluginBroadcast(msg, id, name, text)` function (or add to your existing one if you already have one) that includes the following
+  * You need to have an `OnPluginBroadcast(msg, id, name, text)` function that includes the following
   {{{
   if (id == "462b665ecb569efbf261422f" and msg==996 and text == "re-register z") then
     CallPlugin("462b665ecb569efbf261422f", "registerMiniwindow", win)
