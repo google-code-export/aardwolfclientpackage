@@ -52,4 +52,4 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/preferencesgen
 
 == Where is the main output scroll bar? I can't find it! ==
 
-[https://code.google.com/p/aardwolfclientpackage/wiki/Layout#Where_is_the_scroll_bar?_I_don%27t_see_it_anymore. See here.]
+[https://code.google.com/p/aardwolfclientpackage/wiki/Layout#Where_is_the_scroll_bar?_I_don%27t_see_it_anymore. See the answer to this question here.]
