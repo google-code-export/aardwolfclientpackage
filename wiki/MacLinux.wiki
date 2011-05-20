@@ -34,3 +34,5 @@ Probably the simplest method is as follows:
  # Double click on the file and you should see a disk icon mounted on your desktop that looks like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winemounted.png" align="center">
  # Double click on that icon and you should see a window that looks like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winewindow.png" align="center">
  # Drag the Wine icon onto the Applications folder as instructed by the arrow.
+
+Once Wine is installed, you can start MUSHclient by right-clicking on MUSHclient.exe and choosing Open With...->Wine.
