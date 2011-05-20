@@ -45,9 +45,21 @@ bigmap help
 }}}
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmaphelp.png
 
-==== bigmap on/off ====
+=== bigmap on/off ===
 
-The key useful commands here are *bigmap off* and *bigmap on*. The off command makes the mapper view go back to the old display of showing individual room tiles that you can right-click on to change exits and add notes and stuff. The on command makes the bigmap view come back, like for when you are done making manual changes.
+The off command makes the bigmap disappear. If you have the `bigmap merge` setting enabled (on by default) the gmcp mapper window goes back to the old display of showing individual room tiles that you can right-click on to change exits and add notes and stuff. 
+
+The on command makes the bigmap view come back, like for when you are done making manual changes.
+
+=== bigmap merge/unmerge ===
+
+This controls whether the bigmap display will try to use the same miniwindow space as the gmcp mapper.
+
+With the bigmap merged, you might see this:
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmapmerged.png
+
+With the bigmap unmerged, you might see this:
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmapunmerged.png
 
 == I got a message saying "To activate this continent map, walk onto the continent and type: 'bigmap update'. What does that mean? ==
 Before you can see the pretty continent picture like shown above, the plugin has to generate it based on the bigmap information from the game. This is how we do that. Just do what the message says.
