@@ -32,9 +32,9 @@ Here's just one example:
 
 https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlogright.png
 
-=== Controllable Z Order ===
+=== Controllable Z-order ===
 
-Z order is the order in which miniwindows are drawn on top of each other. In traditional coordinates, X is left/right, Y is up/down, and Z is in/out of the screen. A new feature in the plugins included in this package is the ability to make any of them jump to the front of all the others. In the example below, the player has the channel capture window hiding behind the ASCII map.
+Z-order is the order in which miniwindows are drawn on top of each other. In traditional coordinates, X is left/right, Y is up/down, and Z is in/out of the screen. A new feature in the plugins included in this package is the ability to make any of them jump in front of or behind all the others. In the example below, the player has the channel capture window hiding behind the ASCII map.
 
 https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/zorderexample1.png
 
