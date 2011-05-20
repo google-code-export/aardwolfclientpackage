@@ -48,3 +48,18 @@ Maybe you don't care about tracking group members' mana or moves, and you only w
 If you disable mana and moves, for example, then the group would show like this:
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/grouphp.png
+
+=== Use Flat Gauges ===
+This option changes the display style for the gauges from the gradient shaded bars to flat ones.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/groupflatgauges.png
+
+=== Overlay Numbers ===
+This option makes it so that the HP, MN, and MV numbers show on top of their respective bars instead of along side them. This takes up less horizontal space.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/groupoverlaynumbers.png
+
+==== HP Thresholds > ===
+You may want player hp gauges to change colors when they drop below certain thresholds. Here you can specify up to two different health percentages after which the hp bars will change to a different color.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/grouphpthresholds.png
