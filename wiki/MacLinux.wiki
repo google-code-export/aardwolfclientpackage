@@ -1,9 +1,9 @@
 = Using the Aardwolf MUSHclient Package on a Mac or Linux PC =
 
 == It looks like MUSHclient is a Windows app. Is there a version for Mac or Linux? ==
-The state of computers today is that Windows has had market dominance for so long that a lot of very smart people have spent a lot of time making it so that Windows apps can be run on Mac and Linux operating systems. Two primary methods are explained below -- running through [MacLinux#Running_MUSHclient_in_Wine Wine] and running inside a virtual machine.
+The state of computers today is that Windows has had market dominance for so long that a lot of very smart people have spent a lot of time making it so that Windows apps can be run on Mac (though only Intel CPU Macs) and Linux operating systems. Two primary methods are explained below -- running through [MacLinux#Running_MUSHclient_in_Wine Wine] and running inside a virtual machine.
 
-I (Fiendish) run the Aardwolf MUSHclient Package on both Linux and Mac OS (intel). So yes, it is indeed possible to run this on all three major platforms. And it's pretty easy with a few small caveats that will be explained.
+I (Fiendish) run the Aardwolf MUSHclient Package on both Linux and Mac OS (Intel). So yes, it is indeed possible to run this on all three major platforms. And it's pretty easy with a few small caveats that will be explained.
 
 == Running MUSHclient in Wine ==
 ==== What is Wine? ====
@@ -27,8 +27,11 @@ In Gentoo you could type:
 And so on...
 
 ==== How do I install Wine on a Mac? ====
+Requirements:
+ * A Mac with an Intel CPU (All new Macs use Intel CPUs). Older PPC or 68k Macs cannot use Wine. Sorry.
+ * X11 (this is already installed by default on Snow Leopard and Leopard. If you are running Tiger, you can install X11 from your Tiger installation DVD using the "Optional Installs.mpkg" file.)
 
-Probably the simplest method is as follows:
+Probably the simplest method to get Wine is as follows:
  # Download Wine_1.2.2.dmg from [http://darwine.good-day.net/Wine_1.2.2.dmg]
  # Find the file you just downloaded. It should look like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winedmg.png" align="center">
  # Double click on the file and you should see a disk icon mounted on your desktop that looks like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winemounted.png" align="center">
