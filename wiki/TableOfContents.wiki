@@ -23,6 +23,7 @@
       * [Layout Main output windower]
       * [NewConnection New user welcome screen]
     * Required Plugins (do not uninstall!)
+      * [ZOrderMonitor Miniwindow Z Order Monitor]
       * [GMCPHandler GMCP handler]
       * [RepaintBuffer Repaint buffer]
     * Useful bits for programmers
