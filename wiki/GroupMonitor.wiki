@@ -34,7 +34,7 @@ Changes the font.
 === Show Players > ===
 This submenu will show a list of all players currently in your group and offer the ability to selectively to show or hide any of them from the group monitor window.
 
-==== Include Self ====
+==== Show Players > Include Self ====
 You may choose to not show yourself in the group monitor window, since you already get personal status bars as a separate floating window. This will let you save some space.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/groupincludeself.png
