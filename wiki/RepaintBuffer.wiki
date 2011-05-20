@@ -18,7 +18,7 @@ This is explained in the documentation for [http://mushclient.com/scripts/doc.ph
 This plugin allows for deferred updates for better performance when running a lot of plugins at once like with Redraw and also the higher priority of Repaint that causes it to happen at all instead of never when under load.
 
 == Does it work? ==
-Uh...I think so? :)
+I think so. :)
 
 == How do I use it in my plugins? ==
 Most of the time you don't need to tell MUSHclient to refresh the screen. It will just happen on its own. So first consider carefully whether you need to worry about this at all.
