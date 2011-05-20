@@ -31,11 +31,12 @@ If you want another miniwindow to fit into the Z-order system, there are only a 
   require "checkplugin"
   function OnPluginListChanged()
     if not first_check then
-        do_plugin_check_now("462b665ecb569efbf261422f", "aard_miniwindow_z_order_monitor") -- check we have z order plugin
+        do_plugin_check_now("462b665ecb569efbf261422f", "aard_miniwindow_z_order_monitor")
         first_check = true
-        OnPluginInstall() -- run install again now that the z order plugin is loaded
+        -- run install again now that the z order plugin is loaded
+        OnPluginInstall()
     end
-  end -- OnPluginListChanged
+  end
   }}}
 
   * Once all of that is done, you can bring your miniwindow to the front of the stack by calling:
