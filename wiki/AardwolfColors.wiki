@@ -13,6 +13,9 @@ The reverse of !StylesToColoursOneLine. This takes a string containing Aardwolf 
 ==== `strip_colours (text)` ====
 Takes a string containing Aardwolf color codes and removes all of the color codes from it.
 
+==== `stylesToANSI (styles)` ====
+Converts a series of style runs to a string with embedded ansi codes.
+
 == How do I use this in a plugin? ==
 If your plugin lives in the plugins folder, put this line somewhere in the main script body of your plugin:
 {{{
