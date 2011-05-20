@@ -30,4 +30,7 @@ And so on...
 
 Probably the simplest method is as follows:
  # Download Wine_1.2.2.dmg from [http://darwine.good-day.net/Wine_1.2.2.dmg]
- # Find the file you just downloaded. It should look like this: https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winedmg.png
+ # Find the file you just downloaded. It should look like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winedmg.png" align="center">
+ # Double click on the file and you should see a disk icon mounted on your desktop that looks like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winemounted.png" align="center">
+ # Double click on that icon and you should see a window that looks like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winewindow.png" align="center">
+ # Drag the Wine icon onto the Applications folder as instructed by the arrow.
