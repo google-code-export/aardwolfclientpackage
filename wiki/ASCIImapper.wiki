@@ -12,7 +12,7 @@ The ASCII map window has a few different right-click options.
 
 ==== Change Font ====
 
-This ought to be self-explanatory.
+Changes the display font.
 
 ==== Show Coordinates ====
 
