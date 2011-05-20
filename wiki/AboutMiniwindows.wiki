@@ -38,7 +38,7 @@ Z-order is the order in which miniwindows are drawn on top of each other. In tra
 
 https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/zorderexample1.png
 
-Selecting "Bring To Front" from the right-click menu on the channel capture window allows the player to switch the display order so that it gets shown on top. "Send To Back" will do the reverse.
+Selecting "Bring To Front" from the right-click menu on the channel capture window allows the player to switch the display order so that it gets shown on top. "Send To Back" (not shown) will do the reverse.
 
 https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/zorderexample2.png
 
