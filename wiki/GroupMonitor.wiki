@@ -29,7 +29,7 @@ There are a few things you can do, and they all involve using the right-click me
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/groupright.png
 
 === Change Font ===
-Changes the font.
+Changes the display font.
 
 === Show Players > ===
 This submenu will show a list of all players currently in your group and offer the ability to selectively to show or hide any of them from the group monitor window.
