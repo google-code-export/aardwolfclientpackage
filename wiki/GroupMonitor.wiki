@@ -28,22 +28,6 @@ There are two things you can do, both involve using the right-click menu, so let
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/groupright.png
 
-==== Show Help ====
-Prints out the following bit of helpful information for using this plugin.
-{{{
-        +--------------- Group Monitor Plugin Info ----------------+
-        
-          * Resizing the group window will cause visible player 
-            entries to automatically wrap to fit the space based
-            on the number of columns that can go into the width.
-        
-          * Most of the color configuration options are pretty
-            self-explanatory, and adjust the border and fill
-            colors of the gauge bars. Alignment colors affect the
-            colorization of names of the players in the group.
-        
-        +----------------------------------------------------------+
-}}}
 ==== Change Font ====
 Changes the font.
 
