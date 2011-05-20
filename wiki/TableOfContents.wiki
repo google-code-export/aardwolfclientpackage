@@ -1,8 +1,6 @@
   * [Introduction Introduction]
   * [WhatMakesThisSpecial What makes this package special?]
   * [AboutMiniwindows Teach me about miniwindows!]
-  * [Versions Version Numbering]
-  * [Contact Who makes this?]
   * [Upgrading How do I upgrade from an old version?]
   * [MacLinux Running in Linux/MacOS]
   * I'm used to a different client. How do I...?
@@ -29,3 +27,5 @@
       * [RepaintBuffer Repaint buffer]
     * Useful bits for programmers
       * [AardwolfColors Aardwolf color code functions]
+  * [Versions Version Numbering]
+  * [Contact Who makes this?]
