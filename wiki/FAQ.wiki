@@ -49,3 +49,7 @@ Go to File->Global Preferences... and click on the General tab. Then check the b
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/filemenu.png
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/preferencesgeneral.png
+
+== Where is the main output scroll bar? I can't find it! ==
+
+[https://code.google.com/p/aardwolfclientpackage/wiki/Layout#Where_is_the_scroll_bar?_I_don%27t_see_it_anymore. See here.]
