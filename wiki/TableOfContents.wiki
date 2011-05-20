@@ -11,7 +11,6 @@
     * [Aliases Writing Aliases]
     * [CommandLineAliasesAndTriggers Adding alias/triggers from the command line]
     * [ConvertingScripts Converting my scripts over from <other_client>]
-
   * What's included in the package?
     * Featured Plugins
       * [ASCIImapper ASCII overhead view]
