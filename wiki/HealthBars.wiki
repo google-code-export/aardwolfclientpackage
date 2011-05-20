@@ -12,34 +12,34 @@ There are many display customization options accessible through the right-click 
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarsright.png
 
-==== Change Font ====
+=== Change Font ===
 
 Changes the display font.
 
-==== Hide Labels ====
+=== Hide Labels ===
 You may decide that the color and order sufficiently differentiates the bars for you, and you don't need the text labels taking up space. Use the Hide and Show options to toggle them off and on.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarsnolabels.png
 
-==== Un-stack Bars ====
+=== Un-stack Bars ===
 You may want a more prompt-like configuration for the status bars that puts them in a long row instead of stacking them on top of each other. Use the Un-stack and Stack options for switching between the original configuration and a horizontal configuration.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarsunstacked.png
 
-==== Activate/De-activate ====
+=== Activate/De-activate > ===
 Maybe you don't need to see your mana status all the time. Or maybe you don't care about enemy health. You can turn different bars off and on using the options in this sub-menu.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarsactivate.png
 
-==== Configure Colors ====
+=== Configure Colors ===
 Not everyone will like the default colors used for displaying the various status bars. You can configure your own preferences for border and fill colors for each of the status indicators.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarscolors.png
 
-==== Reverse TNL ====
+=== Reverse TNL ===
 TNL stands for "To Next Level" and indicates how much experience you still need to get before you will move to the next level. By default this bar starts out full at the beginning of a level and then shrinks down to empty as you get closer to leveling up. Toggle this option if you prefer instead to see the opposite view, a growing bar that indicates how much experience you have gained so far on the current level.
 
-==== Text Mode ====
+=== Text Mode ===
 This mode gets rid of the bars altogether, and just shows a numerical readout of the various statuses.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarstext.png
