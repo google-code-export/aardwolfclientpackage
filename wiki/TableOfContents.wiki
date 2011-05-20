@@ -6,11 +6,11 @@
   * [Upgrading How do I upgrade from an old version?]
   * [MacLinux Running in Linux/MacOS]
   * I'm used to a different client. How do I...?
-    * [FAQ FAQ]
-    * [Triggers Writing Triggers]
-    * [Aliases Writing Aliases]
-    * [CommandLineAliasesAndTriggers Adding alias/triggers from the command line]
-    * [ConvertingScripts Converting my scripts over from <other_client>]
+   * [FAQ FAQ]
+   * [Triggers Writing Triggers]
+   * [Aliases Writing Aliases]
+   * [CommandLineAliasesAndTriggers Adding alias/triggers from the command line]
+   * [ConvertingScripts Converting my scripts over from <other_client>]
   * What's included in the package?
     * Featured Plugins
       * [ASCIImapper ASCII overhead view]
