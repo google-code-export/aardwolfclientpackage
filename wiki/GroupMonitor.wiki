@@ -22,24 +22,29 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/group3.png
 
 == My group is really big and I don't have a ton of space on my screen. Is there anything I can do? ==
 
-There are two things you can do, both involve using the right-click menu, so let's investigate those options.
+There are a few things you can do, and they all involve using the right-click menu, so let's investigate those options.
 
 == What are the right-click options? ==
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/groupright.png
 
-==== Change Font ====
+=== Change Font ===
 Changes the font.
 
-==== Show Self In Group ====
+=== Show Players > ===
+This submenu will show a list of all players currently in your group and offer the ability to selectively to show or hide any of them from the group monitor window.
+
+==== Include Self ====
 You may choose to not show yourself in the group monitor window, since you already get personal status bars as a separate floating window. This will let you save some space.
 
-==== Configure Colors > ====
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/groupincludeself.png
+
+=== Configure Colors > ===
 This lets you customize what border and fill colors are used for the various status bars. The "align" colors do not affect any bars. They are used to color the player names depending on whether the player is neutral, evil, or good alignment.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/groupcolors.png
 
-==== Show Info > ====
+=== Show Info > ===
 Maybe you don't care about tracking group members' mana or moves, and you only want to know about Health. You can use these options to disable/enable some or all of the group member status bars. This will let you save some space.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/groupcustom.png
