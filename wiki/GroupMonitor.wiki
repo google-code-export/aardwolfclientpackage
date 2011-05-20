@@ -64,4 +64,4 @@ You may want player hp gauges to change colors when they drop below certain thre
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/grouphpthresholds.png
 
-http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/grouphpthresholdwindow.png
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/groupthresholdwindow.png
