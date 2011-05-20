@@ -24,7 +24,7 @@ Copies the entire capture buffer to the clipboard. This is like Copy Selected bu
 
 === Change Font ===
 
-This ought to be self-explanatory.
+Changes the display font.
 
 === Turn Echo Off ===
 
