@@ -25,3 +25,7 @@ Yes it will in all versions after [Versions r397].
 
 == Why do you use both the American and British spellings of "color"? ==
 Because screw you, that's why!
+
+== Why dofile instead of the cleaner require? ==
+
+Purely [http://www.catb.org/jargon/html/H/hysterical-reasons.html hysterical raisins].
