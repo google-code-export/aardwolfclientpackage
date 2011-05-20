@@ -32,3 +32,7 @@ Because screw you, that's why!
 == Why dofile instead of the cleaner require? ==
 
 Purely [http://www.catb.org/jargon/html/H/hysterical-reasons.html hysterical raisins].
+
+== Why don't the function names follow a consistent pattern? ==
+
+See the above.
