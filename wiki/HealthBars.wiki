@@ -45,5 +45,12 @@ This mode gets rid of the bars altogether, and just shows a numerical readout of
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarstext.png
 
 === Use Flat Gauges ===
+This option changes the display style for the gauges from the gradient shaded bars to flat ones.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarsflatgauges.png
 
 === Overlay Numbers ===
+
+This option makes it so that the HP, MN, MV, TNL, and Enemy (when fighting) bars get overlayed with their respective raw numbers.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarsoverlaynumbers.png
