@@ -18,4 +18,4 @@ Some people like a single column, more vertical orientation for the stats displa
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/statsstacked.png
 
 ==== Change Font ====
-Changes the font used for display.
+Changes the display font.
