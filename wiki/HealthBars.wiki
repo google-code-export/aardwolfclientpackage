@@ -31,7 +31,7 @@ Maybe you don't need to see your mana status all the time. Or maybe you don't ca
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarsactivate.png
 
-=== Configure Colors ===
+=== Configure Colors > ===
 Not everyone will like the default colors used for displaying the various status bars. You can configure your own preferences for border and fill colors for each of the status indicators.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarscolors.png
@@ -43,3 +43,7 @@ TNL stands for "To Next Level" and indicates how much experience you still need 
 This mode gets rid of the bars altogether, and just shows a numerical readout of the various statuses.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarstext.png
+
+=== Use Flat Gauges ===
+
+=== Overlay Numbers ===
