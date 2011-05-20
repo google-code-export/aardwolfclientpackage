@@ -6,7 +6,16 @@ It probably looks something like this:
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/ascii_map1.png
 
-== What happens if I right-click on the ascii map? ==
-Why are you asking me? Try it!
+=== What options are available if I right-click? ===
 
-http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/ascii_map2.png
+The ASCII map window has a few different right-click options.
+
+==== Change Font ====
+
+This ought to be self-explanatory.
+
+==== Show Coordinates ====
+
+Shows your current coordinates (similar to as displayed by the `coord` command) underneath the room exits line.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/asciimapcoordinates.png
