@@ -1,7 +1,7 @@
 = Using the Aardwolf MUSHclient Package on a Mac or Linux PC =
 
 == It looks like MUSHclient is a Windows app. Is there a version for Mac or Linux? ==
-The state of computers today is that Windows has had market dominance for so long that a lot of very smart people have spent a lot of time making it so that Windows apps can be run on Mac (though only Intel CPU Macs) and Linux operating systems. Two primary methods are explained below -- running through [MacLinux#Running_MUSHclient_in_Wine Wine] and running inside a [MacLinux#Running_MUSHclient_in_a_virtual_machine virtual machine].
+The state of computers today is that Windows has had market dominance for so long that a lot of very smart people have spent a lot of time making it so that Windows apps can be run on Mac (though only on Intel CPU Macs) and Linux operating systems. Two primary methods are explained below -- running through [MacLinux#Running_MUSHclient_in_Wine Wine] and running inside a [MacLinux#Running_MUSHclient_in_a_virtual_machine virtual machine].
 
 I (Fiendish) run the Aardwolf MUSHclient Package on both Linux and Mac OS (Intel). So yes, it is indeed possible to run this on all three major platforms. And it's pretty easy with a few small caveats that will be explained.
 
@@ -10,6 +10,8 @@ I (Fiendish) run the Aardwolf MUSHclient Package on both Linux and Mac OS (Intel
 [http://www.winehq.org WineHQ] describes it in the following basic way: "Wine lets you run Windows software on other operating systems. With Wine, you can install and run these applications just like you would in Windows."
 
 You can also see the [https://secure.wikimedia.org/wikipedia/en/wiki/Wine_(software) Wikipedia entry for Wine_(software)] to learn more.
+
+One of the major benefits of using Wine is that you do not need to install Windows.
 
 ==== How do I install Wine in Linux? ====
 
@@ -41,3 +43,9 @@ Probably the simplest method to get Wine is as follows:
 Once Wine is installed in this way, you can start MUSHclient by right-clicking on MUSHclient.exe and choosing Open With...->Wine.
 
 == Running MUSHclient in a virtual machine ==
+
+==== What is a virtual machine? ====
+Unlike Wine, where you do not need to actually install Windows to use Windows software, setting up a virtual machine means essentially creating a whole virtual computer running a second operating system that runs inside of your main operating system. Popular virtual machine software for the Mac includes [http://www.vmware.com/products/fusion/overview.html VMware Fusion], [http://www.parallels.com/products/desktop/ Parallels Desktop], and [http://www.virtualbox.org/ VirtualBox]. Of those three, VirtualBox has the significant benefit that it doesn't cost anything because it is Free Software.
+
+==== How do I install a virtual machine on a Mac? ====
+After installing your virtual machine host software, you will need to install Windows as a guest operating system. Whichever software you choose will walk you through this process. After installing Windows inside your virtual machine, you will have a fully functional secondary operating system inside of which you can then download and run MUSHclient.
