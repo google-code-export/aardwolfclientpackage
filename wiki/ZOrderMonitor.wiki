@@ -4,4 +4,4 @@ This plugin handles keeping track of the Z ordering of the miniwindow plugins in
 
 === What is Z-Order? ===
 
-See the wikipedia entry on Z-order here: https://secure.wikimedia.org/wikipedia/en/wiki/Z-order
+See the Wikipedia entry on Z-order here: https://secure.wikimedia.org/wikipedia/en/wiki/Z-order
