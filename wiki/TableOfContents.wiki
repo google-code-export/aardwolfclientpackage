@@ -6,7 +6,7 @@
   * [Upgrading How do I upgrade from an old version?]
   * [MacLinux Running in Linux/MacOS]
 
-  I'm used to a different client. How do I...?
+I'm used to a different client. How do I...?
 
   * [FAQ FAQ]
   * [Triggers Writing Triggers]
