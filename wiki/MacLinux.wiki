@@ -38,4 +38,4 @@ Probably the simplest method to get Wine is as follows:
  # Double click on that icon and you should see a window that looks like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winewindow.png" align="center">
  # Drag the Wine icon onto the Applications folder as instructed by the arrow.
 
-Once Wine is installed, you can start MUSHclient by right-clicking on MUSHclient.exe and choosing Open With...->Wine.
+Once Wine is installed in this way, you can start MUSHclient by right-clicking on MUSHclient.exe and choosing Open With...->Wine.
