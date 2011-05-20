@@ -23,9 +23,9 @@ If you want another miniwindow to fit into the Z-order system, there are only a 
   {{{
   first_check = false
   require "checkplugin"
-  function OnPluginListChanged ()
+  function OnPluginListChanged()
     if not first_check then
-        do_plugin_check_now ("462b665ecb569efbf261422f", "aard_miniwindow_z_order_monitor") -- check we have z order plugin
+        do_plugin_check_now("462b665ecb569efbf261422f", "aard_miniwindow_z_order_monitor") -- check we have z order plugin
         first_check = true
         OnPluginInstall() -- run install again now that the z order plugin is loaded
     end
