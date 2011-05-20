@@ -35,4 +35,4 @@ Purely [http://www.catb.org/jargon/html/H/hysterical-reasons.html hysterical rai
 
 == Why don't the function names follow a consistent pattern? ==
 
-See the above answer.
+See the above two answers.
