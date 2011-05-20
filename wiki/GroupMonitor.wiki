@@ -63,3 +63,5 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/groupoverlaynu
 You may want player hp gauges to change colors when they drop below certain thresholds. Here you can specify up to two different health percentages after which the hp bars will change to a different color.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/grouphpthresholds.png
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/grouphpthresholdwindow.png
