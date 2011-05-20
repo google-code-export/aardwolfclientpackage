@@ -59,7 +59,7 @@ This option makes it so that the HP, MN, and MV numbers show on top of their res
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/groupoverlaynumbers.png
 
-==== HP Thresholds > ===
+=== HP Thresholds > ===
 You may want player hp gauges to change colors when they drop below certain thresholds. Here you can specify up to two different health percentages after which the hp bars will change to a different color.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/grouphpthresholds.png
