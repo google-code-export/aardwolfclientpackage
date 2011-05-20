@@ -31,3 +31,13 @@ If you want another miniwindow to fit into the Z-order system, there are only a 
     end
   end -- OnPluginListChanged
   }}}
+
+  * Once all of that is done, you can bring your miniwindow to the front of the stack by calling:
+  {{{
+  CallPlugin("462b665ecb569efbf261422f","boostMe", win)
+
+  }}}
+  and drop it to the back by calling:
+  {{{
+  CallPlugin("462b665ecb569efbf261422f","dropMe", win)
+  }}}
