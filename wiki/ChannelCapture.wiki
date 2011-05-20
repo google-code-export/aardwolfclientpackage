@@ -14,29 +14,29 @@ The channel capture window has many different right-click options.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlogright.png
 
-==== Copy Selected / Copy Selected Without Colors ====
+=== Copy Selected / Copy Selected Without Colors ===
 
 If any text inside the log window is selected, this text will be copied to the clipboard either with or without Aardwolf color codes inserted. More on selecting later.
 
-==== Copy All ====
+=== Copy All ===
 
 Copies the entire capture buffer to the clipboard. This is like Copy Selected but grabs everything instead of just the selected text.
 
-==== Change Font ====
+=== Change Font ===
 
 This ought to be self-explanatory.
 
-==== Turn Echo Off ====
+=== Turn Echo Off ===
 
 By default, all lines that get captured to the communication log window also get shown in the main output. Use this option if you want captured lines to not show in the main output.
 
-==== Timestamp > ====
+=== Timestamp > ===
 
 You'll notice in the above example images that captured messages are marked with the date and time. You can change the format of this timestamp, or disable it, by choosing one of the options in this sub-menu.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlogtimestamp.png
 
-==== Capture Other Info > ====
+=== Capture Other Info > ===
 
 Some informational messages on Aardwolf do not present themselves in the form of channels with GMCP data. Other things may be annoying under certain circumstances. Control of those bits go here.
 
@@ -44,7 +44,7 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlogother.pn
 
 INFO:, Global Quest:, Remort Auction:, and speech from mobs can be optionally captured by enabling or disabling the right options. If you are in a clan with members who all have gold donation triggers, you might also desire to specifically disable the capturing of clan donation messages.
 
-==== Logging to File > ====
+=== Logging to File > ===
 
 The channel capture plugin has the ability to record a log of all captured messages to a text file in the MUSHclient\logs folder.
 
@@ -58,7 +58,7 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comloglogging.
 
 Aside from the standard resizing (drag the bottom-right corner) and moving (drag the title bar), there are a few other things you can do.
 
-==== Scroll up and down ====
+=== Scroll up and down ===
 
 You can scroll up and down inside the channel capture window by any of the following methods:
 
@@ -66,7 +66,7 @@ You can scroll up and down inside the channel capture window by any of the follo
   * clicking on the up/down arrows at the top-right and bottom-right of the miniwindow
   * dragging the miniwindow's scrollbar shuttle
 
-==== Select captured text ====
+=== Select captured text ===
 
 The channel capture miniwindow, through the magic of awesomeness, supports selecting arbitrary bits of text with the mouse. Just select it as you would select text anywhere else. After you have text selected, you can copy the selection to the clipboard with or without Aardwolf color codes via the right-click menu.
 
