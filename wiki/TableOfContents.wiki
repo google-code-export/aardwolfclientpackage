@@ -27,6 +27,9 @@
       * [GMCPHandler GMCP handler]
       * [RepaintBuffer Repaint buffer]
     * Useful bits for programmers
+      * [ZOrderMonitor Miniwindow Z-order Monitor]
+      * [GMCPHandler GMCP handler]
+      * [RepaintBuffer Repaint buffer]
       * [AardwolfColors Aardwolf color code functions]
   * [Versions Version Numbering]
   * [Contact Who makes this?]
