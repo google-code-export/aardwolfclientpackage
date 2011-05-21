@@ -8,7 +8,7 @@ There are three major ways you can experience Aardwolf:
 Let's quickly walk through them...
 
 ==== Basic Telnet ====
-This is a horrible, crappy choice. There is really no excuse for this kind of Neo-Luddite silliness. The game is text-based, but there is no reason to limit yourself to using stone age tools like this.
+This is a horrible, crappy choice. There is really no excuse for this kind of Neo-Luddite silliness. The game is text-based, but there is no reason to limit yourself to using stone age tools like this. No aliases. No triggers. No large buffers. No nothing. Blech.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/rawtelnet.png
 
