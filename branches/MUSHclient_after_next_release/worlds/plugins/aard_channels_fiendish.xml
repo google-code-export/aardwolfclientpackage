@@ -372,7 +372,7 @@ function init (firstTime)
 
       -- re-wrap buffered lines at the new size
       lines = {}
-      for _,styles in ipairs(rawlines) do 
+      for _,styles in ipairs(rawlines) do
          fillBuffer(styles[1],styles[2])
       end
       CallPlugin("462b665ecb569efbf261422f", "registerMiniwindow", win) -- fail silently
@@ -666,12 +666,13 @@ function add_line ( line, is_beginning_of_message, urls )
     end -- if
 end -- add_line
 
-function fillBuffer(rawstyles, urls)
+function fillBuffer(rawstyles, rawurls)
    local avail = WINDOW_WIDTH - (TEXT_INSET * 2) - 9
    local line_styles = {}
    local beginning = true
    local length = 0
-   local styles = copytable.deep (rawstyles)
+   local styles = copytable.deep(rawstyles)
+   local urls = copytable.deep(rawurls)
    
    -- It turns out you can reduce the function
    -- call time by instantiating functions as local.
