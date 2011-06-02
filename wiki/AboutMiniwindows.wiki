@@ -2,7 +2,7 @@
 
 Ok. Let's cover this in two sections...
   # The practical interaction with miniwindow plugins in the Aardwolf MUSHclient Package.
-  # A technical overview of what it means to call something a miniwindow.
+  # A brief technical overview of what it means to call something a miniwindow.
 
 == Miniwindows in the Aardwolf MUSHclient Package ==
 
