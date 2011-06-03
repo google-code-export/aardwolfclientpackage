@@ -25,7 +25,7 @@ If you want another miniwindow to fit into the Z-order system, there are only a 
      CallPlugin("462b665ecb569efbf261422f", "registerMiniwindow", win)
   end
   }}}
-  * You need to add this section of code (or if you already have an `OnPluginListChanged` function, you need to work this code in) to make sure that the z order monitor plugin is up and running when your plugin goes through OnPluginInstall at startup.
+  * You need to add this section of code (or if you already have an `OnPluginListChanged` function, you need to work this code in) to make sure that the z order monitor plugin is up and running when your plugin goes through `OnPluginInstall` at startup.
   {{{
   require "checkplugin"
   function OnPluginListChanged()
