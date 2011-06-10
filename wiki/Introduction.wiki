@@ -4,7 +4,9 @@ So you've followed the instructions at http://www.aardwolf.com/play/downloadmc.h
 
 You've heard all about it. Everyone has suggested it. And now you've decided to try it. But maybe you're not used to MUSHclient. Or maybe you're used to an old version of MUSHclient and don't know anything about all of these newfangled plugins that are a part of the package. That's ok, because we're here to help.
 
-This guide should make the transition a little bit easier for those who have either never used MUSHclient before or who are new to this package.
+This guide should make the transition a little bit easier for those who have either never used MUSHclient before or who are new to this package. 
+
+<-- Content categories for the guide are on the left. Please click on them.
 
 If you think there should be something in this guide that isn't here, or if you think the wording should be changed for clarity, or if you have any other comments for any reason, contact me and let me know! My name is *Fiendish* in the game. I maintain this website and the plugin code for the package, and I want to help you.
 
