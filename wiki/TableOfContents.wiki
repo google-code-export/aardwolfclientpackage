@@ -3,7 +3,7 @@
   * [AboutMiniwindows Teach me about miniwindows!]
   * [Upgrading How do I upgrade from an old version?]
   * [MacLinux Running in Linux/MacOS]
-  * I'm used to a different client. How do I...?
+  * I'm not used to MUSHclient. How do I...?
     * [FAQ FAQ]
     * [Triggers Writing Triggers]
     * [Aliases Writing Aliases]
