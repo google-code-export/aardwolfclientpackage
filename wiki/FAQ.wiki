@@ -76,3 +76,5 @@ Set the maximum height to, for example, 30 lines (default 20)
 {{{
 SetOption ("auto_resize_maximum_lines", 30)
 }}}
+
+For more details on these and other secret configuration options, see http://www.mushclient.com/forum/bbshowpost.php?bbsubject_id=10430
