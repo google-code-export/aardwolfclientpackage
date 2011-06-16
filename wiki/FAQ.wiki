@@ -1,4 +1,4 @@
-= MUSHclient Tweaks FAQ =
+= MUSHclient Tweaks / FAQ =
 
 For the most part, as configured by default, you should be able to just run the program and start playing without any changes. But maybe you want to customize things a little bit to match your taste, and you don't know quite where to look.
 
@@ -53,3 +53,26 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/preferencesgen
 == Where is the main output scroll bar? I can't find it! ==
 
 [https://code.google.com/p/aardwolfclientpackage/wiki/Layout#Where_is_the_scroll_bar?_I_don%27t_see_it_anymore. See the answer to this question here.]
+
+== I don't like that the input bar automatically resizes. How do I change that? ==
+
+Honestly, I think you're just wrong, and I too thought it looked a bit funny when I first started using it. There are absolutely no down sides to the auto-resizing input bar, only benefits. Please try it for a few days, let yourself get used to it, then come back and thank me.
+
+== Ok, I tried it out for a while and I still hate that the input bar automatically resizes. Yes, I know I'm an idiot. ==
+
+As long as you gave it an honest chance, here are all of the things you can do to modify the way the input bar works...
+
+Press Ctrl+I or go to Game->Immediate... and in the window that pops up you can use one or more of the following script commands
+
+Deactivate resizing (1 re-activates it)
+{{{
+SetOption ("auto_resize_command_window", 0)
+}}}
+Set the minimum height to, for example, 2 lines (default 1)
+{{{
+SetOption ("auto_resize_minimum_lines", 2)
+}}}
+Set the maximum height to, for example, 30 lines (default 20)
+{{{
+SetOption ("auto_resize_maximum_lines", 30)
+}}}
