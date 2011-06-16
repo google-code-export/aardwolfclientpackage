@@ -4,7 +4,7 @@
   * [Upgrading How do I upgrade from an old version?]
   * [MacLinux Running in Linux/MacOS]
   * I'm not used to MUSHclient. How do I...?
-    * [FAQ FAQ]
+    * [FAQ FAQ/Configuration]
     * [Triggers Writing Triggers]
     * [Aliases Writing Aliases]
     * [CommandLineAliasesAndTriggers Adding alias/triggers from the command line]
