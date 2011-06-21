@@ -16,7 +16,7 @@ All of the miniwindows in this package can be moved around the screen, so that y
 
 http://www.aardwolf.com/play/screenshots.htm has many screenshots with examples of this.
 
-In order to move the miniwindows around, find the part of the miniwindow where the mouse cursor changes to a hand and then click and drag. The hand looks like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/handcursor.png" align=top>
+In order to move the miniwindows around, find the part of the miniwindow where the mouse cursor changes to a hand and then click and drag. This part is either the entire miniwindow or a bar across the top if the rest of the area is used for other click actions. The hand looks like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/handcursor.png" align=top>
 
 === Resizing ===
 
