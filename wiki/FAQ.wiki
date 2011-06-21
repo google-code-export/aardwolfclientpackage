@@ -58,7 +58,7 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/preferencesgen
 
 Honestly, I think you're just wrong, and I too thought it looked a bit funny when I first started using it. There are absolutely no down sides to the auto-resizing input bar, only benefits. Please try it for a few days, let yourself get used to it, then come back and thank me.
 
-== Ok, I tried it out for a while and I still hate that the input bar automatically resizes. Yes, I know I'm an idiot. ==
+== Ok, I tried it out for a while and I still hate that the input bar automatically resizes. Yes, I know I'm wrong. ==
 
 As long as you gave it an honest chance, here are all of the things you can do to modify the way the input bar works...
 
