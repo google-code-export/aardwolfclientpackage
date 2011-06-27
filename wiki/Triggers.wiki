@@ -47,3 +47,9 @@ Or switch to using [http://mushclient.com/scripts/doc.php?general=regexp regular
 See this forum post explaining how to translate the zMUD/CMUD multi-state trigger concept into MUSHclient triggers:
 
 http://www.mushclient.com/forum/bbshowpost.php?bbsubject_id=10338
+
+== zMUD lets me add triggers from the input bar. How do I do that in MUSHclient? ==
+
+See the guide page on that subject here:
+
+https://code.google.com/p/aardwolfclientpackage/wiki/CommandLineAliasesAndTriggers
