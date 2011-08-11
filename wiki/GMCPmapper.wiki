@@ -143,7 +143,7 @@ and
 {{{
 bigmap on
 }}}
-or through the right-click menus
+or through the right-click menu options
 
 https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/hide_bigmap_menu.png
 
