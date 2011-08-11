@@ -35,6 +35,7 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlogtimestam
 === Customize Channels ===
 
 By default all channels are captured to the communication log window. You can use this option to change which channels get captured and which ones don't. In the following example, all channels except for auction and debate are being captured:
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/choose_captured_channels.png
 
 === Capture Other Info > ===
 
