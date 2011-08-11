@@ -1,6 +1,6 @@
 = How do I write aliases in MUSHclient? =
 
-Scripting is a complicated subject that has been addressed by documentation for MUSHclient itself. See the following pages for help on writing aliases:
+Scripting is a complicated subject that has been addressed by documentation for MUSHclient itself. See the following pages for some help on writing aliases:
 
   * [http://www.mushclient.com/forum/?id=6030 Introduction to scripting]
   * [http://www.mushclient.com/forum/?id=8084 Making aliases]
