@@ -1,4 +1,4 @@
-= ASCII overhead map - `aard_ASCII_map.xml` =
+= ASCII automap - `aard_ASCII_map.xml` =
 This plugin shows an overhead view of the local area by capturing the game's map output to a miniwindow.
 
 == What does the ascii map look like? ==
@@ -19,3 +19,9 @@ Changes the display font.
 Shows your current coordinates (similar to as displayed by the `coord` command) underneath the room exits line.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/asciimapcoordinates.png
+
+==== Bring To Front / Send To Back ====
+
+Change the Z-order as shown in:
+
+https://code.google.com/p/aardwolfclientpackage/wiki/AboutMiniwindows#Controllable_Z-order
