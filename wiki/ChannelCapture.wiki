@@ -26,15 +26,15 @@ Copies the entire capture buffer to the clipboard. This is like Copy Selected bu
 
 Changes the display font.
 
-=== Turn Echo Off ===
-
-By default, all lines that get captured to the communication log window also get shown in the main output. Use this option if you want captured lines to not show in the main output.
-
 === Timestamp > ===
 
-You'll notice in the above example images that captured messages are marked with the date and time. You can change the format of this timestamp, or disable it, by choosing one of the options in this sub-menu.
+You'll notice in the above example image that captured messages are marked with the date and time. You can change the format of this timestamp, or disable it, by choosing one of the options in this sub-menu.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlogtimestamp.png
+
+=== Customize Channels ===
+
+By default all channels are captured to the communication log window. You can use this option to change which channels get captured and which ones don't. In the following example, all channels except for auction and debate are being captured:
 
 === Capture Other Info > ===
 
@@ -43,6 +43,10 @@ Some informational messages on Aardwolf do not present themselves in the form of
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlogother.png
 
 INFO:, Global Quest:, Remort Auction:, and speech from mobs can be optionally captured by enabling or disabling the right options. If you are in a clan with members who all have gold donation triggers, you might also desire to specifically disable the capturing of clan donation messages.
+
+=== Echo Channels In Main Window > ===
+
+By default, all lines that get captured to the communication log window also get shown in the main output. Use this submenu if you want to change that.
 
 === Logging to File > ===
 
