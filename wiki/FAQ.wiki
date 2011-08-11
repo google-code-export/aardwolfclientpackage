@@ -4,7 +4,7 @@ For the most part, as configured by default, you should be able to just run the 
 
 <wiki:toc max_depth="2" />
 
-== If I want to make configuration changes and triggers and stuff, where do I look? ==
+== Where do I look for configuration and triggers and stuff? ==
 
 The main configuration area of MUSHclient is accessible through the Game menu. Go to Game->Configure
 
@@ -14,12 +14,12 @@ All of the options under this menu will just bring up different sections of the 
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/configscreen.png
 
-== How do I make it so that commands stay on the input line after I hit enter? ==
+== How do I make commands stay on the input line after I hit enter? ==
 
 Go to Game->Configure->Commands... as shown above.
 Then check the box for "Auto-repeat Commands".
 
-== How do I make my keyboard number pad send numbers instead of north/south/east/west/etc? ==
+== How do I make my number pad send numbers instead of north/south/east/west/etc? ==
 
 Go to Game->Configure->Keypad... as shown above.
 Then uncheck the box for "Enable Keypad Keys".
@@ -29,9 +29,9 @@ Then uncheck the box for "Enable Keypad Keys".
 Go to Game->Configure->Output... as shown above.
 Click on the "Font..." button and choose a new font.
 
-== Can I get rid of that message bubble that shows the line number and date? ==
+== How do I get rid of the bubble that shows line numbers and dates? ==
 
-Absolutely. Go to Game->Configure->Output... as shown above.
+Go to Game->Configure->Output... as shown above.
 Uncheck "Show Line Information".
 
 == Can I make it so that text automatically gets copied to the clipboard when I select it, without having to do Ctrl+C? ==
@@ -43,9 +43,9 @@ Check "Copy selection to Clipboard".
 
 Nope. Sorry. But see the page on [ColorCopy the included plugin for copying with color codes].
 
-== Can I disable F1 as being the program help macro? ==
+== How do I disable F1 as being the help macro? ==
 
-Yes, though that's stored in a different place than most configuration settings.
+That's stored in a different place than most configuration settings.
 Go to File->Global Preferences... and click on the General tab. Then check the box for "F1, F6 are macros". This will also let you use F1 as your own custom macro if you want.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/filemenu.png
@@ -54,11 +54,11 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/preferencesgen
 
 == Where is the main output scroll bar? I can't find it! ==
 
-[https://code.google.com/p/aardwolfclientpackage/wiki/Layout#Where_is_the_scroll_bar?_I_don%27t_see_it_anymore. See the answer to this question here.]
+[https://code.google.com/p/aardwolfclientpackage/wiki/Layout#Where_is_the_scroll_bar? See the answer to this question here.]
 
 == I don't like that the input bar automatically resizes. How do I change that? ==
 
-Honestly, I think you're just wrong, and I too thought it looked a bit funny when I first started using it. There are absolutely no down sides to the auto-resizing input bar, only benefits. Please try it for a few days, let yourself get used to it, then come back and thank me.
+Honestly, I think you're wrong to want to change this, and I too thought it looked a bit funny when I first started using it. There are absolutely no down sides to the auto-resizing input bar, only benefits. Please try it for a few days, let yourself get used to it, then come back and thank me. If you still don't like it after a few days of use, try the next section.
 
 == Ok, I tried it out for a while and I still hate that the input bar automatically resizes. Yes, I know I'm wrong. ==
 
