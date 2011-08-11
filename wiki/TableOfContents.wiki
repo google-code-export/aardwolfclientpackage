@@ -11,9 +11,9 @@
     * [ConvertingScripts Converting my scripts over from <other_client>]
   * What's included in the package?
     * Featured Plugins
-      * [ASCIImapper ASCII overhead view]
+      * [ASCIImapper ASCII automap]
       * [GMCPmapper GMCP driven world mapper]
-      * [ChannelCapture Channel capture window]
+      * [ChannelCapture Communication Log window]
       * [ColorCopy Copy output with color codes]
       * [GroupMonitor Group monitor window]
       * [HealthBars Graphical health bars]
