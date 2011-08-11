@@ -4,7 +4,7 @@ MUSHclient does not by default have a mechanism for creating aliases and trigger
 
 But the fact remains that sometimes a player wants to be able to set up simple aliases and triggers quickly and easily without dealing with the rather complicated interface and without having to write a full plugin.
 
-It is possible to add this functionality to MUSHclient by adding two aliases:
+It is possible to add this functionality to MUSHclient by adding two aliases (described down below):
 {{{
 #alias {*} {*}
 }}}
