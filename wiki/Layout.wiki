@@ -14,9 +14,9 @@ With this plugin, however, the main output area can be moved away from the top l
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/mushclientyeswindow.png
 
-== Where is the scroll bar? I don't see it anymore. ==
+== Where is the scroll bar? ==
 
-Actually, you do, but it's not attached to the text area anymore. Sorry. Look over at the very far right side of your MUSHclient window. Actually, that's exactly the same place it was before. This is just how MUSHclient's !TextRectangle feature works. `*shrug*`
+It's not attached to the text area anymore. Sorry. Look over at the very far right side of your MUSHclient window. Actually, that's exactly the same place it was before. This is just how MUSHclient's !TextRectangle feature works. `*shrug*`
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/mushclientyeswindowscroll.png
 
