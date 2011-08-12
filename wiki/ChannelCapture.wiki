@@ -69,9 +69,9 @@ Aside from the standard resizing (drag the bottom-right corner) and moving (drag
 
 You can scroll up and down inside the channel capture window by any of the following methods:
 
-  * mouse-wheel scrolling with the cursor placed inside the miniwindow
-  * clicking on the up/down arrows at the top-right and bottom-right of the miniwindow
-  * dragging the miniwindow's scrollbar shuttle
+  # mouse-wheel scrolling with the cursor placed inside the miniwindow
+  # clicking on the up/down arrows at the top-right and bottom-right of the miniwindow
+  # dragging the miniwindow's scrollbar shuttle
 
 === Select captured text ===
 
