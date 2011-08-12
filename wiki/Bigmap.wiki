@@ -35,13 +35,16 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmapcompare.
 I think the value of bigmap is obvious here.
 
 == How do I change this plugin's behavior? / How do I get the standard GMCP mapper tile view back on continents? ==
-Right click functionality isn't enabled on this one just yet, but there are a few commands for switching between different operation modes.
+You can control the bigmap either by commands listed in the help output or via a right-click menu.
 
 To get a brief description of the available bigmap commands, type
 {{{
 bigmap help
 }}}
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmaphelp.png
+
+The same options in the right-click menu look like this:
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmap_menu.png
 
 === bigmap on/off ===
 
