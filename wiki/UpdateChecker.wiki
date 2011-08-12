@@ -12,6 +12,13 @@ Choosing `[`Yes`]` will enable update checks. Choosing `[`No`]` will not.
 
 At any time during play you can change your mind as indicated in the message by simple installing or removing the !Aardwolf_Package_Update_Checker plugin (aard_package_update_checker.xml).
 
+== Can I make the update check run more often than once per startup? ==
+
+The plugin has the following built-in command for that:
+{{{
+package update check
+}}}
+
 == How do I know when there is a new version available? ==
 
 If the update checker plugin finds a new update, you will see a message pop up like this one:
@@ -30,6 +37,6 @@ If you choose to ignore the update message, you will not be reminded about updat
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/update_check_ignore.png
 
-=== How does it check what version I have? ===
+== How does it check what version I have? ==
 
 It uses the `AardwolfPackageChanges.txt` file in your MUSHclient directory. Please never modify this file.
