@@ -5,7 +5,7 @@ Displays graphical status bars for Health, Mana, Moves, Experience, Enemy Health
 == What does it look like? ==
 When you first load the client package, it should look something like this...
 
-http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbars.png
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarsunstacked.png
 
 == When I first load it? What other display options are there? ==
 
@@ -22,10 +22,10 @@ You may decide that the color and order sufficiently differentiates the bars for
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarsnolabels.png
 
-=== Un-stack Bars ===
-You may want a more prompt-like configuration for the status bars that puts them in a long row instead of stacking them on top of each other. Use the Un-stack and Stack options for switching between the original configuration and a horizontal configuration.
+=== Stack Bars ===
+You may want a less prompt-like configuration for the status bars that puts them in a stack instead of a long row. Use the Stack and Un-stack options for switching between the original configuration and a stacked configuration.
 
-http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarsunstacked.png
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbars.png
 
 === Activate/De-activate > ===
 Maybe you don't need to see your mana status all the time. Or maybe you don't care about enemy health. You can turn different bars off and on using the options in this sub-menu.
