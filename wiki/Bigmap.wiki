@@ -28,8 +28,6 @@ Because before the GMCP mapper looked like this on the continents and had a less
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmapoff.png
 
-== You idiot, the GMCP map tiles are WAY BETTER on the continents. This bigmap stuff is garbage! ==
-
 Here's just one example of why this addition makes sense.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmapcompare.png
