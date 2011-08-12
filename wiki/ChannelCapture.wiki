@@ -43,7 +43,7 @@ Some informational messages on Aardwolf do not present themselves in the form of
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlogother.png
 
-INFO:, Global Quest:, Remort Auction:, and speech from mobs can be optionally captured by enabling or disabling the right options. If you are in a clan with members who all have gold donation triggers, you might also desire to specifically disable the capturing of clan donation messages.
+INFO:, Global Quest:, and Remort Auction: can be optionally captured by enabling or disabling the right options. If you are in a clan with members who all have gold donation triggers, you might also desire to specifically disable the capturing of clan donation messages.
 
 === Echo Channels In Main Window > ===
 
