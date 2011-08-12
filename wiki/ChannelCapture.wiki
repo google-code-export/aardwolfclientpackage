@@ -65,6 +65,12 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comloglogging.
 
 Aside from the standard resizing (drag the bottom-right corner) and moving (drag the title bar), there are a few other things you can do.
 
+=== Open URLs in your web browser ===
+
+Right-clicking on a captured URL presents two new menu options, "Go to URL" and "Copy URL to Clipboard".
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/chat_url_menu.png
+
 === Scroll up and down ===
 
 You can scroll up and down inside the channel capture window by any of the following methods:
