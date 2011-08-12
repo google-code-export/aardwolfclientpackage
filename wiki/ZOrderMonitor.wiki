@@ -1,4 +1,4 @@
-= Miniwindow Z-order Monitor - `aard_miniwindow_z_order_monitor.xml` =
+= Miniwindow Z-order Monitor (`aard_miniwindow_z_order_monitor.xml`) =
 
 This plugin handles keeping track of the Z ordering of the miniwindow plugins included in the package and any other plugins that choose to use this ordering system.
 
