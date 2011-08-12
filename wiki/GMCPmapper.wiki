@@ -1,4 +1,4 @@
-= GMCP mapper (`aard_GMCP_mapper.xml and aardmapper.lua`) =
+= GMCP mapper (`aard_GMCP_mapper.xml` and `aardmapper.lua`) =
 
 A dynamically updated mapper that enables rapid navigation by storing room information in a SQLite database.
 
