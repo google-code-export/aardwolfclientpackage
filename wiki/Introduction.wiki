@@ -2,8 +2,6 @@
 
 So you've followed the instructions at http://www.aardwolf.com/play/downloadmc.htm and either you downloaded the official quasi-monthly release of the Aardwolf MUSHclient Package, or you've gone to get the latest development snapshot from the [https://code.google.com/p/aardwolfclientpackage/downloads/list Downloads] link above, and now you have a shiny new MUSHclient folder. Congratulations! You're well on your way to an enhanced Aardwolf experience. 
 
-You've heard all about it. Everyone has suggested it. And now you've decided to try it. But maybe you're not used to MUSHclient. Or maybe you're used to an old version of MUSHclient and don't know anything about all of these newfangled plugins that are a part of the package. That's ok, because we're here to help.
-
 This guide should make the transition a little bit easier for those who have either never used MUSHclient before or who are new to this package. 
 
 <-- Content categories for the guide are on the left. Please click on them.
