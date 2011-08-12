@@ -29,3 +29,7 @@ https://code.google.com/p/aardwolfclientpackage/downloads/detail?name=MUSHclient
 If you choose to ignore the update message, you will not be reminded about updates again until another beta version is released. As a reminder of this policy, you will be shown a message similar to this one:
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/update_check_ignore.png
+
+=== How does it check what version I have? ===
+
+It uses the `AardwolfPackageChanges.txt` file in your MUSHclient directory. Please never modify this file.
