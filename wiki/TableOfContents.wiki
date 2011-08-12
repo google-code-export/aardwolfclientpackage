@@ -22,6 +22,7 @@
       * [TickTimer Tick timer]
       * [Layout Main output layout control]
       * [NewConnection New user welcome screen]
+      * [UpdateChecker Automatic update checker]
     * Required Plugins (do not uninstall!)
       * [ZOrderMonitor Miniwindow Z-order Monitor]
       * [GMCPHandler GMCP handler]
