@@ -1,4 +1,4 @@
-= The group monitor window - `aard_group_monitor_gmcp.xml` =
+= The group monitor window (`aard_group_monitor_gmcp.xml`) =
 
 Displays the status of all of your current group members.
 
