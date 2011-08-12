@@ -20,7 +20,7 @@
       * [StatMon Stats window]
       * [Bigmap Bigmap display]
       * [TickTimer Tick timer]
-      * [Layout Main output windower]
+      * [Layout Main output layout control]
       * [NewConnection New user welcome screen]
     * Required Plugins (do not uninstall!)
       * [ZOrderMonitor Miniwindow Z-order Monitor]
