@@ -1,4 +1,4 @@
-= The health bars window - `aard_health_bars_gmcp.xml` =
+= The health bars window (`aard_health_bars_gmcp.xml`) =
 
 Displays graphical status bars for Health, Mana, Moves, Experience, Enemy Health, and Alignment.
 
