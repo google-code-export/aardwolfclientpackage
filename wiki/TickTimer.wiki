@@ -1,4 +1,4 @@
-= Tick countdown timer - `Aardwolf_Tick_Timer.xml` =
+= Tick countdown timer (`Aardwolf_Tick_Timer.xml`) =
 
 Estimates the time left until the next game tick. (see 'help tick')
 
