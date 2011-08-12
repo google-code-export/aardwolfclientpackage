@@ -67,7 +67,7 @@ Aside from the standard resizing (drag the bottom-right corner) and moving (drag
 
 === Open URLs in your web browser ===
 
-Right-clicking on a captured URL presents two new menu options, "Go to URL" and "Copy URL to Clipboard".
+Right-clicking on a captured URL presents two new menu options, "Go to URL" (which will launch your default web browser) and "Copy URL to Clipboard".
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/chat_url_menu.png
 
