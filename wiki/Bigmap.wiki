@@ -66,4 +66,6 @@ The same options in the right-click menu look like this:
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmap_menu.png
 
 == I got a message saying "To activate this continent map, walk onto the continent and type: 'bigmap update'. What does that mean? ==
-Before you can see the pretty continent picture like shown above, the plugin has to generate it based on the bigmap information from the game. This is how we do that. Just do what the message says.
+The message is only there as a precaution, since the plugin should take care of this for you automatically. But if the message persists, just do what it says.
+
+Explanation: Before you can see the pretty continent picture like shown above, the plugin has to generate it based on the bigmap information from the game. This is how we do that.
