@@ -1,0 +1,31 @@
+= Automatic Update Checker (aard_package_update_checker.xml) =
+
+This plugin enables the Aardwolf MUSHclient Package, if you choose, to automatically check for new beta versions from this google code repository every time you launch MUSHclient.
+
+== Enabling update checks ==
+
+The very first time you launch a new copy of the Aardwolf MUSHclient Package you should see this message:
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/update_check_first_run.png
+
+Choosing `[`Yes`]` will enable update checks. Choosing `[`No`]` will not.
+
+At any time during play you can change your mind as indicated in the message by simple installing or removing the !Aardwolf_Package_Update_Checker plugin (aard_package_update_checker.xml).
+
+== How do I know when there is a new version available? ==
+
+If the update checker plugin finds a new update, you will see a message pop up like this one:
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/update_check_updates.png
+
+=== What happens if I choose `[`Ok, Show Me`]`? ===
+
+Choosing `[`Ok, Show Me`]` will launch your default web browser to this URL which will always allow you to download the newest beta release:
+
+https://code.google.com/p/aardwolfclientpackage/downloads/detail?name=MUSHclient.zip
+
+=== What happens if I choose `[`Ignore`]` or press Esc or just close the message dialog? ===
+
+If you choose to ignore the update message, you will not be reminded about updates again until another beta version is released. As a reminder of this policy, you will be shown a message similar to this one:
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/update_check_ignore.png
