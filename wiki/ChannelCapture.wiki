@@ -49,6 +49,8 @@ INFO:, Global Quest:, Remort Auction:, and speech from mobs can be optionally ca
 
 By default, all lines that get captured to the communication log window also get shown in the main output. Use this submenu if you want to change that.
 
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/echo_channels_menu.png
+
 === Logging to File > ===
 
 The channel capture plugin has the ability to record a log of all captured messages to a text file in the MUSHclient\logs folder.
