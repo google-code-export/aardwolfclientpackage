@@ -44,6 +44,7 @@ bigmap help
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmaphelp.png
 
 The same options in the right-click menu look like this:
+
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmap_menu.png
 
 === bigmap on/off ===
