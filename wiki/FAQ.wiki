@@ -79,8 +79,11 @@ Set the maximum height to, for example, 30 lines (default 20)
 SetOption ("auto_resize_maximum_lines", 30)
 }}}
 
-For more details on these and other secret configuration options, see http://www.mushclient.com/forum/bbshowpost.php?bbsubject_id=10430
+For more details on these and other secret configuration options, see 
+
+http://www.mushclient.com/forum/bbshowpost.php?bbsubject_id=10430
 
 === Can I lock my layout so that I don't accidentally drag my miniwindows out of place? ===
 Yes, the aard_layout plugin now includes that feature. See here for details:
+
 http://code.google.com/p/aardwolfclientpackage/wiki/Layout#How_do_I_lock_my_layout?
