@@ -44,6 +44,12 @@ https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/zorderexample
 
 https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/zorderexample3.png
 
+=== Lockable Layout ===
+
+You can lock and unlock your miniwindow layout at any time. See here for more information:
+
+http://code.google.com/p/aardwolfclientpackage/wiki/Layout#How_do_I_lock_my_layout?
+
 == Miniwindows: A Technical Overview ==
 
 A "miniwindow" is the MUSHclient term for using a region of the screen for graphics, text, and mouse-event handlers that are technically part of but visually distinct from the main text output from the game.
