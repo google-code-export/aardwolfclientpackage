@@ -1,6 +1,6 @@
-= Main output windower - `aard_layout.xml` =
+= Main output windower and layout control - `aard_layout.xml` =
 
-Sets up the main output as a movable, resizable region instead of filling the whole client. It creates a desktop-like space that automatically adjusts the line wrap column when the main output area is resized.
+Sets up the main output as a movable, resizable region instead of filling the whole client. It creates a desktop-like space that automatically adjusts the line wrap column when the main output area is resized. It also allows you to lock down the position and size of cooperative miniwindows.
 
 == What's this about? ==
 
