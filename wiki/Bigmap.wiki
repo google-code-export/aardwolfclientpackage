@@ -18,7 +18,7 @@ You are here:
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmapme.png
 
-The inner box shows your current room. The outer border shows the range that you can see on the ASCII overhead map.
+The inner box shows your current room. The outer border shows the range that you can see on the ASCII automap.
 
 == Hey, my GMCP mapper got replaced by this bigmap picture when I walk onto the continents. What gives? ==
 That is a major feature of this plugin. If you really don't like it, see below for options to change this behavior.
