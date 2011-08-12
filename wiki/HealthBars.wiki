@@ -50,7 +50,7 @@ This option changes the display style for the gauges from the gradient shaded ba
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarsflatgauges.png
 
-=== Overlay Numbers ===
-This option makes it so that the HP, MN, MV, TNL, and Enemy (when fighting) bars get overlayed with their respective raw numbers and/or percentages. This mode disables the 25% line markers in the bars because they would interfere with reading the text.
+=== Overlay Numbers > ===
+This submenu has options to make it so that the HP, MN, MV, TNL, and Enemy (when fighting) bars get overlayed with their respective raw numbers and/or percentages. This mode disables the 25% line markers in the bars because they would interfere with reading the text.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarsoverlaynumbers.png
