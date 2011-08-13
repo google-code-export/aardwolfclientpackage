@@ -91,7 +91,7 @@ If you want to have multiple log windows, each capturing different channels, you
 
   # Go into your plugins folder and find `aard_channels_fiendish.xml`
   # Make a duplicate of that file (copy/paste) in the same folder. Give the duplicate any name you want, as long as the new file keeps the same .xml file type.<BR><BR>http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/duplicate_comm_log_plugin.png
-  # In MUSHclient, go to the `Edit` menu and select `"Generate Unique ID..."`
+  # In MUSHclient, go to the `Edit` menu and select `"Generate Unique ID..."`<BR><BR>http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/unique_id_menu.png
   # Copy the number in the small window that pops up and then click `Close`.<BR><BR>http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/unique_id.png
   # Open the duplicate file you just made in a text editor like Notepad and find the bit near the top of the file that says `id="b555825a4a5700c35fa80780"`<BR><BR>http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comm_log_id.png
   # Replace the id string with the new one generated above.<BR><BR>http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comm_log_change_id.png
