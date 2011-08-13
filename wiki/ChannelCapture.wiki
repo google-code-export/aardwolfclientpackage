@@ -97,4 +97,4 @@ If you want to have multiple log windows, each capturing different channels, you
   # Replace the id string with the new one generated above.<BR><BR>http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comm_log_change_id.png
   # Save and close the file.
   # Load your newly modified plugin into MUSHclient.
-  # You should now have another Communication Log window. Make sure to customize both so that they don't capture the same channels.<BR><BR>http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/two_comm_logs.png
+  # You should now have another Communication Log window. Make sure to customize them (see the [https://code.google.com/p/aardwolfclientpackage/w/edit.do#Customize_Channels Customize Channels] and [https://code.google.com/p/aardwolfclientpackage/w/edit.do#Capture_Other_Info Capture Other Info] sections above) so that they don't capture the same channels.<BR><BR>http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/two_comm_logs.png
