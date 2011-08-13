@@ -5,6 +5,7 @@
   * [MacLinux Running in Linux/MacOS]
   * I'm not used to MUSHclient. How do I...?
     * [FAQ FAQ/Configuration]
+    * [LoadPlugins Load new plugins]
     * [Triggers Writing Triggers]
     * [Aliases Writing Aliases]
     * [CommandLineAliasesAndTriggers Adding alias/triggers from the command line]
