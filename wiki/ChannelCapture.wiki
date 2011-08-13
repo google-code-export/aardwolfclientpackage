@@ -1,8 +1,8 @@
-= Channel capture window (`aard_channels_fiendish.xml`) =
+= Communication Log window (`aard_channels_fiendish.xml`) =
 
 This plugin captures channels and other bits of information to a floating miniwindow so that you can follow conversations more easily.
 
-== What does the channel capture window look like? ==
+== What does the communication log window look like? ==
 
 It should look something like this:
 
@@ -10,7 +10,7 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlog.png
 
 == What options are available if I right-click? == 
 
-The channel capture window has many different right-click options.
+There are many different right-click options.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlogright.png
 
