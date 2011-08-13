@@ -84,3 +84,17 @@ You can scroll up and down inside the channel capture window by any of the follo
 The channel capture miniwindow, through the magic of awesomeness, supports selecting arbitrary bits of text with the mouse. Just select it as you would select text anywhere else. After you have text selected, you can copy the selection to the clipboard with or without Aardwolf color codes via the right-click menu.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlogselect.png
+
+== Creating multiple log windows ==
+
+If you want to have multiple log windows, each capturing different channels, you should take the following steps:
+
+  # Go into your plugins folder and find `aard_channels_fiendish.xml`
+  # Make a duplicate of that file (copy/paste) in the same folder. Give the duplicate any name you want, as long as the new file name also ends in the .xml extension.
+  # In MUSHclient, go to the `Edit` menu and select `"Generate Unique ID..."`
+  # Copy the number in the small window that pops up and then click OK.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/uniqe_id.png
+
+  # Open the duplicate file you just made in a text editor like Notepad and find the bit (on or near the 11th line) that says `id="b555825a4a5700c35fa80780"`
+   
