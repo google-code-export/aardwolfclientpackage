@@ -24,11 +24,7 @@ The inner box shows your current room. The outer border shows the range that you
 That is a major feature of this plugin. If you really don't like it, see below for options to change this behavior.
 
 == Why did you do this? ==
-Because before the GMCP mapper looked like this on the continents and had a less than stellar display:
-
-http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmapoff.png
-
-Here's just one example of why this addition makes sense.
+Because before the GMCP mapper looked like this on the continents and had a less than stellar display. Here's just one example of why this addition makes sense.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/bigmapcompare.png
 
