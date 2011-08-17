@@ -83,7 +83,11 @@ For more details on these and other secret configuration options, see this page:
 
 http://www.mushclient.com/forum/bbshowpost.php?bbsubject_id=10430
 
-=== Can I lock my layout so that I don't accidentally drag my miniwindows out of place? ===
-Yes, the aard_layout plugin now includes that feature. See here for details:
+== How do I lock my layout so that I don't accidentally drag my miniwindows out of place? ==
+See here for details on that feature of the layout plugin:
 
 http://code.google.com/p/aardwolfclientpackage/wiki/Layout#How_do_I_lock_my_layout?
+
+== How do I remove or change the Aardwolf logo background image in the main output? ==
+The image file being used is `/worlds/plugins/images/aardbg13.png`
+To have the image not show, either rename or remove that file.
