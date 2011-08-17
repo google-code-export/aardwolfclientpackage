@@ -89,6 +89,6 @@ See here for details on that feature of the layout plugin:
 http://code.google.com/p/aardwolfclientpackage/wiki/Layout#How_do_I_lock_my_layout?
 
 == How do I remove or change the Aardwolf logo background image in the main output? ==
-The image file being used is `/worlds/plugins/images/aardbg13.png`
+The image file being used is `MUSHclient/worlds/plugins/images/aardbg13.png`
 
 To have the image not show, either rename or remove that file. To change the image, just replace it with a new one.
