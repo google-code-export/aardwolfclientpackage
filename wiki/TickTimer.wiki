@@ -1,6 +1,6 @@
 = Tick countdown timer (`Aardwolf_Tick_Timer.xml`) =
 
-Estimates the time left until the next game tick. (see 'help tick')
+Estimates the time left until the next game tick in the MUSHclient status area. (see 'help tick')
 
 == Where is it? ==
 
