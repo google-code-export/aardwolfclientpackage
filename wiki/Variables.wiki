@@ -5,3 +5,7 @@ Something that confuses many people is that there are different kinds of variabl
 Watch the video in this thread to understand how to use the different types of variables in MUSHclient.
 
 http://www.gammon.com.au/forum/?id=10863
+
+See also...
+
+[http://mushclient.com/forum/?id=7794#22 How do I use a variable in a trigger or an alias pattern?]
