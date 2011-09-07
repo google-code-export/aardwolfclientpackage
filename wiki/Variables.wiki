@@ -9,3 +9,7 @@ http://www.gammon.com.au/forum/?id=10863
 See also...
 
 [http://mushclient.com/forum/?id=7794#22 How do I use a variable in a trigger or an alias pattern?]
+
+[http://mushclient.com/forum/?id=7794#32 How do I compare a wildcard in a trigger?]
+
+[http://mushclient.com/forum/?id=7794#50 How can I make an alias take an optional wildcard?]
