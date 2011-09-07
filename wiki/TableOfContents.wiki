@@ -9,7 +9,7 @@
     * [Triggers Writing Triggers]
     * [Aliases Writing Aliases]
     * [Variables Using Variables]
-    * [CommandLineAliasesAndTriggers Adding alias/triggers from the command line]
+    * [CommandLineAliasesAndTriggers Adding aliases/triggers from the command line]
     * [ConvertingScripts Converting my scripts over from <other_client>]
   * What's included in the package?
     * [FeaturedPlugins Featured Plugins]
