@@ -94,4 +94,4 @@ The image file being used is `MUSHclient/worlds/plugins/images/aardbg13.png`
 To have the image not show, either rename or remove that file. To change the image, just replace it with a new one.
 
 == How do I send a semicolon to the MUD? It keeps getting cut off. ==
-Semicolon is the default line-break character for MUSHclient. In order to send a literal ; without having it eaten, you need to type two of them. ;; becomes ;.
+Semicolon is the default line-break character for MUSHclient. In order to send a literal ; without having it eaten, you need to type two of them. ;; becomes ;. ;;;; becomes ;;. And so on.
