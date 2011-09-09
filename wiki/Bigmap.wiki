@@ -2,6 +2,7 @@
 
 Display a graphical view of the continent bigmap. Optionally merge this display with the GMCP mapper window (this is the default behavior).
 
+<wiki:toc max_depth="3" />
 == What's a bigmap? ==
 Back when the continents were created, Lasher decided that it would be nice to give people a way to visually appreciate them better. The 'bigmap' command lets you see the continent that you're currently on. See the in-game help file:
 {{{
