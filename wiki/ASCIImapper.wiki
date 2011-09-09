@@ -27,3 +27,7 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/asciimapcoordi
 Change the Z-order as shown in:
 
 https://code.google.com/p/aardwolfclientpackage/wiki/AboutMiniwindows#Controllable_Z-order
+
+=== Echo Map in Main Output ===
+
+This allows you to, if you want, have the ascii map show in the main output as well.
