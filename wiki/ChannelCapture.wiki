@@ -2,6 +2,8 @@
 
 This plugin captures channels and other bits of information to a floating miniwindow so that you can follow conversations more easily.
 
+<wiki:toc max_depth="3" />
+
 == What does the communication log window look like? ==
 
 It should look something like this:
