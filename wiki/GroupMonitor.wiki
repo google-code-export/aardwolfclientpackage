@@ -2,6 +2,7 @@
 
 Displays the status of all of your current group members.
 
+<wiki:toc max_depth="3" />
 == What does it look like? ==
 
 There are a number of different similar forms the group monitor window can take. The long answer is that it depends on how you've sized the window, because the plugin attempts to automatically arrange group members to fit logically into the available space. The organization algorithm it follows is that it starts with a single column, and then if there is enough room for additional columns it will create new columns if the creation of those columns would also reduce the number of rows.
