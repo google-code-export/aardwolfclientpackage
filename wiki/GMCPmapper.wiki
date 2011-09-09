@@ -185,6 +185,8 @@ Then choose your level to lock under. Keep in mind that these locks automaticall
 
 https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/gmcpmapperexitlocklevel.png
 
-If you click OK, the chosen exit from the chosen room will be assigned the chosen lock level. You will see locked exits in red on the mapper like this:
+If you click OK, the chosen exit from the chosen room will be assigned the chosen lock level. 
+
+Locked exits display in the mapper in red instead of white.
 
 https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/gmcpmapperexitlockmarking.png
