@@ -2,18 +2,20 @@
 
 A lua snippet file that provides functions for handling Aardwolf color codes to any plugin that wants to use them.
 
+<wiki:toc max_depth="3" />
+
 == What functions does it provide? ==
 
-==== `StylesToColoursOneLine (styles, start_column, end_column)` ====
+=== `StylesToColoursOneLine (styles, start_column, end_column)` ===
 Converts all or part of a single line of MUSHclient style runs into a string containing Aardwolf color codes, starting at column start_column and ending at column end_column. To convert the entire line use 1 for start_column and some sufficiently high number for end_column like 99999.
 
-==== `ColoursToStyles (text)` ====
+=== `ColoursToStyles (text)` ===
 The reverse of !StylesToColoursOneLine. This takes a string containing Aardwolf color codes and generates a sequence of MUSHclient style runs.
 
-==== `strip_colours (text)` ====
+=== `strip_colours (text)` ===
 Takes a string containing Aardwolf color codes and removes all of the color codes from it.
 
-==== `stylesToANSI (styles)` ====
+=== `stylesToANSI (styles)` ===
 Converts a series of style runs to a string with embedded ansi codes.
 
 == How do I use this in a plugin? ==
