@@ -2,7 +2,7 @@
 
 Displays graphical status bars for Health, Mana, Moves, Experience, Enemy Health, and Alignment.
 
-<wiki:toc max_depth="2" />
+<wiki:toc max_depth="3" />
 
 == What does it look like? ==
 When you first load the client package, it should look something like this...
