@@ -172,4 +172,19 @@ For more information on this see the page for [Bigmap the merged Bigmap plugin].
 
 == Can I block dangerous routes? ==
 
-You can achieve this by assigning level locks to dangerous exits. To assign a level lock to an exit, right click on the "from" room (all exits are defined as being _from_ one room _to_ another) and choose `Change Exit Level Lock`.
+You can achieve this by assigning level locks to dangerous exits. To assign a level lock to an exit, right click on the "from" room (all exits are defined as being _from_ one room _to_ another) and choose *Change Exit Level Lock*.
+
+
+https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/gmcpmapperexitlockmenu.png
+
+Then select the exit from that room to which you want to add a level lock, and click OK.
+
+https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/gmcpmapperexitlockdialog.png
+
+Then choose your level to lock under. Keep in mind that these locks automatically take tiers into account. So a lock of level 50 will be open to a Tier 1 at level 40 and a Tier 5+ at level 1. The example below uses 300, which will always be locked for any level of any tier.
+
+https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/gmcpmapperexitlocklevel.png
+
+If you click OK, the chosen exit from the chosen room will be assigned the chosen lock level. You will see locked exits in red on the mapper like this:
+
+https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/gmcpmapperexitlockmarking.png
