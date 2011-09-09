@@ -45,9 +45,13 @@ Once Wine is installed in this way, you can start MUSHclient by right-clicking o
 ==== This Mac Wine download is buggy! ====
 
 Yeah, I know. The main problem is that _simple_ Mac support for Wine is super janky. If you want Mac Wine solutions that probably work better, but are a bit more complicated to set up than just drag-drop-play, try:
+
 [http://www.playonmac.com/en/]
+
 [http://wineskin.doh123.com/]
+
 And if you're really adventurous...
+
 [http://wiki.winehq.org/MacOSX/Installing]
 
 == Running MUSHclient in a virtual machine ==
