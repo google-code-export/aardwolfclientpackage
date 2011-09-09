@@ -1,3 +1,5 @@
+<wiki:toc max_depth="3" />
+
 = How do I add aliases and triggers from the command line like I can in `<other_client>`? =
 
 MUSHclient does not by default have a mechanism for creating aliases and triggers from the command line. This is likely because of a combination of the possible complexity of setting up any given alias or trigger and the fact that more and more people are moving towards using plugins for everything. 
