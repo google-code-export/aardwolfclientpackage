@@ -4,6 +4,8 @@ Ok. Let's cover this in two sections...
   # The practical interaction with miniwindow plugins in the Aardwolf MUSHclient Package.
   # A brief technical overview of what it means to call something a miniwindow.
 
+<wiki:toc max_depth="3" />
+
 == Miniwindows in the Aardwolf MUSHclient Package ==
 
 Miniwindows in the package all share certain characteristics with each other that are introduced in tips #2 and #3 of the center of the [NewConnection welcome message box] that pops up the first time you run the package.
