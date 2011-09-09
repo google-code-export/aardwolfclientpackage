@@ -2,6 +2,8 @@
 
 This plugin enables the Aardwolf MUSHclient Package, if you choose, to automatically check for new beta versions from this google code repository every time you launch MUSHclient.
 
+<wiki:toc max_depth="3" />
+
 == Enabling update checks ==
 
 The very first time you launch a new copy of the Aardwolf MUSHclient Package you should see this message:
