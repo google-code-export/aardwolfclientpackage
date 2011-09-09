@@ -2,6 +2,8 @@
 
 Sets up the main output as a movable, resizable region instead of filling the whole client. It creates a desktop-like space that automatically adjusts the line wrap column when the main output area is resized. It also allows you to lock down the position and size of cooperative miniwindows.
 
+<wiki:toc max_depth="3" />
+
 == What's this about? ==
 
 Well, you see, normally MUSHclient looks like this...
