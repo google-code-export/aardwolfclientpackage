@@ -148,7 +148,7 @@ Or if you're in the room you can use the command
 mapper thisroom
 }}}
 
-== I updated to a new version and now when I go out on the continents the mapper looks different. What's going on? ==
+== When I go out on the continents the mapper looks different. What is this? ==
 
 Are you confused about this?
 
