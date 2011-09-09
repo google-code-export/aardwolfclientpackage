@@ -6,14 +6,14 @@ The state of computers today is that Windows has had market dominance for so lon
 I (Fiendish) run the Aardwolf MUSHclient Package on both Linux and Mac OS (Intel). So yes, it is indeed possible to run this on all three major platforms. And it's pretty easy with a few small caveats that will be explained.
 
 == Running MUSHclient in Wine ==
-==== What is Wine? ====
+=== What is Wine? ===
 [http://www.winehq.org WineHQ] describes it in the following basic way: "Wine lets you run Windows software on other operating systems. With Wine, you can install and run these applications just like you would in Windows."
 
 You can also see the [https://secure.wikimedia.org/wikipedia/en/wiki/Wine_(software) Wikipedia entry for Wine_(software)] to learn more.
 
 One of the major benefits of using Wine is that you do not need to install Windows.
 
-==== How do I install Wine in Linux? ====
+=== How do I install Wine in Linux? ===
 
 Installing Wine in Linux is extremely straightforward with one minor caveat. If you are using an Intel graphics driver version between 2.12 and 2.15 (as of this writing) you'll probably need to use an old version of Wine (wine1.0 rather than wine), because of a bug in the Intel driver. It affects, for example, my Lenovo Thinkpad x201i running Ubuntu because it has an Intel graphics chip. If you have ATI or NVIDIA graphics, you should be fine with the latest version of Wine.
 <BR>See here: [https://bugs.freedesktop.org/show_bug.cgi?id=28798]
@@ -28,13 +28,13 @@ In Gentoo you could type:
   `sudo emerge wine`
 And so on...
 
-==== How do I install Wine on a Mac? ====
+=== How do I install Wine on a Mac? ===
 Requirements:
  * A Mac with an Intel CPU (All new Macs use Intel CPUs). Older PPC or 68k Macs cannot use Wine. Sorry.
  * X11 (this is already installed by default on Snow Leopard and Leopard. If you are running Tiger, you can install X11 from your Tiger installation DVD using the "Optional Installs.mpkg" file.)
 
 Probably the simplest method to get Wine is as follows:
- # Download Wine_1.2.2.dmg from [http://darwine.good-day.net/Wine_1.2.2.dmg]
+ # Download Wine_1.2.2.dmg from [http://aardwolfclientpackage.googlecode.com/files/Wine_1.2.2.dmg]
  # Find the file you just downloaded. It should look like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winedmg.png" align="center">
  # Double click on the file and you should see a disk icon mounted on your desktop that looks like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winemounted.png" align="center">
  # Double click on that icon and you should see a window that looks like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winewindow.png" align="center">
@@ -42,12 +42,20 @@ Probably the simplest method to get Wine is as follows:
 
 Once Wine is installed in this way, you can start MUSHclient by right-clicking on MUSHclient.exe and choosing Open With...->Wine.
 
+==== This Mac Wine download is buggy! ====
+
+Yeah, I know. The main problem is that _simple_ Mac support for Wine is super janky. If you want Mac Wine solutions that probably work better, but are a bit more complicated to set up than just drag-drop-play, try:
+[http://www.playonmac.com/en/]
+[http://wineskin.doh123.com/]
+And if you're really adventurous...
+[http://wiki.winehq.org/MacOSX/Installing]
+
 == Running MUSHclient in a virtual machine ==
 
-==== What is a virtual machine? ====
+=== What is a virtual machine? ===
 Unlike Wine, where you do not need to actually install Windows to use Windows software, setting up a virtual machine means essentially creating a whole virtual computer running a second operating system that runs inside of your main operating system. Popular virtual machine software for the Mac includes [http://www.vmware.com/products/fusion/overview.html VMware Fusion], [http://www.parallels.com/products/desktop/ Parallels Desktop], and [http://www.virtualbox.org/ VirtualBox]. Of those three, [http://www.virtualbox.org/ VirtualBox] has the significant benefit that it doesn't cost anything because it is [https://secure.wikimedia.org/wikipedia/en/wiki/Free_software free/open source software].
 
-==== How do I install a virtual machine on a Mac? ====
+=== How do I install a virtual machine on a Mac? ===
 Requirements:
  * A Mac with an Intel CPU (All new Macs use Intel CPUs). Older PPC or 68k Macs cannot run modern virtual machine software. Sorry.
 
