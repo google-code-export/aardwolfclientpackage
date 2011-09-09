@@ -169,3 +169,7 @@ https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/hide_bigmap_m
 https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/show_bigmap_menu.png
 
 For more information on this see the page for [Bigmap the merged Bigmap plugin].
+
+== Can I block dangerous routes? ==
+
+You can achieve this by assigning level locks to dangerous exits. To assign a level lock to an exit, right click on the "from" room (all exits are defined as being _from_ one room _to_ another) and choose `Change Exit Level Lock`.
