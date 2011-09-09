@@ -2,6 +2,7 @@
 
 Estimates the time left until the next game tick in the MUSHclient status area. (see 'help tick')
 
+<wiki:toc max_depth="3" />
 == Where is it? ==
 
 Down at the very bottom, underneath your input bar.
