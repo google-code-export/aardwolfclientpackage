@@ -2,6 +2,7 @@
 
 Displays your current stats in a miniwindow.
 
+<wiki:toc max_depth="3" />
 == What does it look like? ==
 Something like this:
 
@@ -12,10 +13,10 @@ Of course!
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/statsright.png
 
-==== Flip Orientation ====
+=== Flip Orientation ===
 Some people like a more horizontal orientation for the stats display.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/stats.png
 
-==== Change Font ====
+=== Change Font ===
 Changes the display font.
