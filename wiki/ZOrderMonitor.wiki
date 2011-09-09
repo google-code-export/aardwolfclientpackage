@@ -2,16 +2,18 @@
 
 This plugin handles keeping track of the Z ordering of the miniwindow plugins included in the package and any other plugins that choose to use this ordering system.
 
-=== What is Z-order? ===
+<wiki:toc max_depth="3" />
+
+== What is Z-order? ==
 See the Wikipedia entry on Z-order here: https://secure.wikimedia.org/wikipedia/en/wiki/Z-order
 
-=== How do I make the included miniwindows change ordering? ===
+== How do I make the included miniwindows change ordering? ==
 
 All of the included miniwindow plugins have right-click menu options 'Bring To Front' and 'Send To Back'.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/zordermenu.png
 
-=== How do I make my own miniwindow plugins make use of your Z-ordering system? ===
+== How do I make my own miniwindow plugins make use of your Z-ordering system? ==
 If you want another miniwindow to fit into the Z-order system, there are only a few steps (the following assumes that the name of your miniwindow is stored in a variable called win)...
 
   * The name of your miniwindow must only contain numbers, letters, and the underscore character. Using the plugin UID as your miniwindow name is fine, for example.
