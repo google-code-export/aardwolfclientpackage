@@ -2,6 +2,9 @@
 
 A dynamically updated mapper that enables rapid navigation by storing room information in a SQLite database.
 
+
+<wiki:toc max_depth="2" />
+
 == What does it look like? ==
 Probably something like this
 
