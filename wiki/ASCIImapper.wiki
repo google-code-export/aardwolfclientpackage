@@ -1,6 +1,8 @@
 = ASCII automap (`aard_ASCII_map.xml`) =
 This plugin shows an overhead view of the local area by capturing the game's map output to a miniwindow.
 
+<wiki:toc max_depth="2" />
+
 == What does the ascii map look like? ==
 It probably looks something like this:
 
