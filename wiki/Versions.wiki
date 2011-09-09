@@ -1,5 +1,7 @@
 #summary How do I know what version I have?
 
+<wiki:toc max_depth="3" />
+
 = Someone asked me what version of the package I have. How can I tell? =
 
 Unless you have a very old copy of the package (update! update now!), you should have a file called `AardwolfPackageChanges.txt` in your MUSHclient folder. This file lists in order from newest to oldest all of the development snapshot releases that have been made since the first beta release was publicly announced on December 1, 2010.
