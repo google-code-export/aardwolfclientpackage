@@ -30,6 +30,6 @@ https://code.google.com/p/aardwolfclientpackage/wiki/AboutMiniwindows#Controllab
 
 === Echo Map In Main Output ===
 
-This allows you to, if you want, have the ascii map show in the main output as well.
+This allows you to also have the ascii map show in the main output.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/ascii_map_echo.png
