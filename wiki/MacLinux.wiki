@@ -19,6 +19,7 @@ One of the major benefits of using Wine is that you do not need to install Windo
 
 Installing Wine in Linux is extremely straightforward with one minor caveat. If you are using an Intel graphics driver version between 2.12 and 2.15 (as of this writing) you'll probably need to use an old version of Wine (wine1.0 rather than wine), because of a bug in the Intel driver. It affects, for example, my Lenovo Thinkpad x201i running Ubuntu because it has an Intel graphics chip. If you have ATI or NVIDIA graphics, you should be fine with the latest version of Wine.
 <BR>See here: [https://bugs.freedesktop.org/show_bug.cgi?id=28798]
+<BR>*UPDATE*: Intel has fixed the driver bug, but it may take time to reach some distributions. There is a PPA that can be applied to fix Ubuntu 11 here https://launchpad.net/~smorar/+archive/bugfixes
 
 Installing Wine in Linux is as simple and straightforward as installing anything else from the command line. Just open up a terminal and, for example...
 
