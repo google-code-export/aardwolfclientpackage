@@ -18,11 +18,10 @@ The MUSHclient FAQ has an entry on creating accelerators that you should read he
 
 http://www.mushclient.com/forum/?id=7794#39
 
-Also see the relevant documentation pages:
+You may also want to read the relevant documentation:
 
 http://mushclient.com/scripts/doc.php?function=Accelerator
-
-
+<BR>
 http://mushclient.com/scripts/doc.php?function=AcceleratorTo
 
 = I tried assigning a macro to F1, but that just brings up the Windows Help App =
