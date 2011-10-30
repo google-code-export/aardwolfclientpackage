@@ -1,7 +1,7 @@
 <wiki:toc max_depth="3" />
 
 = How do I make macros in MUSHclient? =
-There are two ways of creating macros in MUSHclient, one of them is much more flexible but the other is much easier to use if it fits your needs.
+There are two ways of creating macros in MUSHclient, one of them is much more flexible but the other is a bit easier to use if it fits your needs.
 
 == The easy but inflexible way ==
 The simplest way of creating macros is through the Macros configuration dialog. You can find this by pressing
