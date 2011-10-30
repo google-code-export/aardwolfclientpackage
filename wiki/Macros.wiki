@@ -17,4 +17,4 @@ There you will find a set of predefined key combinations that you can use for se
 = I tried assigning a macro to F1, but that just brings up the Windows Help App =
 See this FAQ entry about how to fix that:
 
-FAQ#How_do_I_disable_F1_as_being_the_help_macro?
+https://code.google.com/p/aardwolfclientpackage/wiki/FAQ#How_do_I_disable_F1_as_being_the_help_macro?
