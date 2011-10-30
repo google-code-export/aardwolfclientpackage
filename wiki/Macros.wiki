@@ -6,7 +6,7 @@ There are two ways of creating macros in MUSHclient, one of them is much more fl
 == The easy but inflexible way ==
 The simplest way of creating macros is through the Macros configuration dialog. You can find this by pressing
 {{{
-Shift+Control+2
+Shift+Ctrl+2
 }}}
 or by using the menu option
 {{{
