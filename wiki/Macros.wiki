@@ -12,7 +12,18 @@ or by using the menu option
 There you will find a set of predefined key combinations that you can use for sending various commands to the MUD. You cannot create new key combinations in this dialog, and you cannot process complex scripts.
 
 == The more complex and more powerful way ==
+The more flexible way to create macros is through a scripting feature called Accelerators. Accelerators can be made for any key combination and are overall more flexible in what they can do. 
 
+The MUSHclient FAQ has an entry on creating accelerators that you should read here:
+
+http://www.mushclient.com/forum/?id=7794#39
+
+Also see the relevant documentation pages:
+
+http://mushclient.com/scripts/doc.php?function=Accelerator
+
+
+http://mushclient.com/scripts/doc.php?function=AcceleratorTo
 
 = I tried assigning a macro to F1, but that just brings up the Windows Help App =
 See this FAQ entry about how to fix that:
