@@ -197,3 +197,19 @@ If you click OK, the chosen exit from the chosen room will be assigned the chose
 Locked exits display in the mapper in red instead of white.
 
 https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/gmcpmapperexitlockmarking.png
+
+== Configuring the norecall/noportal assistance ==
+
+Understanding what this does:
+Sometimes the shortest path from where you are to where you want to go starts with entering a portal, but you happen to be in a noportal room so that just won't work. Likewise, maybe the shortest path starts with a 'home' or 'recall' command, but you happen to be in a norecall room. When configured correctly the mapper can find the nearest walkable room that allows you to escape the prison and, if necessary, bounce through a portal to get to recall or bounce through recall to get to a portal destination.
+
+  * *portalrecall* - Tells the mapper that a particular 'mapper portals' entry  won't work in a norecall room because it uses the home or recall commands.
+  * *bouncerecall* - Bounce through this 'portalrecall' flagged mapper-portal in the scenario where the shortest path wants to enter a portal but you are in a noportal room.
+  * *bounceportal* - Bounce through this non-recall mapper-portal in the scenario where the shortest path wants to recall or home but you are in a norecall room.
+
+The steps for using the portalrecall, bouncerecall, and bounceportal commands may not be immediately obvious to everyone. Follow this example for configuring the mapper to robustly handle finding paths from noportal and norecall rooms.
+
+  # Type 'mapper portals' to show the list of your current portals and find index numbers<BR><BR>https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/mapperportalsexample.png
+  # Type something like 'mapper portalrecall 2' to mark a particular portal as using the home or recall game commands<BR><BR>https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/mapperportalrecallflag.png<BR><BR>recallportals will show up in red when viewing the 'mapper portals' list and the mapper will know not to use them from norecall rooms but that they are safe for noportal rooms<BR><BR>https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/mapperportalsrecallexample.png
+  # Type something like 'mapper bounceportal 1' to mark a particular non-recall/home mapper-portal as being the command you always want to bounce through when the mapper wants to recall or home while you are in a norecall room. This interface may change in the future.<BR><BR>https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/mapperbounceportal.png<BR><BR>
+  # Type something like 'mapper bouncerecall 2' to mark a particular recall-flagged mapper-portal as being the command you always want to bounce through when the mapper wants to use a handheld portal while you are in a noportal room.<BR><BR>https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/mapperbouncerecall.png<BR><BR>Note: You will not be allowed to set an index as the bouncerecall command if it is not already flagged 'portalrecall' like above. This interface may change in the future.
