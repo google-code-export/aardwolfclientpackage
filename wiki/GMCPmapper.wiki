@@ -151,6 +151,10 @@ Or if you're in the room you can use the command
 mapper thisroom
 }}}
 
+and you'll see something like this
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/thisroom.png
+
 == When I go out on the continents the mapper looks different. What is this? ==
 
 Are you confused about this?
