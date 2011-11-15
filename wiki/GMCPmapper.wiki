@@ -213,3 +213,9 @@ The steps for using the portalrecall, bouncerecall, and bounceportal commands ma
   # Type something like 'mapper portalrecall 2' to mark a particular portal as using the home or recall game commands<BR><BR>https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/mapperportalrecallflag.png<BR><BR>recallportals will show up in red when viewing the 'mapper portals' list and the mapper will know not to use them from norecall rooms but that they are safe for noportal rooms<BR><BR>https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/mapperportalsrecallexample.png
   # Type something like 'mapper bounceportal 1' to mark a particular non-recall/home mapper-portal as being the command you always want to bounce through when the mapper wants to recall or home while you are in a norecall room. This interface may change in the future.<BR><BR>https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/mapperbounceportal.png<BR><BR>
   # Type something like 'mapper bouncerecall 2' to mark a particular recall-flagged mapper-portal as being the command you always want to bounce through when the mapper wants to use a handheld portal while you are in a noportal room.<BR><BR>https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/mapperbouncerecall.png<BR><BR>Note: You will not be allowed to set an index as the bouncerecall command if it is not already flagged 'portalrecall' like above. This interface may change in the future.
+
+== More Tips ==
+
+User "Hosch" also has a nice little writeup about getting the most out of your mapper.
+
+http://www.holgerschurig.de/games/aardmapper.html
