@@ -1,4 +1,4 @@
-= [FeaturedPlugins Featured Plugins] =
+= Featured Plugins =
 
 == [ASCIImapper ASCII automap] ==
 Shows an overhead view of the local area by capturing the game's map output to a miniwindow.
