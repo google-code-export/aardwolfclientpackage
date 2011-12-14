@@ -4,13 +4,21 @@
 There are two ways of creating macros in MUSHclient, one of them is much more flexible but the other is a bit easier to use if its limitations don't impact your needs.
 
 == The easy but inflexible way ==
-The simplest way of creating macros is through the Macros configuration dialog. You can find this by pressing
+The simplest way of creating macros is through the Macros and Keypad configuration dialogs. You can find them by pressing
 {{{
 Shift+Ctrl+2
 }}}
-or by using the menu option
+and
+{{{
+Shift+Ctrl+1
+}}}
+or by using the menu options
 {{{
 Game->Configure->Macros...
+}}}
+and
+{{{
+Game->Configure->Keypad...
 }}}
 
 There you will find a set of predefined key combinations that you can use for sending various commands to the MUD. The limitations are that you cannot create new key combinations in this dialog other than the ones that are already there, and you cannot process complex scripts.
