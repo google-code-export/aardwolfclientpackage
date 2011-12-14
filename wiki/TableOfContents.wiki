@@ -3,7 +3,7 @@
   * [AboutMiniwindows Teach me about miniwindows!]
   * [Upgrading How do I upgrade from an old version?]
   * [MacLinux Running in Linux/MacOS]
-  * I'm not used to MUSHclient. How do I...?
+  * [GeneralIndex I'm not used to MUSHclient. How do I...?]
     * [FAQ FAQ/Configuration]
     * [LoadPlugins Load new plugins]
     * [Triggers Writing Triggers]
@@ -12,7 +12,7 @@
     * [Variables Using Variables]
     * [CommandLineAliasesAndTriggers Adding aliases/triggers from the command line]
     * [ConvertingScripts Converting my scripts over from <other_client>]
-  * What's included in the package?
+  * [PackageIndex What's included in the package?]
     * [FeaturedPlugins Featured Plugins]
       * [ASCIImapper ASCII automap]
       * [GMCPmapper GMCP driven world mapper]
