@@ -14,6 +14,12 @@ All of the options under this menu will just bring up different sections of the 
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/configscreen.png
 
+== How do I write Triggers, Aliases, or Macros? ==
+
+[Triggers Click here to visit the page on writing triggers.]
+[Aliases Click here to visit the page on writing aliases.]
+[Macros Click here to visit the page on writing macros.]
+
 == How do I make commands stay on the input line after I hit enter? ==
 
 Go to Game->Configure->Commands... as shown above.
