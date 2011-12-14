@@ -3,7 +3,7 @@
   * [AboutMiniwindows Teach me about miniwindows!]
   * [Upgrading How do I upgrade from an old version?]
   * [MacLinux Running in Linux/MacOS]
-  * [FAQ FAQ/Configuration]
+  * [FAQ MUSHclient FAQ]
     * [LoadPlugins Load new plugins]
     * [Triggers Writing Triggers]
     * [Aliases Writing Aliases]
