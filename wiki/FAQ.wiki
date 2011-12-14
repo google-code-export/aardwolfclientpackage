@@ -22,6 +22,14 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/configscreen.p
 
 [Macros Click here to visit the page on writing macros.]
 
+== How do I load new plugins? ==
+
+Press `Shift+Ctrl+P` or go to `File->Plugins...` to bring up the `Plugins` dialog box.
+
+Then click the `Add...` button and go find the plugin file you want to load.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/add_new_plugin.png
+
 == How do I make commands stay on the input line after I hit enter? ==
 
 Go to Game->Configure->Commands... as shown above.
