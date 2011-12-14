@@ -1,7 +1,0 @@
-= Loading New Plugins =
-
-Press `Shift+Ctrl+P` or go to `File->Plugins...` to bring up the `Plugins` dialog box.
-
-Then click the `Add...` button and go find the plugin file you want to load.
-
-http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/add_new_plugin.png
