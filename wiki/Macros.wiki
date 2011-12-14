@@ -21,7 +21,7 @@ and
 Game->Configure->Keypad...
 }}}
 
-There you will find a set of predefined key combinations that you can use for sending various commands to the MUD. The limitations are that you cannot create new key combinations in this dialog other than the ones that are already there, and you cannot process complex scripts.
+There you will find a set of predefined key combinations that you can use for sending various commands to the MUD. The limitations are that you cannot create new key combinations in these dialogs other than the ones that are already there, and you cannot process complex scripts.
 
 == The more complex and more powerful way ==
 The more flexible way to create macros is through a scripting feature called Accelerators. Accelerators can be made for any key combination and are overall more flexible in what they can do. 
