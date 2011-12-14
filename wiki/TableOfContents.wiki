@@ -4,7 +4,7 @@
   * [Upgrading How do I upgrade from an old version?]
   * [MacLinux Running in Linux/MacOS]
   * [GuideIndex MUSHclient Guide]
-    * [FAQ Configuration FAQ
+    * [FAQ Configuration FAQ]
     * [LoadPlugins Load new plugins]
     * [Triggers Writing Triggers]
     * [Aliases Writing Aliases]
