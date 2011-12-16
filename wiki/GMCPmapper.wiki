@@ -18,7 +18,7 @@ In this menu, all of the items are clickable. If the item is a color, then a col
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/gmcpmapperconfig.png
 
 == Are there any special commands for using the mapper? ==
-Many! To see the entire list, type
+Many! The mapper is one of the most complicated plugins you're ever likely to see written for Aardwolf and has a wide array of commands. Learning how to use every aspect of it may take some time, but you'll likely find it well worth your while. To see the entire command list, type
 {{{
 mapper help
 }}}
