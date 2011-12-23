@@ -54,6 +54,7 @@ mapper hide                    --> Hide map
 mapper show                    --> Show map
 mapper addnote                 --> Add a new note to the current room
 mapper purgezone <area>        --> Remove an area from the map database
+mapper purgeroom               --> Purge the current room from the map database
 
 ===== CUSTOM EXIT ACTIONS =======>
 
