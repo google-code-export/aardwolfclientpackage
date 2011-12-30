@@ -7,7 +7,7 @@ A lua snippet file that provides functions for handling Aardwolf color codes to 
 == What functions does it provide? ==
 
 === `StylesToColoursOneLine (styles, start_column, end_column)` ===
-Converts all or part of a single line of MUSHclient style runs into a string containing Aardwolf color codes, starting at column start_column and ending at column end_column. To convert the entire line use 1 for start_column and some sufficiently high number for end_column like 99999.
+Converts all or part of a single line of MUSHclient style runs into a string containing Aardwolf color codes, starting at column start_column and ending at column end_column. To convert the entire line use 1 for start_column and some sufficiently high number for end_column like 99999. You may also leave start_column and end_column nil which will default to this behavior. Negative column indices will count back from the end of the line.
 
 === `ColoursToStyles (text)` ===
 The reverse of !StylesToColoursOneLine. This takes a string containing Aardwolf color codes and generates a sequence of MUSHclient style runs.
