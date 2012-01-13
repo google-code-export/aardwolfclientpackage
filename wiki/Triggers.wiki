@@ -12,7 +12,7 @@ Scripting is a complicated subject that has been addressed by documentation for 
   * [http://www.mushclient.com/scripts/doc.php?general=function_list Scripting function list]
   * [http://www.mushclient.com/scripts/doc.php Complete online documentation for MUSHclient]
 
-= I tried making a trigger but it isn't firing. =
+= I tried making a trigger but it isn't firing. What did I do wrong? =
 
 In zMUD, if you make a pattern that looks like
 
