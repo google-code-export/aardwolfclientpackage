@@ -296,6 +296,6 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/backup_files.p
 
 Make a copy of the most recent file (from BEFORE the crash) and put it in the same place where your old database file (the corrupt one you just deleted) was before in the MUSHclient directory. If you can't figure out when a backup file was made, you'll need to look at file modification dates. You can ask on the Tech channel in-game if you don't know how to do a google search.
 
-You have to rename the backup file to match what your old database file was named before. So in the default case this means naming it "Aardwolf.db".
+You'll have to rename the backup file to match what your old database file was named before. So in the default case this means naming it "Aardwolf.db".
 
 You may now restart MUSHclient.
