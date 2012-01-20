@@ -251,10 +251,45 @@ User "Hosch" also has a nice little writeup about getting the most out of your m
 
 http://www.holgerschurig.de/games/aardmapper.html
 
-= Preventing And Dealing With Database Corruption =
+= Database Corruption =
 
-If either your computer or MUSHclient crashes, the database used for storing your mapper information may be left in an unusable and unrecoverable state. These situations are quite rare but they can happen occasionally even on fairly stable computers, which is why the GMCP mapper plugin has a built-in facility for daily rotating automatic backups as well as immediate manual backups.
+If either your computer or MUSHclient crashes, the database used for storing your mapper information may be left in an unusable and unrecoverable state. These situations are somewhat rare, but they can happen occasionally even on fairly stable computers. This is why the GMCP mapper plugin has a built-in facility for data integrity checks and daily rotating automatic backups as well as immediate manual backups.
 
-Every 24 hours (or when you launch MUSHclient if more than 24 hours have elapsed) the mapper plugin will attempt to make a backup copy of the database file that stores your map and portal information in it. If the backup runs successfully you will see a message like:
+Every 24 hours (or when you launch MUSHclient if more than 24 hours have elapsed) the mapper plugin will, by default, attempt to make a backup copy of the database file that stores your map and portal information in it. If you happen to be in combat when the backup wants to run, the mapper will notify you and then wait until combat has ended.
+
+If the backup runs successfully you will see a message like:
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/backupmsg.png
+
+If for some reason the backup or integrity check fails, you will see a message like one of the following:<BR>
+*ERROR executing system command:*<BR>
+*ERROR (###) trying to copy database from `_____` to `_____`*<BR>
+*ERROR (###) trying to CreateDirectory: `_____`*<BR>
+*FAILED INTEGRITY CHECK*<BR>
+or...well...pretty much anything else that looks bad and is obviously not a success message.
+
+_If you ever see one of these error messages you need to immediately restore from a backup copy as described below._
+
+If you like living life on the edge, you can disable automatic backups by using the command
+{{{
+mapper backups off
+}}}
+
+But this is a BAD idea. Please don't disable backups and then come crying to me that you lost all your data. "But I was saving space!" you will say. And I will say "You saved 100 megabytes. Congratulations. Now you have nothing." Seriously, this is like riding a bicycle without a helmet. You can point at all kinds of studies about risk-taking and injury rates for bicyclists with and without helmets, but one day you might hit your head. And if you ride without a helmet you will die. And it will be entirely your fault. Be safe. Backup.
+
+If you need to save space and are willing to accept a slightly slower backup process, you can make it so that backups get .zip compressed with the command
+{{{
+mapper backups compressed
+}}}
+
+== Restoring From A Database Backup ==
+
+If you experienced a crash recently, you may find that your mapper database no longer works properly. That sucks but can be fixed as long as you have database backups.
+
+First, quit MUSHclient. You should never rename or move around files while MUSHclient is running.
+
+Then get rid of the damaged database files. These should be named Aardwolf.db (or something_else.db if you've done something silly like making a new world file). The key to finding the right file is that the name of the database is the same as the world file that you use to connect to Aardwolf. The name of the default world file that everyone starts with in the Aardwolf MUSHclient Package is, conveniently, "Aardwolf". This makes the default mapper database file Aardwolf.db. So go find that file and delete it. You should also look for files named like Aardwolf.db-shm and Aardwolf.db-wal and delete those too if you find them.
+
+Then look inside the *db_backups* folder of your MUSHclient directory. You should find a collection of files with names that look like "blahblah_Automatic" and "blahblah_Automatic_old" and "blahblah_Automatic_older", etc. Make a copy of the most recent file (from BEFORE the crash) and put it in the same place where your old database file (the corrupt one you just deleted) was before. You have to rename the backup file to match what your old database file was named before. So in most cases this means naming it "Aardwolf.db"
+
+You may now restart MUSHclient.
