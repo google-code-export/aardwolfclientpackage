@@ -251,4 +251,10 @@ User "Hosch" also has a nice little writeup about getting the most out of your m
 
 http://www.holgerschurig.de/games/aardmapper.html
 
-= ERROR! ACHTUNG! HELP! I think my database got corrupted! =
+= Preventing And Dealing With Database Corruption =
+
+If either your computer or MUSHclient crashes, the database used for storing your mapper information may be left in an unusable and unrecoverable state. These situations are quite rare but they can happen occasionally even on fairly stable computers, which is why the GMCP mapper plugin has a built-in facility for daily rotating automatic backups as well as immediate manual backups.
+
+Every 24 hours (or when you launch MUSHclient if more than 24 hours have elapsed) the mapper plugin will attempt to make a backup copy of the database file that stores your map and portal information in it. If the backup runs successfully you will see a message like:
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/backupmsg.png
