@@ -262,13 +262,14 @@ If the backup runs successfully you will see a message like:
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/backupmsg.png
 
 If for some reason the backup or integrity check fails, you will see a message like one of the following:<BR>
+*FAILED INTEGRITY CHECK*<BR>
 *ERROR executing system command:*<BR>
 *ERROR (###) trying to copy database from `_____` to `_____`*<BR>
-*ERROR (###) trying to CreateDirectory: `_____`*<BR>
-*FAILED INTEGRITY CHECK*<BR>
 or...well...pretty much anything else that looks bad and is obviously not a success message.
 
-_If you ever see one of these error messages you need to immediately restore from a backup copy as described below._
+_If you ever see one of these error messages you may need to restore from a backup copy as described below._
+
+If you see *ERROR (###) trying to CreateDirectory: `_____`* then the mapper tried and failed to make the db_backups folder. You should fix the cause for this. It means you have MUSHclient in a place where, for some reason, it doesn't have access to make new folders.
 
 If you like living life on the edge, you can disable automatic backups by using the command
 {{{
