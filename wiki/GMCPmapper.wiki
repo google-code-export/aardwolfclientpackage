@@ -250,3 +250,5 @@ The steps for using the portalrecall, bouncerecall, and bounceportal commands ma
 User "Hosch" also has a nice little writeup about getting the most out of your mapper.
 
 http://www.holgerschurig.de/games/aardmapper.html
+
+= ERROR! ACHTUNG! HELP! I think my database got corrupted! =
