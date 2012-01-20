@@ -269,7 +269,7 @@ or...well...pretty much anything else that looks bad and is obviously not a succ
 
 _If you ever see one of these error messages you may need to restore from a backup copy as described below._
 
-If you see *ERROR (###) trying to CreateDirectory: `_____`* then the mapper tried and failed to make the db_backups folder. You should fix the cause for this. It means you have MUSHclient in a place where, for some reason, it doesn't have access to make new folders.
+If you see *ERROR (###) trying to `CreateDirectory`: `_____`* then the mapper tried and failed to make the db_backups folder. You should fix the cause for this. It means you have MUSHclient in a place where, for some reason, it doesn't have access to make new folders.
 
 If you like living life on the edge, you can disable automatic backups by using the command
 {{{
