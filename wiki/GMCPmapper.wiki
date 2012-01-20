@@ -283,7 +283,7 @@ If you need to save space and are willing to accept a slightly slower backup pro
 mapper backups compressed
 }}}
 
-== Restoring From A Database Backup ==
+== Restoring From A Database Backup After Corruption ==
 
 If you experienced a crash recently, you may find that your mapper database no longer works properly. That sucks but can be fixed as long as you have database backups.
 
