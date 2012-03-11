@@ -35,7 +35,8 @@ and ends with
 {{{
 </muclient>
 }}}
-Open a text editor (such as Notepad) and paste the plugin into it
+Open a text editor (such as Notepad) and paste the plugin into it.
+
 Save to disk on your PC, preferably in your plugins directory, as "your_desired_plugin_name.xml" (ending in .xml is important!)
 
 == How do I load new plugins? ==
