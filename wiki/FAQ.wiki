@@ -27,7 +27,8 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/configscreen.p
 First recognize that a plugin is a specially formatted ".xml" (as opposed to .txt or .doc) text file. You can frequently get these files by either downloading them or by copy/pasting them from forum posts on the [http://www.mushclient.com/forum MUSHclient forums]. 
 
 To save a plugin from a thread in the forums, do the following:
-Copy all of the quoted lines of code from the forum entry. It probably begins with {{{
+Copy all of the quoted lines of code from the forum entry. It probably begins with 
+{{{
 <?xml version="1.0" encoding="iso-8859-1"?>
 }}}
 and ends with 
