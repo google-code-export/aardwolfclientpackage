@@ -1,4 +1,4 @@
-= Using the Aardwolf MUSHclient Package on a Mac or Linux PC =
+= Using MUSHclient on a Mac or Linux PC =
 
 <wiki:toc max_depth="4" />
 
