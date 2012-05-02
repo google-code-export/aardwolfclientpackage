@@ -115,3 +115,12 @@ which would result in sending:
 {{{
 cast 'heal' self
 }}}
+
+=== Multiple commands in one alias ===
+
+If you want to perform multiple commands with a single alias, you need to use  two semicolons (;;) to separate the commands as in:
+{{{
+#alias {h *} {cast 'heal' %1;;say I just healed %1!}
+}}}
+
+For the reason why, [http://code.google.com/p/aardwolfclientpackage/wiki/FAQ#How_do_I_send_a_semicolon_to_the_MUD?_It_keeps_getting_cut_off. read about semicolons in MUSHclient here].
