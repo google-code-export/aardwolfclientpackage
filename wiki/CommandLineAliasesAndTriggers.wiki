@@ -123,4 +123,4 @@ If you want to perform multiple commands with a single alias, you need to use  t
 #alias {h *} {cast 'heal' %1;;say I just healed %1!}
 }}}
 
-For the reason why, [FAQ#How_do_I_send_a_semicolon_to_the_MUD?_It_keeps_getting_cut_off. read about semicolons in MUSHclient here].
+For the reason why, [FAQ#How_do_I_send_a_literal_semicolon?_It_keeps_cutting_off_my_input. read about semicolons in MUSHclient here].
