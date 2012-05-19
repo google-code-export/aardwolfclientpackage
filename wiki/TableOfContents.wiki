@@ -11,7 +11,7 @@
     * [Variables Using Variables]
     * [CommandLineAliasesAndTriggers Adding aliases/triggers from the command line]
     * [ConvertingScripts Converting my scripts over from <other_client>]
-  * What's included in the package?
+  * Included Plugins
     * [FeaturedPlugins Featured Plugins]
       * [ASCIImapper ASCII automap]
       * [GMCPmapper GMCP driven world mapper]
