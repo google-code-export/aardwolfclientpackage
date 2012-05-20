@@ -40,7 +40,7 @@ Not everyone will like the default colors used for displaying the various status
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarscolors.png
 
 === Reverse TNL ===
-TNL stands for "To Next Level" and indicates how much experience you still need to get before you will move to the next level. By default this bar starts out empty at the beginning of a level and then fills up as you get closer to the next level. Toggle this option if you prefer instead to see the opposite view, a shrinking bar that indicates how much experience you have left to gain.
+TNL stands for "To Next Level" and indicates how much experience you still need to get before you will move to the next level. By default this bar shows EXP earned at your current level. It starts out empty at the beginning of a level and then fills up as you get closer to the next level. Toggle this option if you prefer instead to see the opposite view, a shrinking bar that indicates how much experience you have left to gain.
 
 === Text Mode ===
 This mode gets rid of the bars altogether, and just shows a numerical readout of the various statuses.
