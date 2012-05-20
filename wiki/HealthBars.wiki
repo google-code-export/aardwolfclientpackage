@@ -17,7 +17,7 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarsrigh
 
 === Change Font ===
 
-Changes the display font.
+Changes the display font. This also affects the height of the display area, because the gauge thickness is keyed directly to the height of your chosen font.
 
 === Stack Bars ===
 You may want a less prompt-like configuration for the status bars that puts them in a stack instead of a long row. Use the Stack and Un-stack options for switching between the original configuration and a stacked configuration.
