@@ -19,15 +19,15 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarsrigh
 
 Changes the display font.
 
-=== Hide Labels ===
-You may decide that the color and order sufficiently differentiates the bars for you, and you don't need the text labels taking up space. Use the Hide and Show options to toggle them off and on.
-
-http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarsnolabels.png
-
 === Stack Bars ===
 You may want a less prompt-like configuration for the status bars that puts them in a stack instead of a long row. Use the Stack and Un-stack options for switching between the original configuration and a stacked configuration.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbars.png
+
+=== Hide Labels ===
+You may decide that the color and order sufficiently differentiates the bars for you, and you don't need the text labels taking up space. Use the Hide and Show options to toggle them off and on.
+
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarsnolabels.png
 
 === Activate/De-activate > ===
 Maybe you don't need to see your mana status all the time. Or maybe you don't care about enemy health. You can turn different bars off and on using the options in this sub-menu.
