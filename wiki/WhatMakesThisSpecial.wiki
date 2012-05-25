@@ -10,7 +10,7 @@ Let's quickly walk through them...
 <wiki:toc max_depth="3" />
 
 == Basic Telnet ==
-If you've never used anything else, you probably won't realize how bad this is. But this is a horrible, crappy choice. Once you move on to a real client, you'll see that there is really no excuse for this kind of Neo-Luddite silliness. The game is text-based, but there is no reason to limit yourself to using stone age tools like basic telnet. No aliases. No triggers. No large buffers. No visuals. No nothing. Blech.
+If you've never used anything else, you probably won't realize how bad this is. But this is a horrible, crappy choice. Once you move on to a real client, you'll see that there is really no excuse for this kind of Neo-Luddite silliness. The game is text-based, but there is no reason to limit yourself to using stone age tools like basic telnet. No aliases. No triggers. No large buffers. No visuals. No nothing. When your fingers fall off because you had to type out "south" for the ten thousandth time you'll realize that it was all a horrible mistake. Blech. For your own sanity and the health of your wrists, please skip this option. You'll thank me later.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/rawtelnet.png
 
