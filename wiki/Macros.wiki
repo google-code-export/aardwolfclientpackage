@@ -3,7 +3,7 @@
 = How do I make macros in MUSHclient? =
 There are two ways of creating macros in MUSHclient, one of them is much more flexible but the other is a bit easier to use if its limitations don't impact your needs.
 
-== The easy but inflexible way ==
+== The easy but limited way ==
 The simplest way of creating macros is through the Macros and Keypad configuration dialogs. You can find them by pressing
 {{{
 Shift+Ctrl+2
