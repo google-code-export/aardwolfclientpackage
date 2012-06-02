@@ -1,4 +1,5 @@
 = The repaint call buffer (`aard_repaint_buffer.xml`) =
+http://aardwolfclientpackage.googlecode.com/svn/trunk/MUSHclient/worlds/plugins/aard_repaint_buffer.xml
 
 Executes a single Repaint call if multiple repaint requests are issued by various plugins in rapid succession. Required by included plugins for screen updates. Do not disable or remove this!
 
