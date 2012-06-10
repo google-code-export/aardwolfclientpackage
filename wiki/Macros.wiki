@@ -3,7 +3,7 @@
 = How do I make macros in MUSHclient? =
 There are two ways of creating macros in MUSHclient, one of them is much more flexible but the other is a bit easier to use if its limitations don't impact your needs.
 
-== The easy but limited way ==
+== Macro: The easy but limited way ==
 The simplest way of creating macros is through the Macros and Keypad configuration dialogs. You can find them by pressing
 {{{
 Shift+Ctrl+2
@@ -23,7 +23,7 @@ Game->Configure->Keypad...
 
 There you will find a set of predefined key combinations that you can use for sending various commands to the MUD. The limitations are that you cannot create new key combinations in these dialogs other than the ones that are already there, and you cannot process any kind of script functions.
 
-== The more complex and more powerful way ==
+== Accelerator: The more complex and more powerful way ==
 The more flexible way to create macros is through a scripting feature called Accelerators. Accelerators can be made for any key combination and are overall more flexible in what they can do, though in order for them to persist you have to stick them inside a plugin because otherwise they go away when you quit.
 
 The MUSHclient FAQ has an entry on creating accelerators that you should read here:
