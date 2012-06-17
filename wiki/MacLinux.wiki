@@ -36,8 +36,8 @@ Requirements:
  * A Mac with an Intel CPU (All new Macs use Intel CPUs). Older PPC or 68k Macs cannot use Wine. Sorry.
  * X11 (this is already installed by default on Snow Leopard and Leopard. If you are running Tiger, you can install X11 from your Tiger installation DVD using the "Optional Installs.mpkg" file.)
 
-Probably the simplest method to get Wine is as follows:
- # Download Wine_1.2.2.dmg from [http://aardwolfclientpackage.googlecode.com/files/Wine_1.2.2.dmg]
+Probably the _simplest_ method to get Wine is as follows:
+ # Download Wine_1.2.2.dmg from [http://aardwolfclientpackage.googlecode.com/files/Wine_1.2.2.dmg] (note: this is a rather old version of Wine, but finding standalone precompiled Wine binaries for Mac OS is difficult. If you're willing to figure out how to use the various installation platforms, see the next section below.)
  # Find the file you just downloaded. It should look like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winedmg.png" align="center">
  # Double click on the file and you should see a disk icon mounted on your desktop that looks like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winemounted.png" align="center">
  # Double click on that icon and you should see a window that looks like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winewindow.png" align="center">
