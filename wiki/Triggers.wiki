@@ -17,7 +17,6 @@ Scripting is a complicated subject that has been addressed by documentation for 
 In zMUD, if you make a pattern that looks like
 
 {{{
-#!c
 This is a pattern
 }}}
 
