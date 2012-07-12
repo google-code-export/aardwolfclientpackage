@@ -4,6 +4,13 @@ A lua snippet file that provides functions for handling Aardwolf color codes to 
 
 <wiki:toc max_depth="3" />
 
+== How do I use this in a plugin? ==
+If your plugin lives in the plugins folder, put this line somewhere in the main script body of your plugin:
+{{{
+dofile (GetPluginInfo (GetPluginID(), 20) .. "aardwolf_colors.lua")
+}}}
+Then use the provided functions as if they were part of your plugin.
+
 == What functions does it provide? ==
 
 === `StylesToColoursOneLine (styles, start_column, end_column)` ===
@@ -17,13 +24,6 @@ Takes a string containing Aardwolf color codes and removes all of the color code
 
 === `stylesToANSI (styles)` ===
 Converts a series of style runs to a string with embedded ansi codes.
-
-== How do I use this in a plugin? ==
-If your plugin lives in the plugins folder, put this line somewhere in the main script body of your plugin:
-{{{
-dofile (GetPluginInfo (GetPluginID(), 20) .. "aardwolf_colors.lua")
-}}}
-Then use the provided functions as if they were part of your plugin.
 
 == Will this handle xterm 256 colors? ==
 Yes it will in all versions after [Versions r397].
