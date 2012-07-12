@@ -91,7 +91,7 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlogselect.p
 
 There is a function in the plugin, called `storeFromOutside` that makes it easy to log arbitrary lines of colored text in the communication log window. You use it via the `CallPlugin()` access function, with input of a string with embedded Aardwolf color codes (example below).
 
-[http://mushclient.com/scripts/doc.php?function=CallPlugin For documentation on CallPlugin(), see http://mushclient.com/scripts/doc.php?function=CallPlugin]
+For documentation on CallPlugin(), see http://mushclient.com/scripts/doc.php?function=CallPlugin
 
 Example:
 {{{
