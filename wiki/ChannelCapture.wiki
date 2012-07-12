@@ -98,6 +98,8 @@ Example:
 CallPlugin("b555825a4a5700c35fa80780","storeFromOutside","HELLO@RHello@Mhello@x215hello@x66HELLO")
 }}}
 
+http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/store_from_outside.png
+
 To get Aardwolf color codes from a table of MUSHclient styles, see the function [http://code.google.com/p/aardwolfclientpackage/wiki/AardwolfColors#StylesToColoursOneLine_(styles,_start_column,_end_column) StylesToColoursOneLine(styles_table) in aardwolf_colors.lua].
 
 == Creating multiple log windows ==
