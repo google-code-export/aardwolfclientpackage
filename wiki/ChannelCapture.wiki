@@ -87,6 +87,18 @@ The channel capture miniwindow, through the magic of awesomeness, supports selec
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/comlogselect.png
 
+=== Send your own custom lines to the log window ===
+
+There is a function in the plugin, called `storeFromOutside` that makes it easy to log arbitrary lines of colored text in the communication log window. You use it via the CallPlugin() access function, with input of a string with embedded Aardwolf color codes (example below).
+[http://mushclient.com/scripts/doc.php?function=CallPlugin For documentation on CallPlugin(), see http://mushclient.com/scripts/doc.php?function=CallPlugin]
+
+Example:
+{{{
+CallPlugin("b555825a4a5700c35fa80780","storeFromOutside","HELLO@RHello@Mhello@x215hello@x66HELLO")
+}}}
+
+To get Aardwolf color codes from a table of MUSHclient styles, see the function [http://code.google.com/p/aardwolfclientpackage/wiki/AardwolfColors#StylesToColoursOneLine_(styles,_start_column,_end_column) StylesToColoursOneLine(styles_table) in aardwolf_colors.lua].
+
 == Creating multiple log windows ==
 
 If you want to have multiple log windows, each capturing different channels, you should take the following steps:
