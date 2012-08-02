@@ -576,6 +576,9 @@ local function draw_room (uid, x, y)
       local exit_info = connectors [dir]
       local stub_exit_info = half_connectors [dir]
       local locked_exit = not (room.exit_locks == nil or room.exit_locks[dir] == nil or room.exit_locks[dir] == "0")
+      if locked_exit then
+         unused_exits[dir] = false
+      end
       local exit_line_colour = (locked_exit and 0x0000FF) or config.EXIT_COLOUR.colour
       local arrow = arrows [dir]
             
@@ -688,7 +691,7 @@ local function draw_room (uid, x, y)
 
    for k,v in pairs(unused_exits) do
       local wall = walls[k]
-      wall_lines[(x*2+wall.x1+wall.x2)/2 + (y*2+wall.y1+wall.y2)*config.WINDOW.width] = {x1=x + wall.x1, y1=y + wall.y1, x2=x + wall.x2, y2=y + wall.y2, col=room.bordercolour, wid=wallwidth, styl=(room.borderpen or (miniwin.pen_solid+0x0200))}
+      wall_lines[(x*2+wall.x1+wall.x2)/2 + (y*2+wall.y1+wall.y2)*config.WINDOW.width] = {x1=x + wall.x1, y1=y + wall.y1, x2=x + wall.x2, y2=y + wall.y2, col=v and room.bordercolour or 0x0000FF, wid=wallwidth, styl=(room.borderpen or (miniwin.pen_solid+0x0200))}
    end
    
    WindowAddHotspot(win, uid,  
