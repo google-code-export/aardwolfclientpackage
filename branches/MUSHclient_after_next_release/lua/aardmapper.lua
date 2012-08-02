@@ -85,7 +85,7 @@ local CONFIG_FONT_ID_UL = "cfnu"
 local ROOM_SIZE = tonumber(GetVariable("ROOM_SIZE")) or 12
 
 -- how far away to draw rooms from each other
-local DISTANCE_TO_NEXT_ROOM = tonumber(GetVariable("DISTANCE_TO_NEXT_ROOM")) or 8
+local DISTANCE_TO_NEXT_ROOM = 1 --tonumber(GetVariable("DISTANCE_TO_NEXT_ROOM")) or 8
 
 -- supplied in init
 local config  -- configuration table 
@@ -126,23 +126,19 @@ function reset_pos()
 end
 
 local function build_room_info ()
-
    HALF_ROOM   = math.ceil(ROOM_SIZE / 2)
    local THIRD_WAY   = math.ceil(DISTANCE_TO_NEXT_ROOM / 3)
    local HALF_WAY = math.ceil(DISTANCE_TO_NEXT_ROOM / 2)
    
    -- how to draw a line from this room to the next one (relative to the center of the room)
    connectors = {
-      n =  { x1 = 0,            y1 = - HALF_ROOM, x2 = 0,                             y2 = - HALF_ROOM - HALF_WAY, at = { 0, -1 } }, 
-      s =  { x1 = 0,            y1 =   HALF_ROOM, x2 = 0,                             y2 =   HALF_ROOM + HALF_WAY, at = { 0,  1 } }, 
-      e =  { x1 =   HALF_ROOM,  y1 = 0,           x2 =   HALF_ROOM + HALF_WAY,  y2 = 0,                            at = {  1,  0 }}, 
-      w =  { x1 = - HALF_ROOM,  y1 = 0,           x2 = - HALF_ROOM - HALF_WAY,  y2 = 0,                            at = { -1,  0 }}, 
-   
-      ne = { x1 =   HALF_ROOM,  y1 = - HALF_ROOM, x2 =   HALF_ROOM + HALF_WAY , y2 = - HALF_ROOM - HALF_WAY, at = { 1, -1 } }, 
-      se = { x1 =   HALF_ROOM,  y1 =   HALF_ROOM, x2 =   HALF_ROOM + HALF_WAY , y2 =   HALF_ROOM + HALF_WAY, at = { 1,  1 } }, 
-      nw = { x1 = - HALF_ROOM,  y1 = - HALF_ROOM, x2 = - HALF_ROOM - HALF_WAY , y2 = - HALF_ROOM - HALF_WAY, at = {-1, -1 } }, 
-      sw = { x1 = - HALF_ROOM,  y1 =   HALF_ROOM, x2 = - HALF_ROOM - HALF_WAY , y2 =   HALF_ROOM + HALF_WAY, at = {-1,  1 } }, 
-   
+      n =  { x1 = - HALF_ROOM,  y1 = - HALF_ROOM, x2 = HALF_ROOM+1,               y2 = - HALF_ROOM, at = { 0, -1 } }, 
+      s =  { x1 = - HALF_ROOM,  y1 =   HALF_ROOM, x2 = HALF_ROOM+1,               y2 =   HALF_ROOM, at = { 0,  1 } }, 
+      e =  { x1 =   HALF_ROOM,  y1 = - HALF_ROOM, x2 = HALF_ROOM,               y2 =   HALF_ROOM+1, at = {  1,  0 }}, 
+      w =  { x1 = - HALF_ROOM,  y1 = - HALF_ROOM, x2 = - HALF_ROOM,             y2 =   HALF_ROOM+1, at = { -1,  0 }}, 
+
+      u = { x1 =   HALF_ROOM,  y1 = - HALF_ROOM, x2 =   HALF_ROOM + HALF_WAY , y2 = - HALF_ROOM - HALF_WAY, at = { 1, -1 } }, 
+      d = { x1 = - HALF_ROOM,  y1 =   HALF_ROOM, x2 = - HALF_ROOM - HALF_WAY , y2 =   HALF_ROOM + HALF_WAY, at = {-1,  1 } }, 
    } -- end connectors
    
    -- how to draw a stub line
@@ -151,28 +147,41 @@ local function build_room_info ()
       s =  { x1 = 0,            y1 =   HALF_ROOM, x2 = 0,                        y2 =   HALF_ROOM + THIRD_WAY, at = { 0,  1 } }, 
       e =  { x1 =   HALF_ROOM,  y1 = 0,           x2 =   HALF_ROOM + THIRD_WAY,  y2 = 0,                       at = {  1,  0 }}, 
       w =  { x1 = - HALF_ROOM,  y1 = 0,           x2 = - HALF_ROOM - THIRD_WAY,  y2 = 0,                       at = { -1,  0 }}, 
-  
-      ne = { x1 =   HALF_ROOM,  y1 = - HALF_ROOM, x2 =   HALF_ROOM + THIRD_WAY , y2 = - HALF_ROOM - THIRD_WAY, at = { 1, -1 } }, 
-      se = { x1 =   HALF_ROOM,  y1 =   HALF_ROOM, x2 =   HALF_ROOM + THIRD_WAY, y2 =   HALF_ROOM + THIRD_WAY, at = { 1,  1 } }, 
-      nw = { x1 = - HALF_ROOM,  y1 = - HALF_ROOM, x2 = - HALF_ROOM - THIRD_WAY, y2 = - HALF_ROOM - THIRD_WAY, at = {-1, -1 } }, 
-      sw = { x1 = - HALF_ROOM,  y1 =   HALF_ROOM, x2 = - HALF_ROOM - THIRD_WAY , y2 =   HALF_ROOM + THIRD_WAY, at = {-1,  1 } }, 
-  
+
+      u = { x1 =   HALF_ROOM,  y1 = - HALF_ROOM, x2 =   HALF_ROOM + THIRD_WAY , y2 = - HALF_ROOM - THIRD_WAY, at = { 1, -1 } }, 
+      d = { x1 = - HALF_ROOM,  y1 =   HALF_ROOM, x2 = - HALF_ROOM - THIRD_WAY , y2 =   HALF_ROOM + THIRD_WAY, at = {-1,  1 } }, 
    } -- end half_connectors
   
+   wallwidth = math.ceil(HALF_ROOM/4)
+
    -- how to draw one-way arrows (relative to the center of the room)
    arrows = {
-      n =  { - 2, - HALF_ROOM - 2,  2, - HALF_ROOM - 2,  0, - HALF_ROOM - 6 },
-      s =  { - 2,   HALF_ROOM + 2,  2,   HALF_ROOM + 2,  0,   HALF_ROOM + 6  },
-      e =  {   HALF_ROOM + 2, -2,   HALF_ROOM + 2, 2,   HALF_ROOM + 6, 0 },
-      w =  { - HALF_ROOM - 2, -2, - HALF_ROOM - 2, 2, - HALF_ROOM - 6, 0 },
-   
-      ne = {   HALF_ROOM + 3,  - HALF_ROOM,  HALF_ROOM + 3, - HALF_ROOM - 3,  HALF_ROOM, - HALF_ROOM - 3 },
-      se = {   HALF_ROOM + 3,    HALF_ROOM,  HALF_ROOM + 3,   HALF_ROOM + 3,  HALF_ROOM,   HALF_ROOM + 3 },
-      nw = { - HALF_ROOM - 3,  - HALF_ROOM,  - HALF_ROOM - 3, - HALF_ROOM - 3,  - HALF_ROOM, - HALF_ROOM - 3 },
-      sw = { - HALF_ROOM - 3,    HALF_ROOM,  - HALF_ROOM - 3,   HALF_ROOM + 3,  - HALF_ROOM,   HALF_ROOM + 3},
-  
+      n =  { -wallwidth, -HALF_ROOM, wallwidth, -HALF_ROOM, 0, -HALF_ROOM-wallwidth-wallwidth },
+      s =  { -wallwidth, HALF_ROOM, wallwidth, HALF_ROOM, 0, HALF_ROOM+wallwidth+wallwidth  },
+      e =  { HALF_ROOM, -wallwidth, HALF_ROOM, wallwidth, HALF_ROOM+wallwidth+wallwidth, 0 },
+      w =  { -HALF_ROOM, -wallwidth, -HALF_ROOM, wallwidth, -HALF_ROOM-wallwidth-wallwidth, 0 },
+
+      u = { HALF_ROOM+wallwidth/2, -HALF_ROOM+wallwidth, HALF_ROOM+wallwidth/2, -HALF_ROOM-wallwidth, HALF_ROOM-wallwidth*3/2, -HALF_ROOM-wallwidth },
+      d = { -HALF_ROOM-wallwidth, HALF_ROOM-wallwidth*3/2, -HALF_ROOM-wallwidth, HALF_ROOM+wallwidth/2, -HALF_ROOM+wallwidth, HALF_ROOM+wallwidth/2 },
    } -- end of arrows
 
+   walls = {
+      n =  { x1 = - HALF_ROOM - math.floor(wallwidth / 2), y1 = - HALF_ROOM, x2 = HALF_ROOM + math.ceil(wallwidth / 2), y2 = - HALF_ROOM, at = { 0, -1 } }, 
+      s =  { x1 = - HALF_ROOM - math.floor(wallwidth / 2), y1 =   HALF_ROOM, x2 = HALF_ROOM + math.ceil(wallwidth / 2), y2 =   HALF_ROOM, at = { 0,  1 } }, 
+      e =  { x1 =   HALF_ROOM,  y1 = - HALF_ROOM - math.floor(wallwidth / 2), x2 = HALF_ROOM, y2 =   HALF_ROOM + math.ceil(wallwidth / 2), at = {  1,  0 }}, 
+      w =  { x1 = - HALF_ROOM,  y1 = - HALF_ROOM - math.floor(wallwidth / 2), x2 = - HALF_ROOM, y2 =   HALF_ROOM + math.ceil(wallwidth / 2), at = { -1,  0 }}, 
+
+      u = { x1 =   HALF_ROOM,  y1 = - HALF_ROOM, x2 =   HALF_ROOM + HALF_WAY , y2 = - HALF_ROOM - HALF_WAY, at = { 1, -1 } }, 
+      d = { x1 = - HALF_ROOM,  y1 =   HALF_ROOM, x2 = - HALF_ROOM - HALF_WAY , y2 =   HALF_ROOM + HALF_WAY, at = {-1,  1 } }, 
+   } -- end connectors
+
+   exit_centermods = {
+      n = {x=0,y=-ROOM_SIZE,x1=0,y1=1},
+      s = {x=0,y=ROOM_SIZE,x1=0,y1=-1},
+      e = {x=ROOM_SIZE,y=0,x1=-1,y1=0},
+      w = {x=-ROOM_SIZE,y=0,x1=1,y1=0}
+   }  
+   
 end -- build_room_info
 
 local default_config = {
@@ -180,7 +189,6 @@ local default_config = {
    BACKGROUND_COLOUR       = { name = "Area Background",   colour =  ColourNameToRGB "lightseagreen", },
    ROOM_COLOUR             = { name = "Room",              colour =  ColourNameToRGB "cyan", },
    EXIT_COLOUR             = { name = "Exit",              colour =  ColourNameToRGB "darkgreen", },
-   EXIT_COLOUR_UP_DOWN     = { name = "Exit up/down",      colour =  ColourNameToRGB "darkmagenta", },
    ROOM_NOTE_COLOUR        = { name = "Room notes",       colour =  ColourNameToRGB "lightgreen", },
    UNKNOWN_ROOM_COLOUR     = { name = "Unknown room",      colour =  ColourNameToRGB "#00CACA", },
    MAPPER_NOTE_COLOUR      = { name = "Messages",          colour =  ColourNameToRGB "lightgreen" },
@@ -231,8 +239,8 @@ local function get_room (uid)
    room.area = room.area or "<No area>"
    room.hovermessage = room.hovermessage or "<Unexplored room>"
    room.bordercolour = room.bordercolour or config.ROOM_COLOUR.colour
-   room.borderpen = room.borderpen or 0 -- solid
-   room.borderpenwidth = room.borderpenwidth or 1
+   room.borderpen = room.borderpen or (0 + 0x0200) -- solid
+   room.borderpenwidth = room.borderpenwidth
    room.fillcolour = room.fillcolour or 0x000000
    room.fillbrush = room.fillbrush or 1 -- no fill
    room.texture = room.texture or nil -- no texture
@@ -506,27 +514,19 @@ local inverse_direction = {
    u = "d",
    d = "u",
 }  -- end of inverse_direction
-  
-local function add_another_room (uid, path, x, y)
-   local path = path or {}
-   return {uid=uid, path=path, x = x, y = y}
-end  -- add_another_room
-  
-local function draw_room (uid, path, x, y)
-   
-   local coords = string.format ("%i,%i", math.floor (x), math.floor (y))
 
-   -- need this for the *current* room !!!
+local function draw_room (uid, x, y)
+   
+   local coords = table.concat({math.floor(x), math.floor(y)},",")
+
    drawn_coords [coords] = uid
-   
-   -- print ("drawing", uid, "at", coords)
-   
+      
    if drawn [uid] then
       return
    end -- done this one
    
    -- don't draw the same room more than once
-   drawn [uid] = { coords = coords, path = path }
+   drawn [uid] = { coords = coords }
    
    local room = rooms [uid]
    
@@ -537,130 +537,12 @@ local function draw_room (uid, path, x, y)
    end -- not in cache
    
    
-   local left, top, right, bottom = x - HALF_ROOM, y - HALF_ROOM, x + HALF_ROOM, y + HALF_ROOM
+   local left, top, right, bottom = x - HALF_ROOM, y - HALF_ROOM, x + HALF_ROOM+1, y + HALF_ROOM+1
    
    -- forget it if off screen
-   if x < HALF_ROOM or y < HALF_ROOM or 
-      x > config.WINDOW.width - HALF_ROOM or y > config.WINDOW.height - HALF_ROOM then
+   if left < 0 or top < 0 or right > config.WINDOW.width or bottom > config.WINDOW.height then
       return
    end -- if
-   
-   -- exits
-   
-   local texits = {}
-   
-   for dir, exit_uid in pairs (room.exits) do
-      table.insert (texits, dir)
-      local exit_info = connectors [dir]
-      local stub_exit_info = half_connectors [dir]
-      local locked_exit = not (room.exit_locks == nil or room.exit_locks[dir] == nil or room.exit_locks[dir] == "0")
-      local exit_line_colour = (locked_exit and 0x0000FF) or config.EXIT_COLOUR.colour
-      local arrow = arrows [dir]
-      
-      -- draw up in the ne/nw position if not already an exit there at this level
-      if dir == "u" then
-         exit_info = connectors.ne
-         stub_exit_info = half_connectors.ne
-         arrow = arrows.ne
-         exit_line_colour = (locked_exit and 0x0000FF) or config.EXIT_COLOUR_UP_DOWN.colour
-      elseif dir == "d" then
-         exit_info = connectors.sw
-         stub_exit_info = half_connectors.sw
-         arrow = arrows.sw
-         exit_line_colour = (locked_exit and 0x0000FF) or config.EXIT_COLOUR_UP_DOWN.colour
-      end -- if down
-      
-      if exit_info then
-         local linetype = miniwin.pen_solid -- unbroken
-         local linewidth = (locked_exit and 2) or 1 -- not recent
-         
-         -- try to cache room
-         if not rooms [exit_uid] then
-            rooms [exit_uid] = get_room (exit_uid)
-         end -- if
-         
-         if rooms [exit_uid].unknown then
-            linetype = miniwin.pen_dot -- dots
-         end -- if
-         
-         local next_x = x + exit_info.at [1] * (ROOM_SIZE + DISTANCE_TO_NEXT_ROOM)
-         local next_y = y + exit_info.at [2] * (ROOM_SIZE + DISTANCE_TO_NEXT_ROOM)
-         
-         local next_coords = string.format ("%i,%i", math.floor (next_x), math.floor (next_y))
-         
-         -- remember if a zone exit (first one only)
---      if show_area_exits and room.area ~= rooms [exit_uid].area then
-         if show_area_exits and room.area ~= rooms [exit_uid].area and not rooms[exit_uid].unknown then
-            area_exits [ rooms [exit_uid].area ] = area_exits [ rooms [exit_uid].area ] or {x = x, y = y}
-         end -- if
-         
-         -- if another room (not where this one leads to) is already there, only draw "stub" lines
-         if drawn_coords [next_coords] and drawn_coords [next_coords] ~= exit_uid then
-            exit_info = stub_exit_info
-         elseif exit_uid == uid then 
-            -- here if room leads back to itself
-            exit_info = stub_exit_info
-            linetype = miniwin.pen_dash -- dash
-         else
-         --if (not show_other_areas and rooms [exit_uid].area ~= current_area) or
-            if (not show_other_areas and rooms [exit_uid].area ~= current_area and not rooms[exit_uid].unknown) or
-               (not show_up_down and (dir == "u" or dir == "d")) then
-               exit_info = stub_exit_info    -- don't show other areas
-            else
-               -- if we are scheduled to draw the room already, only draw a stub this time
-               if plan_to_draw [exit_uid] and plan_to_draw [exit_uid] ~= next_coords then
-                  -- here if room already going to be drawn
-                  exit_info = stub_exit_info
-                  linetype = miniwin.pen_dash -- dash
-               else
-                  -- remember to draw room next iteration
-                  local new_path = copytable.deep (path)
-                  table.insert (new_path, { dir = dir, uid = exit_uid })
-                  table.insert (rooms_to_be_drawn, add_another_room (exit_uid, new_path, next_x, next_y))
-                  drawn_coords [next_coords] = exit_uid
-                  plan_to_draw [exit_uid] = next_coords
-                  
-                  -- if exit room known
-                  if not rooms [exit_uid].unknown then
-                     local exit_time = last_visited [exit_uid] or 0
-                     local this_time = last_visited [uid] or 0
-                     local now = os.time ()
-                     if exit_time > (now - config.LAST_VISIT_TIME.time) and
-                        this_time > (now - config.LAST_VISIT_TIME.time) then
-                        linewidth = 2
-                     end -- if
-                  end -- if
-               end -- if
-            end -- if
-         end -- if drawn on this spot
-
-         WindowLine (win, x + exit_info.x1, y + exit_info.y1, x + exit_info.x2, y + exit_info.y2, exit_line_colour, linetype + 0x0200, linewidth)
-         
-         -- one-way exit?
-         
-         if not rooms [exit_uid].unknown then
-            local dest = rooms [exit_uid]
-            -- if inverse direction doesn't point back to us, this is one-way
-            if dest.exits [inverse_direction [dir]] ~= uid then
-               -- turn points into string, relative to where the room is
-               local points = string.format ("%i,%i,%i,%i,%i,%i", 
-                  x + arrow [1],
-                  y + arrow [2],
-                  x + arrow [3],
-                  y + arrow [4],
-                  x + arrow [5],
-                  y + arrow [6])
-                  
-               -- draw arrow
-               WindowPolygon(win, points, 
-                  exit_line_colour, miniwin.pen_solid, 1, 
-                  exit_line_colour, miniwin.brush_solid, 
-                  true, true)
-            end -- one way
-         end -- if we know of the room where it does
-      end -- if we know what to do with this direction
-   end -- for each exit
-
    
    if room.unknown then
       WindowCircleOp (win, miniwin.circle_rectangle, left, top, right, bottom, 
@@ -671,19 +553,143 @@ local function draw_room (uid, path, x, y)
       WindowCircleOp (win, miniwin.circle_rectangle, left, top, right, bottom, 
          0, miniwin.pen_null, 0,  -- no pen
          room.fillcolour, room.fillbrush)  -- brush
-      
-      -- room border
-      WindowCircleOp (win, miniwin.circle_rectangle, left, top, right, bottom, 
-         room.bordercolour, room.borderpen, room.borderpenwidth,  -- pen
-         -1, miniwin.brush_null)  -- opaque, no brush
 
+      local markingwidth = 3
       -- mark rooms with notes
       if room.notes ~= nil and room.notes ~= "" then
-         WindowCircleOp (win, miniwin.circle_rectangle, left-1-room.borderpenwidth, top-1-room.borderpenwidth, 
-            right+1+room.borderpenwidth, bottom+1+room.borderpenwidth,config.ROOM_NOTE_COLOUR.colour,
-            room.borderpen, room.borderpenwidth,-1,miniwin.brush_null)
+         room_notes[uid] = {x1=left-1-markingwidth, y1=top-1-markingwidth, x2=right+1+markingwidth, y2=bottom+1+markingwidth}
       end
-   end -- if 
+
+      -- mark pk rooms
+      if room.info and string.match(room.info, "pk") then
+         pk_rooms[uid] = {x1=math.floor(left-1.5+markingwidth), y1=math.floor(top-1.5+markingwidth), x2=math.floor(right+1-markingwidth), y2=math.floor(bottom+1-markingwidth)}
+      end -- not in this area
+
+   end -- if
+
+   -- exits   
+   local unused_exits = {n=true,s=true,e=true,w=true}
+   local fadeouts = {}
+
+   for dir, exit_uid in pairs(room.exits) do
+      unused_exits[dir] = nil
+      local exit_info = connectors [dir]
+      local stub_exit_info = half_connectors [dir]
+      local locked_exit = not (room.exit_locks == nil or room.exit_locks[dir] == nil or room.exit_locks[dir] == "0")
+      local exit_line_colour = (locked_exit and 0x0000FF) or config.EXIT_COLOUR.colour
+      local arrow = arrows [dir]
+            
+      if exit_info then
+         
+         -- try to cache room
+         if not rooms [exit_uid] then
+            rooms [exit_uid] = get_room (exit_uid)
+         end -- if
+                  
+         local next_x = x + exit_info.at [1] * (ROOM_SIZE)
+         local next_y = y + exit_info.at [2] * (ROOM_SIZE)
+
+         local next_coords = table.concat ({next_x, next_y},",")
+         
+         -- remember if a zone exit
+         if room.area ~= rooms [exit_uid].area and not rooms[exit_uid].unknown and exit_centermods[dir] then
+            if not drawn_coords [table.concat({next_x, next_y},",")] then
+               drawn_coords [table.concat({next_x, next_y},",")] = exit_uid
+               table.insert(area_exits,{next_x+(exit_centermods[dir].x1*wallwidth), next_y+(exit_centermods[dir].y1*wallwidth)})
+            end -- if
+         end
+         
+         -- if another room (not where this one leads to) is already there, fade out
+         if drawn_coords [next_coords] and drawn_coords [next_coords] ~= exit_uid then
+            local fadepattern = 8
+            local fadefillcolor = room.fillcolour
+            local fadepencolor = 0xFFFFFF
+            if dir == "e" then
+               WindowCircleOp (win, miniwin.circle_rectangle, math.ceil(x+HALF_ROOM/2), top, right, bottom, 
+                  fadepencolor, miniwin.pen_null, 0,  -- no pen
+                  fadefillcolor, fadepattern)  -- brush
+            elseif dir == "w" then
+               WindowCircleOp (win, miniwin.circle_rectangle, left, top, math.ceil(x+1-HALF_ROOM/2), bottom, 
+                  fadepencolor, miniwin.pen_null, 0,  -- no pen
+                  fadefillcolor, fadepattern)  -- brush
+            elseif dir == "n" then
+               WindowCircleOp (win, miniwin.circle_rectangle, left, top, right, math.ceil(y+1-HALF_ROOM/2), 
+                  fadepencolor, miniwin.pen_null, 0,  -- no pen
+                  fadefillcolor, fadepattern)  -- brush
+            elseif dir == "s" then
+               WindowCircleOp (win, miniwin.circle_rectangle, left, math.ceil(y-1+HALF_ROOM/2), right, bottom, 
+                  fadepencolor, miniwin.pen_null, 0,  -- no pen
+                  fadefillcolor, fadepattern)  -- brush
+            end
+         elseif exit_uid == uid then 
+            -- here if room leads back to itself
+            exit_info = stub_exit_info
+         else
+            if (not show_other_areas and rooms [exit_uid].area ~= current_area and not rooms[exit_uid].unknown) or
+               (not show_up_down and (dir == "u" or dir == "d")) then
+               exit_info = stub_exit_info    -- don't show other areas
+            else
+               -- if we are scheduled to draw the room already, only draw a stub this time
+               if plan_to_draw [exit_uid] and plan_to_draw [exit_uid] ~= next_coords then
+                  -- here if room already going to be drawn
+                  exit_info = stub_exit_info
+               else
+                  -- remember to draw room next iteration
+                  table.insert (rooms_to_be_drawn, {uid=exit_uid, x=next_x, y=next_y})
+                  drawn_coords [next_coords] = exit_uid
+                  plan_to_draw [exit_uid] = next_coords
+                  
+                  -- if exit room known
+                  if not rooms [exit_uid].unknown then
+                     local exit_time = last_visited [exit_uid] or 0
+                     local this_time = last_visited [uid] or 0
+                     local now = os.time ()
+                     if exit_time > (now - config.LAST_VISIT_TIME.time) and
+                        this_time > (now - config.LAST_VISIT_TIME.time) then
+                     end -- if
+                  end -- if
+               end -- if
+            end -- if
+         end -- if drawn on this spot
+
+         -- up and down exits
+         local duwidth = math.min(2, wallwidth)
+         if (dir == "d") then
+            WindowPolygon (win, table.concat({math.floor(left+wallwidth+duwidth),math.ceil(y+0.5),math.floor(left+wallwidth+duwidth),math.floor(bottom-wallwidth-duwidth),math.floor(x),math.floor(bottom-wallwidth-duwidth)},","),
+                           0xFFFFFF, miniwin.pen_solid+0x0200, duwidth,   -- pen (solid, width 3)
+                           0x0, miniwin.brush_null,    -- brush (solid)
+                           false,    -- fill
+                           false)   -- alternate fill
+         elseif (dir == "u") then
+            WindowPolygon (win, table.concat({math.floor(right-wallwidth-duwidth),math.floor(y+0.5),math.floor(right-wallwidth-duwidth),math.floor(top+wallwidth+duwidth),math.floor(x),math.floor(top+wallwidth+duwidth)},","),
+                           0xFFFFFF, miniwin.pen_solid+0x0200, duwidth,   -- pen (solid, width 3)
+                           0x0, miniwin.brush_null,    -- brush (solid)
+                           false,    -- fill
+                           false)   -- alternate fill
+         end
+
+         -- one-way exit?
+         if not rooms [exit_uid].unknown then
+            local dest = rooms [exit_uid]
+            -- if inverse direction doesn't point back to us, this is one-way
+            if dest.exits [inverse_direction [dir]] ~= uid then
+               -- turn points into string, relative to where the room is
+               table.insert(one_way_exits, string.format ("%i,%i,%i,%i,%i,%i", 
+                  x + arrow [1],
+                  y + arrow [2],
+                  x + arrow [3],
+                  y + arrow [4],
+                  x + arrow [5],
+                  y + arrow [6]))
+            end -- one way
+         end -- if we know of the room where it does
+      end -- if we know what to do with this direction
+   end -- for each exit
+
+   for k,v in pairs(unused_exits) do
+      local wall = walls[k]
+      wall_lines[(x*2+wall.x1+wall.x2)/2 + (y*2+wall.y1+wall.y2)*config.WINDOW.width] = {x1=x + wall.x1, y1=y + wall.y1, x2=x + wall.x2, y2=y + wall.y2, col=room.bordercolour, wid=wallwidth, styl=(room.borderpen or (miniwin.pen_solid+0x0200))}
+   end
    
    WindowAddHotspot(win, uid,  
       left, top, right, bottom,   -- rectangle
@@ -734,26 +740,20 @@ local function changed_room (uid)
 end -- changed_room
 
 local function draw_zone_exit (exit)
-   local x, y = exit.x, exit.y
-   local offset = ROOM_SIZE
-   
-   -- draw circle around us
-   WindowCircleOp (win, miniwin.circle_ellipse, 
-      x - offset, y - offset,
-      x + offset, y + offset,
-      ColourNameToRGB "yellow",  -- pen colour
-      miniwin.pen_solid, -- solid pen
-      3, -- pen width
-      0, -- brush colour
-      miniwin.brush_null ) -- null brush
-   WindowCircleOp (win, miniwin.circle_ellipse, 
-      x - offset, y - offset,
-      x + offset, y + offset,
-      ColourNameToRGB "green",  -- pen colour
-      miniwin.pen_solid, -- solid pen
-      1, -- pen width
-      0, -- brush colour
-      miniwin.brush_null) -- null brush
+   local x1 = math.floor(exit[1]-HALF_ROOM+wallwidth)
+   local y1 = math.floor(exit[2]-HALF_ROOM+wallwidth)
+   local x2 = math.ceil(exit[1]+HALF_ROOM-wallwidth)
+   local y2 = math.ceil(exit[2]+HALF_ROOM-wallwidth)
+
+   if x1 < 0 or y1 < 0 or x2 > config.WINDOW.width or y2 > config.WINDOW.height then
+      return
+   end
+
+   WindowCircleOp (win, miniwin.circle_rectangle,
+      x1, y1, x2, y2,
+      0x00FF00, miniwin.pen_solid, wallwidth,  -- pen
+      0x0, miniwin.brush_null)  -- opaque, no brush
+
 end --  draw_zone_exit 
 
 
@@ -860,25 +860,59 @@ function draw (uid)
    WindowScrollwheelHandler (win, "zzz_zoom", "mapper.zoom_map")
    
    -- set up for initial room, in middle
-   drawn, drawn_coords, rooms_to_be_drawn, plan_to_draw, area_exits = {}, {}, {}, {}, {}, {}
+   drawn, drawn_coords, rooms_to_be_drawn, plan_to_draw, area_exits = {}, {}, {}, {}, {}
    depth = 0
 
    -- insert initial room
-   table.insert (rooms_to_be_drawn, add_another_room (uid, {}, config.WINDOW.width / 2, config.WINDOW.height / 2))
+   table.insert (rooms_to_be_drawn, {uid=uid, x=config.WINDOW.width / 2, y=config.WINDOW.height / 2})
 
+   one_way_exits = {}
+   wall_lines = {}
+   pk_rooms = {}
+   room_notes = {}
    while #rooms_to_be_drawn > 0 and depth < config.SCAN.depth do
       local old_generation = rooms_to_be_drawn
       rooms_to_be_drawn = {}  -- new generation
       for i, part in ipairs (old_generation) do 
-         draw_room (part.uid, part.path, part.x, part.y)
+         draw_room (part.uid, part.x, part.y)
       end -- for each existing room
       depth = depth + 1
    end -- while all rooms_to_be_drawn
-  
+
    for area, zone_exit in pairs (area_exits) do
       draw_zone_exit (zone_exit)
    end -- for
-   
+
+   for k,v in pairs(wall_lines) do
+      WindowLine(win, v.x1, v.y1, v.x2, v.y2, v.col, v.styl, v.wid)
+   end
+
+   for k,v in pairs(room_notes) do
+      WindowCircleOp (win, miniwin.circle_rectangle, v.x1, v.y1, v.x2, v.y2,
+         config.ROOM_NOTE_COLOUR.colour, room.borderpen, 3, -1, miniwin.brush_null)
+   end
+
+   for k,v in pairs(pk_rooms) do
+      WindowLine(win, v.x1-1, v.y1-1, v.x2, v.y2, config.PK_BORDER_COLOUR.colour, miniwin.pen_solid + 0x0200, 2);
+      WindowLine(win, v.x1-2, v.y2, v.x2, v.y1-2, config.PK_BORDER_COLOUR.colour, miniwin.pen_solid + 0x0200, 2);
+   end
+
+   -- player marker
+   local x = config.WINDOW.width / 2
+   local y = config.WINDOW.height / 2
+   WindowCircleOp (win, miniwin.circle_rectangle, math.floor(x-HALF_ROOM-1.5), math.floor(y-HALF_ROOM-1.5), math.ceil(x+HALF_ROOM+1.5), math.ceil(y+HALF_ROOM+1.5), 
+      configs.OUR_ROOM_COLOUR.colour, room.borderpen, 3,  -- pen
+      room.bordercolour, miniwin.brush_null)  -- opaque, no brush
+
+
+   -- one way exits
+   for i,points in ipairs(one_way_exits) do
+      WindowPolygon(win, points, 
+         0xFFFFFF, miniwin.pen_solid, 1, 
+         0x0, miniwin.brush_solid, 
+         true, true)
+   end
+      
    local room_name = room.name
    local name_width = WindowTextWidth (win, FONT_ID, room_name)
    local add_dots = false
@@ -906,7 +940,7 @@ function draw (uid)
       3,    -- top
       room_name, false,             -- what to draw, utf8
       config.ROOM_NAME_TEXT.colour,   -- text colour
-      config.ROOM_NAME_FILL.colour,   -- fill colour   
+      (room.info and string.match(room.info, "pk") and config.PK_BORDER_COLOUR.colour) or config.ROOM_NAME_FILL.colour,   -- fill colour   
       config.ROOM_NAME_BORDER.colour)     -- border colour
    
    -- area name
