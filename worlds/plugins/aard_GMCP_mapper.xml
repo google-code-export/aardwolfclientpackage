@@ -3,16 +3,7 @@
 <!-- Save on Wednesday, September 01, 2010, 4:37 PM -->
 <!-- MuClient version 4.59 -->
 
-<!DOCTYPE muclient [
-   <!ENTITY show_vnums "true" > 
-   <!ENTITY show_timing "false" > 
-   <!ENTITY show_completed "true" > 
-   <!ENTITY show_database_mods "false" > 
-   <!ENTITY show_other_areas "false" > 
-   <!ENTITY show_area_exits "false" > 
-   <!ENTITY show_up_down "false" > 
-   <!ENTITY speedwalk_prefix "run" > 
-]>
+<!DOCTYPE muclient>
 
 <muclient>
 <plugin
@@ -79,47 +70,8 @@ LH-click on the "*" button on the upper-left corner for configuration settings.
    enabled="y"
    sequence="100"
    omit_from_output="y"
-   send_to="12"
->
-<send>
-   if "%1" == " off" then
-      EnableTimer("backup_timer", false)
-      SetVariable("backup_timer_enabled", "0")
-      Note("Automated map database backup is now off.")
-   elseif "%1" == " on" then
-      EnableTimer("backup_timer", true)
-      SetVariable("backup_timer_enabled", "1")
-      Note("Automated map database backup is now on.")
-      if ((os.time()-last_auto_backup) >= 86401) then
-         Note("It looks like it has been more than 24 hours since your last automatic mapper database backup!")
-         Note("Forcing an automatic backup now...")
-         Note("")
-         Repaint()
-         automatic_backup()
-      end
-   elseif "%1" == "" then
-      Note("Automated map database backup is currently "..((GetTimerInfo("backup_timer", 6) and "on") or "off")..".")
-      local will_be_would_be = ((GetTimerInfo("backup_timer", 6) and "will be") or "would be (if enabled)")
-      local seconds = GetTimerInfo("backup_timer", 13)
-      local hours = math.floor(seconds/3600)
-      seconds = seconds - hours*3600
-      local minutes = math.floor(seconds/60)
-      seconds = math.floor(seconds - minutes*60)
-      Note("Next backup "..will_be_would_be.." in "..hours.." hours, "..minutes.." minutes, "..seconds.." seconds.")
-      Note("Backup compression is currently "..(((use_compression == 1) and "enabled.") or "disabled."))
-   elseif "%1" == " compressed" then
-      use_compression = 1
-      SetVariable("use_compression", use_compression)
-      Note("Mapper backups will be compressed. This will make backups take a few seconds longer but save a bit of space.")
-   elseif "%1" == " uncompressed" then
-      use_compression = 0
-      SetVariable("use_compression", use_compression)
-      Note("Mapper backups will not be compressed. This will make backups faster but take up a bit more space.")
-   else
-      Note("Invalid option for mapper backups. The current automated backup setting is '"..((GetTimerInfo("backup_timer", 6) and "on") or "off").."'. Try 'mapper backups on' or 'mapper backups off' to set your desired preference.")
-   end
-</send>
-</alias>
+   script="backup_toggles"
+></alias>
 
 <alias
    match="resetaard"
@@ -291,16 +243,8 @@ LH-click on the "*" button on the upper-left corner for configuration settings.
    match="mapper purgeroom"
    enabled="y"
    sequence="100"
-   send_to="12"
-><send>
-   if not current_room then
-      print ("PURGEROOM FAILED: No room received from the mud yet. Try using the 'LOOK' command first.")
-   else
-      map_purgeroom(current_room)
-      mapper.draw (current_room)
-   end
-</send>
-</alias>
+   script="map_purgeroom"
+></alias>
 
 <alias
    match="mapper clearcache"
@@ -314,14 +258,7 @@ LH-click on the "*" button on the upper-left corner for configuration settings.
    enabled="y"
    sequence="100"
    script="map_resume"
-></alias>  
- 
-<alias
-   match="mapper stop"
-   enabled="y"
-   sequence="100"
-   script="mapper.cancel_speedwalk"
-></alias>  
+></alias>
    
 <alias
    match="mapper hide"
@@ -444,20 +381,8 @@ LH-click on the "*" button on the upper-left corner for configuration settings.
    keep_evaluating="n"
    sequence="1"
    regexp="y"
-   send_to="12"
->
-<send>
-   if "%1" == "mapper purge cexits confirm" and toConfirm == "purge cexits" then
-      map_cexits_purge()
-   elseif "%1" == "mapper purge portals confirm" and toConfirm == "purge portals" then
-      map_portal_purge()
-   else
-      Note(string.format("Failed to confirm '%s'. Aborting.", toConfirm))
-   end
-   toConfirm = ""
-   EnableAlias("confirm_catch", false)
-</send>
-</alias>
+   script="confirm_catch"
+></alias>
   
 <alias
    match="mapper cexits *"
@@ -544,70 +469,6 @@ LH-click on the "*" button on the upper-left corner for configuration settings.
 
 <triggers>
 
-<trigger
-   enabled="y"
-   match="The door is locked."
-   script="mapper.cancel_speedwalk"
-   sequence="100"
-></trigger>
-  
-<trigger
-   enabled="y"
-   match="You are regaining balance and are unable to move."
-   script="mapper.cancel_speedwalk"
-   sequence="100"
-></trigger>
-
-<trigger
-   enabled="y"
-   match="You fumble about drunkenly."
-   script="mapper.cancel_speedwalk"
-   sequence="100"
-></trigger>
-  
-<trigger
-   enabled="y"
-   match="You must be standing first."
-   script="mapper.cancel_speedwalk"
-   sequence="100"
-></trigger>
-  
-<trigger
-   enabled="y"
-   match="You need to use a boat, fly, or swim underwater to go there."
-   script="mapper.cancel_speedwalk"
-   sequence="100"
-></trigger> 
-  
-<trigger
-   enabled="y"
-   match="You can't * while sitting."
-   script="mapper.cancel_speedwalk"
-   sequence="100"
-></trigger> 
-  
-<trigger
-   enabled="y"
-   regexp="y"
-   match="^You dream about "
-   script="mapper.cancel_speedwalk"
-   sequence="100"
-></trigger>
-   
-<trigger
-   enabled="y"
-   match="There is no exit in that direction."
-   script="mapper.cancel_speedwalk"
-   sequence="100"
-></trigger> 
-  
-<trigger
-   enabled="y"
-   match="Alas, you cannot go that way."
-   script="mapper.cancel_speedwalk"
-   sequence="100"
-></trigger>   
-
   <trigger
    enabled="y"
    match="^Magic walls bounce you back\.$"
@@ -630,14 +491,14 @@ LH-click on the "*" button on the upper-left corner for configuration settings.
 
 <script>
 
-local show_vnums = &show_vnums;
-local show_timing = &show_timing;
-local show_completed = &show_completed;
-local show_database_mods = &show_database_mods;
-local show_other_areas = &show_other_areas;
-local show_up_down = &show_up_down;
-local show_area_exits = &show_area_exits;
-local speedwalk_prefix = "&speedwalk_prefix;"
+local show_vnums = true
+local show_timing = false
+local show_completed = true
+local show_database_mods = false
+local show_other_areas = false
+local show_up_down = false
+local show_area_exits = false
+local speedwalk_prefix = "run"
 
 <![CDATA[
 
@@ -767,6 +628,59 @@ function fixbool (b)
       return 0
    end -- if
 end -- fixbool
+
+function confirm_catch(name, line, wildcards)
+   if wildcards[1] == "mapper purge cexits confirm" and toConfirm == "purge cexits" then
+      map_cexits_purge()
+   elseif wildcards[1] == "mapper purge portals confirm" and toConfirm == "purge portals" then
+      map_portal_purge()
+   else
+      Note(string.format("Failed to confirm '%s'. Aborting.", toConfirm))
+   end
+   toConfirm = ""
+   EnableAlias("confirm_catch", false)
+end
+
+function backup_toggles(name, line, wildcards)
+   Note("")
+   if wildcards[1] == " off" then
+      EnableTimer("backup_timer", false)
+      SetVariable("backup_timer_enabled", "0")
+      Note("Automated map database backup is now off.")
+   elseif wildcards[1] == " on" then
+      EnableTimer("backup_timer", true)
+      SetVariable("backup_timer_enabled", "1")
+      Note("Automated map database backup is now on.")
+      if ((os.time()-last_auto_backup) >= 86401) then
+         Note("It looks like it has been more than 24 hours since your last automatic mapper database backup!")
+         Note("Forcing an automatic backup now...")
+         Note("")
+         Repaint()
+         automatic_backup()
+      end
+   elseif wildcards[1] == "" then
+      Note("Automated map database backup is currently "..((GetTimerInfo("backup_timer", 6) and "on") or "off")..".")
+      local will_be_would_be = ((GetTimerInfo("backup_timer", 6) and "will be") or "would be (if enabled)")
+      local seconds = GetTimerInfo("backup_timer", 13)
+      local hours = math.floor(seconds/3600)
+      seconds = seconds - hours*3600
+      local minutes = math.floor(seconds/60)
+      seconds = math.floor(seconds - minutes*60)
+      Note("Next backup "..will_be_would_be.." in "..hours.." hours, "..minutes.." minutes, "..seconds.." seconds.")
+      Note("Backup compression is currently "..(((use_compression == 1) and "enabled.") or "disabled."))
+   elseif wildcards[1] == " compressed" then
+      use_compression = 1
+      SetVariable("use_compression", use_compression)
+      Note("Mapper backups will be compressed. This will make backups take a few seconds longer but save a bit of space.")
+   elseif wildcards[1] == " uncompressed" then
+      use_compression = 0
+      SetVariable("use_compression", use_compression)
+      Note("Mapper backups will not be compressed. This will make backups faster but take up a bit more space.")
+   else
+      Note("Invalid option for mapper backups. The current automated backup setting is '"..((GetTimerInfo("backup_timer", 6) and "on") or "off").."'. Try 'mapper backups on' or 'mapper backups off' to set your desired preference.")
+   end
+   Note("")
+end
 
 function findpathfast(name, line, wildcards)
    db = assert (sqlite3.open(GetInfo (66) .. sanitize_filename(WorldName()) .. ".db"))
@@ -1518,6 +1432,15 @@ function fix_up_exit ()
    from_room = nil
 end -- fix_up_exit
 
+function map_purgeroom (name, line, wildcards)
+   if not current_room then
+      print ("PURGEROOM FAILED: No room received from the mud yet. Try using the 'LOOK' command first.")
+   else
+      map_purgeroom(current_room)
+      mapper.draw (current_room)
+   end
+end
+
 function map_purgezone (name, line, wildcards)
    local zoneuid = string.gsub(wildcards[1], "^%s*(.-)%s*$", "%1")
    local found = false
@@ -1812,10 +1735,14 @@ function get_room (uid)
       -- table.concat (path, ",")
       )
       
-   room.borderpen = 0 -- solid
+   room.borderpen = 0 + 0x0200 -- solid
    room.borderpenwidth = 1
    room.fillcolour = 0xff0000
    room.fillbrush = 1 -- no fill
+
+--   room.fillcolour = 0xff0000
+--   room.fillbrush = 1 -- no fill
+--   room.borderpenwidth = nil
    -- special room fill colours
    local special_room = false
    if room.info and room.info ~= "" then
@@ -1862,16 +1789,6 @@ function get_room (uid)
       end
    end -- if environmentname
 
-   if uid == current_room then
-      room.bordercolour = configs.OUR_ROOM_COLOUR.colour
-      room.borderpenwidth = 3
-   elseif room.area ~= current_area then
-      room.bordercolour = configs.DIFFERENT_AREA_COLOUR.colour
-   elseif room.info and string.match(room.info, "pk") then
-      room.bordercolour = configs.PK_BORDER_COLOUR.colour
-      room.borderpenwidth = 3
-   end -- not in this area
-  
    return room      
       
 end -- get_room
@@ -3113,10 +3030,6 @@ function OnPluginBroadcast (msg, id, name, text)
          got_gmcp_room()
       end -- if room.info
 
-      if (text == "room.wrongdir") then
-         mapper.cancel_speedwalk()
-      end -- wrongdir
-
       if (text == "char.base") then
          res, gmcparg = CallPlugin("3e7dedbe37e44942dd46d264","gmcpval","char.base")
          luastmt = "gmcpdata = " .. gmcparg
@@ -3700,12 +3613,9 @@ end -- function
 
 function OnPluginConnect ()
    Send_GMCP_Packet("rawcolor on")
-   mapper.cancel_speedwalk ()
-   -- DoAfter (3, "look")  -- force mapper update
 end -- OnPluginConnect
 
 function OnPluginDisconnect ()
-   mapper.cancel_speedwalk ()
 end -- OnPluginConnect
 
 function OnHelp (name, line, wildcards)
