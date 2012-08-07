@@ -39,7 +39,6 @@ save_state ()       -- call to save plugin state (ie. in OnPluginSaveState)
 draw (uid)          -- draw map - starting at room 'uid'
 start_speedwalk (path)  -- starts speedwalking. path is a table of directions/uids
 build_speedwalk (path)  -- builds a client speedwalk string from path
-cancel_speedwalk ()     -- cancel current speedwalk, if any
 check_we_can_find ()    -- returns true if doing a find is OK right now
 find (f, show_uid, count, walk)      -- generic room finder
 
@@ -107,7 +106,7 @@ local textures = {}
 
 -- other locals
 local HALF_ROOM, connectors, half_connectors, arrows
-local plan_to_draw, drawn, drawn_coords
+local drawn, drawn_coords
 local last_drawn, depth, font_height 
 local walk_to_room_name
 local total_times_drawn = 0
@@ -516,18 +515,22 @@ local inverse_direction = {
 }  -- end of inverse_direction
 
 local function draw_room (uid, x, y)
-   
-   local coords = table.concat({math.floor(x), math.floor(y)},",")
-
-   drawn_coords [coords] = uid
-      
    if drawn [uid] then
       return
    end -- done this one
-   
+
+   local coords = table.concat({math.floor(x), math.floor(y)},",")
    -- don't draw the same room more than once
-   drawn [uid] = { coords = coords }
+   drawn_coords [coords] = uid
+   drawn [uid] = coords
    
+   local left, top, right, bottom = x - HALF_ROOM, y - HALF_ROOM, x + HALF_ROOM+1, y + HALF_ROOM+1
+   
+   -- forget it if off screen
+   if left < 0 or top < 0 or right > config.WINDOW.width or bottom > config.WINDOW.height then
+      return
+   end -- if
+
    local room = rooms [uid]
    
    -- not cached - get from caller
@@ -536,23 +539,15 @@ local function draw_room (uid, x, y)
       rooms [uid] = room
    end -- not in cache
    
-   
-   local left, top, right, bottom = x - HALF_ROOM, y - HALF_ROOM, x + HALF_ROOM+1, y + HALF_ROOM+1
-   
-   -- forget it if off screen
-   if left < 0 or top < 0 or right > config.WINDOW.width or bottom > config.WINDOW.height then
-      return
-   end -- if
-   
-   if room.unknown then
-      WindowCircleOp (win, miniwin.circle_rectangle, left, top, right, bottom, 
-         config.UNKNOWN_ROOM_COLOUR.colour, miniwin.pen_dot, 1,  --  dotted single pixel pen
-         -1, miniwin.brush_null)  -- opaque, no brush
-   else
+   if not room.unknown then
       -- room fill
       WindowCircleOp (win, miniwin.circle_rectangle, left, top, right, bottom, 
-         0, miniwin.pen_null, 0,  -- no pen
+         0, miniwin.pen_null, 1,  -- no pen
          room.fillcolour, room.fillbrush)  -- brush
+      -- room edges
+      WindowCircleOp (win, miniwin.circle_rectangle, left, top, right, bottom, 
+         0xAAAAAA, miniwin.pen_solid, 1,  -- no pen
+         0, miniwin.brush_null)  -- brush
 
       local markingwidth = 3
       -- mark rooms with notes
@@ -565,83 +560,72 @@ local function draw_room (uid, x, y)
          pk_rooms[uid] = {x1=math.floor(left-1.5+markingwidth), y1=math.floor(top-1.5+markingwidth), x2=math.floor(right+1-markingwidth), y2=math.floor(bottom+1-markingwidth)}
       end -- not in this area
 
-   end -- if
+      -- exits   
+      local unused_exits = {n=true,s=true,e=true,w=true}
 
-   -- exits   
-   local unused_exits = {n=true,s=true,e=true,w=true}
-   local fadeouts = {}
-
-   for dir, exit_uid in pairs(room.exits) do
-      unused_exits[dir] = nil
-      local exit_info = connectors [dir]
-      local stub_exit_info = half_connectors [dir]
-      local locked_exit = not (room.exit_locks == nil or room.exit_locks[dir] == nil or room.exit_locks[dir] == "0")
-      if locked_exit then
-         unused_exits[dir] = false
-      end
-      local exit_line_colour = (locked_exit and 0x0000FF) or config.EXIT_COLOUR.colour
-      local arrow = arrows [dir]
-            
-      if exit_info then
-         
-         -- try to cache room
-         if not rooms [exit_uid] then
-            rooms [exit_uid] = get_room (exit_uid)
-         end -- if
-                  
-         local next_x = x + exit_info.at [1] * (ROOM_SIZE)
-         local next_y = y + exit_info.at [2] * (ROOM_SIZE)
-
-         local next_coords = table.concat ({next_x, next_y},",")
-         
-         -- remember if a zone exit
-         if room.area ~= rooms [exit_uid].area and not rooms[exit_uid].unknown and exit_centermods[dir] then
-            if not drawn_coords [table.concat({next_x, next_y},",")] then
-               drawn_coords [table.concat({next_x, next_y},",")] = exit_uid
-               table.insert(area_exits,{next_x+(exit_centermods[dir].x1*wallwidth), next_y+(exit_centermods[dir].y1*wallwidth)})
-            end -- if
-         end
-         
-         -- if another room (not where this one leads to) is already there, fade out
-         if drawn_coords [next_coords] and drawn_coords [next_coords] ~= exit_uid then
-            local fadepattern = 8
-            local fadefillcolor = room.fillcolour
-            local fadepencolor = 0xFFFFFF
-            if dir == "e" then
-               WindowCircleOp (win, miniwin.circle_rectangle, math.ceil(x+HALF_ROOM/2), top, right, bottom, 
-                  fadepencolor, miniwin.pen_null, 0,  -- no pen
-                  fadefillcolor, fadepattern)  -- brush
-            elseif dir == "w" then
-               WindowCircleOp (win, miniwin.circle_rectangle, left, top, math.ceil(x+1-HALF_ROOM/2), bottom, 
-                  fadepencolor, miniwin.pen_null, 0,  -- no pen
-                  fadefillcolor, fadepattern)  -- brush
-            elseif dir == "n" then
-               WindowCircleOp (win, miniwin.circle_rectangle, left, top, right, math.ceil(y+1-HALF_ROOM/2), 
-                  fadepencolor, miniwin.pen_null, 0,  -- no pen
-                  fadefillcolor, fadepattern)  -- brush
-            elseif dir == "s" then
-               WindowCircleOp (win, miniwin.circle_rectangle, left, math.ceil(y-1+HALF_ROOM/2), right, bottom, 
-                  fadepencolor, miniwin.pen_null, 0,  -- no pen
-                  fadefillcolor, fadepattern)  -- brush
-            end
-         elseif exit_uid == uid then 
-            -- here if room leads back to itself
-            exit_info = stub_exit_info
+      for dir, exit_uid in pairs(room.exits) do
+         local exit_info = connectors[dir]
+         if (room.exit_locks == nil or room.exit_locks[dir] == nil or room.exit_locks[dir] == "0") then
+            unused_exits[dir] = nil
          else
-            if (not show_other_areas and rooms [exit_uid].area ~= current_area and not rooms[exit_uid].unknown) or
-               (not show_up_down and (dir == "u" or dir == "d")) then
-               exit_info = stub_exit_info    -- don't show other areas
+            unused_exits[dir] = false
+         end
+         local exit_line_colour = (locked_exit and 0x0000FF) or config.EXIT_COLOUR.colour
+         local arrow = arrows [dir]
+               
+         if exit_info then
+            
+            -- try to cache room
+            if not rooms [exit_uid] then
+               rooms [exit_uid] = get_room (exit_uid)
+            end -- if
+                     
+            local next_x = x + exit_info.at[1] * (ROOM_SIZE)
+            local next_y = y + exit_info.at[2] * (ROOM_SIZE)
+
+            local next_coords = table.concat ({next_x, next_y},",")
+            
+            -- remember if a zone exit
+            if room.area ~= rooms [exit_uid].area and not rooms[exit_uid].unknown and exit_centermods[dir] then
+               if not drawn_coords [table.concat({next_x, next_y},",")] then
+                  drawn_coords [table.concat({next_x, next_y},",")] = exit_uid
+                  table.insert(area_exits,{next_x+(exit_centermods[dir].x1*wallwidth), next_y+(exit_centermods[dir].y1*wallwidth)})
+               end -- if
+            end
+            
+            -- if another room (not where this one leads to) is already there, fade out
+            if drawn_coords [next_coords] and drawn_coords [next_coords] ~= exit_uid then
+               local fadepattern = 8
+               local fadefillcolor = room.fillcolour
+               local fadepencolor = 0xFFFFFF
+               if dir == "e" then
+                  WindowCircleOp (win, miniwin.circle_rectangle, math.ceil(x+HALF_ROOM/2), top, right, bottom, 
+                     fadepencolor, miniwin.pen_null, 0,  -- no pen
+                     fadefillcolor, fadepattern)  -- brush
+               elseif dir == "w" then
+                  WindowCircleOp (win, miniwin.circle_rectangle, left, top, math.ceil(x+1-HALF_ROOM/2), bottom, 
+                     fadepencolor, miniwin.pen_null, 0,  -- no pen
+                     fadefillcolor, fadepattern)  -- brush
+               elseif dir == "n" then
+                  WindowCircleOp (win, miniwin.circle_rectangle, left, top, right, math.ceil(y+1-HALF_ROOM/2), 
+                     fadepencolor, miniwin.pen_null, 0,  -- no pen
+                     fadefillcolor, fadepattern)  -- brush
+               elseif dir == "s" then
+                  WindowCircleOp (win, miniwin.circle_rectangle, left, math.ceil(y-1+HALF_ROOM/2), right, bottom, 
+                     fadepencolor, miniwin.pen_null, 0,  -- no pen
+                     fadefillcolor, fadepattern)  -- brush
+               end
+            elseif exit_uid == uid then 
+               -- here if room leads back to itself
             else
-               -- if we are scheduled to draw the room already, only draw a stub this time
-               if plan_to_draw [exit_uid] and plan_to_draw [exit_uid] ~= next_coords then
-                  -- here if room already going to be drawn
-                  exit_info = stub_exit_info
+               if (not show_other_areas and rooms [exit_uid].area ~= current_area and not rooms[exit_uid].unknown) or
+                  (not show_up_down and (dir == "u" or dir == "d")) then
+                   -- don't show other areas
                else
                   -- remember to draw room next iteration
                   table.insert (rooms_to_be_drawn, {uid=exit_uid, x=next_x, y=next_y})
                   drawn_coords [next_coords] = exit_uid
-                  plan_to_draw [exit_uid] = next_coords
-                  
+
                   -- if exit room known
                   if not rooms [exit_uid].unknown then
                      local exit_time = last_visited [exit_uid] or 0
@@ -652,48 +636,52 @@ local function draw_room (uid, x, y)
                      end -- if
                   end -- if
                end -- if
-            end -- if
-         end -- if drawn on this spot
+            end -- if drawn on this spot
 
-         -- up and down exits
-         local duwidth = math.min(2, wallwidth)
-         if (dir == "d") then
-            WindowPolygon (win, table.concat({math.floor(left+wallwidth+duwidth),math.ceil(y+0.5),math.floor(left+wallwidth+duwidth),math.floor(bottom-wallwidth-duwidth),math.floor(x),math.floor(bottom-wallwidth-duwidth)},","),
-                           0xFFFFFF, miniwin.pen_solid+0x0200, duwidth,   -- pen (solid, width 3)
-                           0x0, miniwin.brush_null,    -- brush (solid)
-                           false,    -- fill
-                           false)   -- alternate fill
-         elseif (dir == "u") then
-            WindowPolygon (win, table.concat({math.floor(right-wallwidth-duwidth),math.floor(y+0.5),math.floor(right-wallwidth-duwidth),math.floor(top+wallwidth+duwidth),math.floor(x),math.floor(top+wallwidth+duwidth)},","),
-                           0xFFFFFF, miniwin.pen_solid+0x0200, duwidth,   -- pen (solid, width 3)
-                           0x0, miniwin.brush_null,    -- brush (solid)
-                           false,    -- fill
-                           false)   -- alternate fill
-         end
+            -- up and down exits
+            local duwidth = math.min(2, wallwidth)
+            if (dir == "d") then
+               WindowPolygon (win, table.concat({math.floor(left+wallwidth+duwidth),math.ceil(y+0.5),math.floor(left+wallwidth+duwidth),math.floor(bottom-wallwidth-duwidth),math.floor(x),math.floor(bottom-wallwidth-duwidth)},","),
+                              0xFFFFFF, miniwin.pen_solid+0x0200, duwidth,   -- pen (solid, width 3)
+                              0x0, miniwin.brush_null,    -- brush (solid)
+                              false,    -- fill
+                              false)   -- alternate fill
+            elseif (dir == "u") then
+               WindowPolygon (win, table.concat({math.floor(right-wallwidth-duwidth),math.floor(y+0.5),math.floor(right-wallwidth-duwidth),math.floor(top+wallwidth+duwidth),math.floor(x),math.floor(top+wallwidth+duwidth)},","),
+                              0xFFFFFF, miniwin.pen_solid+0x0200, duwidth,   -- pen (solid, width 3)
+                              0x0, miniwin.brush_null,    -- brush (solid)
+                              false,    -- fill
+                              false)   -- alternate fill
+            end
 
-         -- one-way exit?
-         if not rooms [exit_uid].unknown then
-            local dest = rooms [exit_uid]
-            -- if inverse direction doesn't point back to us, this is one-way
-            if dest.exits [inverse_direction [dir]] ~= uid then
-               -- turn points into string, relative to where the room is
-               table.insert(one_way_exits, string.format ("%i,%i,%i,%i,%i,%i", 
-                  x + arrow [1],
-                  y + arrow [2],
-                  x + arrow [3],
-                  y + arrow [4],
-                  x + arrow [5],
-                  y + arrow [6]))
-            end -- one way
-         end -- if we know of the room where it does
-      end -- if we know what to do with this direction
-   end -- for each exit
+            -- one-way exit?
+            if not rooms [exit_uid].unknown then
+               local dest = rooms [exit_uid]
+               -- if inverse direction doesn't point back to us, this is one-way
+               if dest.exits [inverse_direction [dir]] ~= uid then
+                  -- turn points into string, relative to where the room is
+                  table.insert(one_way_exits, string.format ("%i,%i,%i,%i,%i,%i", 
+                     x + arrow [1],
+                     y + arrow [2],
+                     x + arrow [3],
+                     y + arrow [4],
+                     x + arrow [5],
+                     y + arrow [6]))
+               end -- one way
+            end -- if we know of the room where it does
+         end -- if we know what to do with this direction
+      end -- for each exit
 
-   for k,v in pairs(unused_exits) do
-      local wall = walls[k]
-      wall_lines[(x*2+wall.x1+wall.x2)/2 + (y*2+wall.y1+wall.y2)*config.WINDOW.width] = {x1=x + wall.x1, y1=y + wall.y1, x2=x + wall.x2, y2=y + wall.y2, col=v and room.bordercolour or 0x0000FF, wid=wallwidth, styl=(room.borderpen or (miniwin.pen_solid+0x0200))}
-   end
-   
+      for k,v in pairs(unused_exits) do
+         local wall = walls[k]
+         wall_lines[(x*2+wall.x1+wall.x2)/2 + (y*2+wall.y1+wall.y2)*config.WINDOW.width] = {x1=x + wall.x1, y1=y + wall.y1, x2=x + wall.x2, y2=y + wall.y2, col=v and room.bordercolour or 0x0000FF, wid=wallwidth, styl=(room.borderpen or (miniwin.pen_solid+0x0200))}
+      end      
+   else
+      WindowCircleOp (win, miniwin.circle_rectangle, left, top, right, bottom, 
+      config.UNKNOWN_ROOM_COLOUR.colour, miniwin.pen_dot, 1,  --  dotted single pixel pen
+      -1, miniwin.brush_null)  -- opaque, no brush
+   end -- if
+
    WindowAddHotspot(win, uid,  
       left, top, right, bottom,   -- rectangle
       "",  -- mouseover
@@ -706,41 +694,6 @@ local function draw_room (uid, x, y)
 
    WindowScrollwheelHandler (win, uid, "mapper.zoom_map")
 end -- draw_room
-
-local function changed_room (uid)
-   if current_speedwalk then
-      if uid ~= expected_room then
-         local exp = rooms [expected_room]
-         if not exp then
-            exp = get_room (expected_room) or { name = expected_room }
-         end -- if
-         local here = rooms [uid]
-         if not here then
-            here = get_room (uid) or { name = uid }
-         end -- if
-         exp = expected_room
-         here = uid
-         maperror (string.format ("Speedwalk failed! Expected to be in '%s' but ended up in '%s'.", exp, here))
-         cancel_speedwalk ()
-      else
-         if #current_speedwalk > 0 then
-            local dir = table.remove (current_speedwalk, 1)
-            SetStatus ("Walking " .. (expand_direction [dir.dir] or dir.dir) .. 
-               " to " .. walk_to_room_name ..
-               ". Speedwalks to go: " .. #current_speedwalk + 1)
-            expected_room = dir.uid
-            Send (dir.dir)
-         else
-            last_hyperlink_uid = nil
-            last_speedwalk_uid = nil
-            if show_completed then
-               mapprint ("Speedwalk completed.")
-            end -- if wanted
-            cancel_speedwalk ()
-         end -- if any left    
-      end -- if expected room or not
-   end -- if have a current speedwalk
-end -- changed_room
 
 local function draw_zone_exit (exit)
    local x1 = math.floor(exit[1]-HALF_ROOM+wallwidth)
@@ -774,10 +727,6 @@ function check_we_can_find ()
       mapprint ("I don't know where you are right now - try: LOOK")
       return false
    end
-   if current_speedwalk then
-      mapprint ("No point doing this while you are speedwalking.")
-      return false
-   end -- if
    return true
 end -- check_we_can_find
 
@@ -791,10 +740,6 @@ function draw (uid)
    if not uid then
       maperror "Cannot draw map right now, I don't know where you are - try: LOOK"
       return
-   end -- if
-   
-   if current_room and current_room ~= uid then
-      changed_room (uid)
    end -- if
    
    current_room = uid -- remember where we are
@@ -863,7 +808,7 @@ function draw (uid)
    WindowScrollwheelHandler (win, "zzz_zoom", "mapper.zoom_map")
    
    -- set up for initial room, in middle
-   drawn, drawn_coords, rooms_to_be_drawn, plan_to_draw, area_exits = {}, {}, {}, {}, {}
+   drawn, drawn_coords, rooms_to_be_drawn, area_exits = {}, {}, {}, {}, {}
    depth = 0
 
    -- insert initial room
@@ -1517,56 +1462,34 @@ function start_speedwalk (path)
       Send("stand")
    end
 
-   if current_speedwalk and #current_speedwalk > 0 then
-      mapprint ("You are already speedwalking! (Ctrl + LH-click on any room to cancel)")
-      return
-   end -- if
-
    current_speedwalk = path
-
-   if current_speedwalk then
-      if #current_speedwalk > 0 then
-         last_speedwalk_uid = current_speedwalk [#current_speedwalk].uid
-         
-         -- fast speedwalk: just send # 4s 3e  etc.
-         if type (speedwalk_prefix) == "string" and speedwalk_prefix ~= "" then
-            local s = speedwalk_prefix .. " "
-            local p = build_speedwalk (path)
-            if p:sub(1,1) ~= stack_char then
-               s = s .. p        
-            else
-               s = p:sub(2)
-            end
-            ExecuteWithWaits(s:gsub(";","\r\n"))
-            current_speedwalk = nil
-            return  
-         end -- if
-         
-         local dir = table.remove (current_speedwalk, 1)
-         local room = get_room (dir.uid)
-         walk_to_room_name = room.name
-         SetStatus ("Walking " .. (expand_direction [dir.dir] or dir.dir) .. 
-            " to " .. walk_to_room_name ..
-            ". Speedwalks to go: " .. #current_speedwalk + 1)
-         Send (dir.dir)
-         expected_room = dir.uid
-      else
-         cancel_speedwalk ()
-      end -- if any left    
+   if current_speedwalk and #current_speedwalk > 0 then
+      last_speedwalk_uid = current_speedwalk [#current_speedwalk].uid
+      
+      -- fast speedwalk: just send # 4s 3e  etc.
+      if type (speedwalk_prefix) == "string" and speedwalk_prefix ~= "" then
+         local s = speedwalk_prefix .. " "
+         local p = build_speedwalk (path)
+         if p:sub(1,1) ~= stack_char then
+            s = s .. p        
+         else
+            s = p:sub(2)
+         end
+         ExecuteWithWaits(s:gsub(";","\r\n"))
+         current_speedwalk = nil
+         return  
+      end -- if
+      
+      local dir = table.remove (current_speedwalk, 1)
+      local room = get_room (dir.uid)
+      walk_to_room_name = room.name
+      SetStatus ("Walking " .. (expand_direction [dir.dir] or dir.dir) .. 
+         " to " .. walk_to_room_name ..
+         ". Speedwalks to go: " .. #current_speedwalk + 1)
+      Send (dir.dir)
    end -- if
    
 end -- start_speedwalk
-
--- cancel the current speedwalk
-
-function cancel_speedwalk ()
-   if current_speedwalk and #current_speedwalk > 0 then
-      mapprint "Speedwalk cancelled."
-   end -- if
-   current_speedwalk = nil
-   expected_room = nil
-   SetStatus ("Ready")
-end -- cancel_speedwalk
 
 
 -- ------------------------------------------------------------------
@@ -1589,7 +1512,6 @@ function mouseup_room (flags, hotspot_id)
    
    -- Control key down?
    if bit.band (flags, miniwin.hotspot_got_control) ~= 0 then
-      cancel_speedwalk ()
       return
    end -- if ctrl-LH click
 
@@ -1600,6 +1522,7 @@ function mouseup_room (flags, hotspot_id)
       false,  -- show vnum?
       1,          -- how many to expect
       true        -- just walk there
+      ,nil,nil,true
    )
 end -- mouseup_room
 
