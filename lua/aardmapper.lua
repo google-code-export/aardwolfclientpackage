@@ -24,9 +24,6 @@ init (t)            -- call once, supply:
    t.room_click  -- function that handles RH click on room (uid, flags)
    t.timing      -- true to show timing
    t.show_completed  -- true to show "Speedwalk completed."
-   t.show_other_areas -- true to show non-current areas
-   t.show_up_down    -- follow up/down exits
-   t.show_area_exits  -- true to draw a circle around rooms leading to other areas
    t.speedwalk_prefix   -- if not nil, speedwalk by prefixing with this
    
 zoom_in ()          -- zoom in map view
@@ -92,15 +89,12 @@ local supplied_get_room
 local room_click
 local timing            -- true to show timing and other info
 local show_completed    -- true to show "Speedwalk completed."
-local show_other_areas  -- true to draw other areas
-local show_area_exits   -- true to show area exits
-local show_up_down      -- true to show up/down exits
 
 -- current room number
 local current_room
 
 -- our copy of rooms info
-local rooms = {}
+rooms = {}
 local last_visited = {}
 local textures = {}
 
@@ -125,40 +119,41 @@ function reset_pos()
 end
 
 local function build_room_info ()
-   HALF_ROOM   = math.ceil(ROOM_SIZE / 2)
-   local THIRD_WAY   = math.ceil(DISTANCE_TO_NEXT_ROOM / 3)
+   HALF_ROOM = math.ceil(ROOM_SIZE / 2)
+   local THIRD_WAY = math.ceil(DISTANCE_TO_NEXT_ROOM / 3)
    local HALF_WAY = math.ceil(DISTANCE_TO_NEXT_ROOM / 2)
    
    -- how to draw a line from this room to the next one (relative to the center of the room)
    connectors = {
-      n =  { x1 = - HALF_ROOM,  y1 = - HALF_ROOM, x2 = HALF_ROOM+1,               y2 = - HALF_ROOM, at = { 0, -1 } }, 
-      s =  { x1 = - HALF_ROOM,  y1 =   HALF_ROOM, x2 = HALF_ROOM+1,               y2 =   HALF_ROOM, at = { 0,  1 } }, 
-      e =  { x1 =   HALF_ROOM,  y1 = - HALF_ROOM, x2 = HALF_ROOM,               y2 =   HALF_ROOM+1, at = {  1,  0 }}, 
-      w =  { x1 = - HALF_ROOM,  y1 = - HALF_ROOM, x2 = - HALF_ROOM,             y2 =   HALF_ROOM+1, at = { -1,  0 }}, 
+      n =  { x1 = - HALF_ROOM, y1 = - HALF_ROOM, x2 =   HALF_ROOM+1, y2 = - HALF_ROOM,   at = { 0, -1 } }, 
+      s =  { x1 = - HALF_ROOM, y1 =   HALF_ROOM, x2 =   HALF_ROOM+1, y2 =   HALF_ROOM,   at = { 0,  1 } }, 
+      e =  { x1 =   HALF_ROOM, y1 = - HALF_ROOM, x2 =   HALF_ROOM,   y2 =   HALF_ROOM+1, at = {  1,  0 }}, 
+      w =  { x1 = - HALF_ROOM, y1 = - HALF_ROOM, x2 = - HALF_ROOM,   y2 =   HALF_ROOM+1, at = { -1,  0 }}, 
 
-      u = { x1 =   HALF_ROOM,  y1 = - HALF_ROOM, x2 =   HALF_ROOM + HALF_WAY , y2 = - HALF_ROOM - HALF_WAY, at = { 1, -1 } }, 
-      d = { x1 = - HALF_ROOM,  y1 =   HALF_ROOM, x2 = - HALF_ROOM - HALF_WAY , y2 =   HALF_ROOM + HALF_WAY, at = {-1,  1 } }, 
+      u = { x1 =   HALF_ROOM,  y1 = - HALF_ROOM, x2 =   HALF_ROOM + HALF_WAY, y2 = - HALF_ROOM - HALF_WAY, at = { 1, -1 } }, 
+      d = { x1 = - HALF_ROOM,  y1 =   HALF_ROOM, x2 = - HALF_ROOM - HALF_WAY, y2 =   HALF_ROOM + HALF_WAY, at = {-1,  1 } }, 
    } -- end connectors
    
    -- how to draw a stub line
    half_connectors = {
-      n =  { x1 = 0,            y1 = - HALF_ROOM, x2 = 0,                        y2 = - HALF_ROOM - THIRD_WAY, at = { 0, -1 } }, 
-      s =  { x1 = 0,            y1 =   HALF_ROOM, x2 = 0,                        y2 =   HALF_ROOM + THIRD_WAY, at = { 0,  1 } }, 
-      e =  { x1 =   HALF_ROOM,  y1 = 0,           x2 =   HALF_ROOM + THIRD_WAY,  y2 = 0,                       at = {  1,  0 }}, 
-      w =  { x1 = - HALF_ROOM,  y1 = 0,           x2 = - HALF_ROOM - THIRD_WAY,  y2 = 0,                       at = { -1,  0 }}, 
+      n =  { x1 = 0,           y1 = - HALF_ROOM, x2 = 0,                       y2 = - HALF_ROOM - THIRD_WAY, at = { 0, -1 } }, 
+      s =  { x1 = 0,           y1 =   HALF_ROOM, x2 = 0,                       y2 =   HALF_ROOM + THIRD_WAY, at = { 0,  1 } }, 
+      e =  { x1 =   HALF_ROOM, y1 = 0,           x2 =   HALF_ROOM + THIRD_WAY, y2 = 0,                       at = {  1,  0 }}, 
+      w =  { x1 = - HALF_ROOM, y1 = 0,           x2 = - HALF_ROOM - THIRD_WAY, y2 = 0,                       at = { -1,  0 }}, 
 
-      u = { x1 =   HALF_ROOM,  y1 = - HALF_ROOM, x2 =   HALF_ROOM + THIRD_WAY , y2 = - HALF_ROOM - THIRD_WAY, at = { 1, -1 } }, 
-      d = { x1 = - HALF_ROOM,  y1 =   HALF_ROOM, x2 = - HALF_ROOM - THIRD_WAY , y2 =   HALF_ROOM + THIRD_WAY, at = {-1,  1 } }, 
+      u = { x1 =   HALF_ROOM, y1 = - HALF_ROOM, x2 =   HALF_ROOM + THIRD_WAY, y2 = - HALF_ROOM - THIRD_WAY, at = { 1, -1 } }, 
+      d = { x1 = - HALF_ROOM, y1 =   HALF_ROOM, x2 = - HALF_ROOM - THIRD_WAY, y2 =   HALF_ROOM + THIRD_WAY, at = {-1,  1 } }, 
    } -- end half_connectors
   
    wallwidth = math.ceil(HALF_ROOM/4)
+   duwidth = math.min(2, wallwidth)
 
    -- how to draw one-way arrows (relative to the center of the room)
    arrows = {
-      n =  { -wallwidth, -HALF_ROOM, wallwidth, -HALF_ROOM, 0, -HALF_ROOM-wallwidth-wallwidth },
-      s =  { -wallwidth, HALF_ROOM, wallwidth, HALF_ROOM, 0, HALF_ROOM+wallwidth+wallwidth  },
-      e =  { HALF_ROOM, -wallwidth, HALF_ROOM, wallwidth, HALF_ROOM+wallwidth+wallwidth, 0 },
-      w =  { -HALF_ROOM, -wallwidth, -HALF_ROOM, wallwidth, -HALF_ROOM-wallwidth-wallwidth, 0 },
+      n =  { -wallwidth, -HALF_ROOM, wallwidth, -HALF_ROOM, 0, -HALF_ROOM-wallwidth-wallwidth},
+      s =  { -wallwidth, HALF_ROOM, wallwidth, HALF_ROOM, 0, HALF_ROOM+wallwidth+wallwidth},
+      e =  { HALF_ROOM, -wallwidth, HALF_ROOM, wallwidth, HALF_ROOM+wallwidth+wallwidth, 0},
+      w =  { -HALF_ROOM, -wallwidth, -HALF_ROOM, wallwidth, -HALF_ROOM-wallwidth-wallwidth, 0},
 
       u = { HALF_ROOM+wallwidth/2, -HALF_ROOM+wallwidth, HALF_ROOM+wallwidth/2, -HALF_ROOM-wallwidth, HALF_ROOM-wallwidth*3/2, -HALF_ROOM-wallwidth },
       d = { -HALF_ROOM-wallwidth, HALF_ROOM-wallwidth*3/2, -HALF_ROOM-wallwidth, HALF_ROOM+wallwidth/2, -HALF_ROOM+wallwidth, HALF_ROOM+wallwidth/2 },
@@ -274,6 +269,7 @@ local function check_connected ()
    return true
 end -- check_connected
 
+
 local function make_number_checker (title, min, max, decimals)
    return function (s)
       local n = tonumber (s)
@@ -295,7 +291,7 @@ local function make_number_checker (title, min, max, decimals)
    end -- generated function
 end -- make_number_checker
 
- 
+
 local function get_number_from_user (msg, title, current, min, max, decimals)
    local max_length = math.ceil (math.log10 (max) + 1)
    
@@ -319,6 +315,7 @@ local function get_number_from_user (msg, title, current, min, max, decimals)
       }  -- end extra stuff
    ))
 end -- get_number_from_user
+
 
 local function draw_configuration ()
 
@@ -531,12 +528,12 @@ local function draw_room (uid, x, y)
       return
    end -- if
 
-   local room = rooms [uid]
+   local room = room_descs[uid]
    
    -- not cached - get from caller
    if not room then
       room = get_room (uid)
-      rooms [uid] = room
+      room_descs[uid] = room
    end -- not in cache
    
    if not room.unknown then
@@ -570,31 +567,31 @@ local function draw_room (uid, x, y)
          else
             unused_exits[dir] = false
          end
-         local exit_line_colour = (locked_exit and 0x0000FF) or config.EXIT_COLOUR.colour
+
          local arrow = arrows [dir]
                
          if exit_info then
             
             -- try to cache room
-            if not rooms [exit_uid] then
-               rooms [exit_uid] = get_room (exit_uid)
+            if not room_descs[exit_uid] then
+               room_descs[exit_uid] = get_room(exit_uid)
             end -- if
                      
             local next_x = x + exit_info.at[1] * (ROOM_SIZE)
             local next_y = y + exit_info.at[2] * (ROOM_SIZE)
 
-            local next_coords = table.concat ({next_x, next_y},",")
+            local next_coords = table.concat({next_x, next_y},",")
             
             -- remember if a zone exit
-            if room.area ~= rooms [exit_uid].area and not rooms[exit_uid].unknown and exit_centermods[dir] then
-               if not drawn_coords [table.concat({next_x, next_y},",")] then
+            if room.area ~= room_descs[exit_uid].area and not room_descs[exit_uid].unknown and exit_centermods[dir] then
+               if not drawn_coords[table.concat({next_x, next_y},",")] then
                   drawn_coords [table.concat({next_x, next_y},",")] = exit_uid
-                  table.insert(area_exits,{next_x+(exit_centermods[dir].x1*wallwidth), next_y+(exit_centermods[dir].y1*wallwidth)})
+                  table.insert(area_exits,{next_x+(exit_centermods[dir].x1*wallwidth), next_y+(exit_centermods[dir].y1*wallwidth),exit_uid})
                end -- if
             end
             
             -- if another room (not where this one leads to) is already there, fade out
-            if drawn_coords [next_coords] and drawn_coords [next_coords] ~= exit_uid then
+            if drawn_coords[next_coords] and drawn_coords[next_coords] ~= exit_uid then
                local fadepattern = 8
                local fadefillcolor = room.fillcolour
                local fadepencolor = 0xFFFFFF
@@ -617,29 +614,24 @@ local function draw_room (uid, x, y)
                end
             elseif exit_uid == uid then 
                -- here if room leads back to itself
-            else
-               if (not show_other_areas and rooms [exit_uid].area ~= current_area and not rooms[exit_uid].unknown) or
-                  (not show_up_down and (dir == "u" or dir == "d")) then
-                   -- don't show other areas
-               else
-                  -- remember to draw room next iteration
-                  table.insert (rooms_to_be_drawn, {uid=exit_uid, x=next_x, y=next_y})
-                  drawn_coords [next_coords] = exit_uid
+            elseif room_descs[exit_uid].area == current_area and not room_descs[exit_uid].unknown and (dir ~= "u" and dir ~= "d") then
+               -- remember to draw room next iteration
+               table.insert(rooms_to_be_drawn, {uid=exit_uid, x=next_x, y=next_y})
+               drawn_coords[next_coords] = exit_uid
 
-                  -- if exit room known
-                  if not rooms [exit_uid].unknown then
-                     local exit_time = last_visited [exit_uid] or 0
-                     local this_time = last_visited [uid] or 0
-                     local now = os.time ()
-                     if exit_time > (now - config.LAST_VISIT_TIME.time) and
-                        this_time > (now - config.LAST_VISIT_TIME.time) then
-                     end -- if
+               -- if exit room known
+               if not room_descs[exit_uid].unknown then
+                  local exit_time = last_visited [exit_uid] or 0
+                  local this_time = last_visited [uid] or 0
+                  local now = os.time ()
+                  if exit_time > (now - config.LAST_VISIT_TIME.time) and
+                     this_time > (now - config.LAST_VISIT_TIME.time) then
+                     -- DRAW BREADCRUMBS HERE
                   end -- if
                end -- if
             end -- if drawn on this spot
 
             -- up and down exits
-            local duwidth = math.min(2, wallwidth)
             if (dir == "d") then
                WindowPolygon (win, table.concat({math.floor(left+wallwidth+duwidth),math.ceil(y+0.5),math.floor(left+wallwidth+duwidth),math.floor(bottom-wallwidth-duwidth),math.floor(x),math.floor(bottom-wallwidth-duwidth)},","),
                               0xFFFFFF, miniwin.pen_solid+0x0200, duwidth,   -- pen (solid, width 3)
@@ -655,8 +647,8 @@ local function draw_room (uid, x, y)
             end
 
             -- one-way exit?
-            if not rooms [exit_uid].unknown then
-               local dest = rooms [exit_uid]
+            if not room_descs[exit_uid].unknown then
+               local dest = room_descs[exit_uid]
                -- if inverse direction doesn't point back to us, this is one-way
                if dest.exits [inverse_direction [dir]] ~= uid then
                   -- turn points into string, relative to where the room is
@@ -674,7 +666,7 @@ local function draw_room (uid, x, y)
 
       for k,v in pairs(unused_exits) do
          local wall = walls[k]
-         wall_lines[(x*2+wall.x1+wall.x2)/2 + (y*2+wall.y1+wall.y2)*config.WINDOW.width] = {x1=x + wall.x1, y1=y + wall.y1, x2=x + wall.x2, y2=y + wall.y2, col=v and room.bordercolour or 0x0000FF, wid=wallwidth, styl=(room.borderpen or (miniwin.pen_solid+0x0200))}
+         wall_lines[(x*2+wall.x1+wall.x2)/2 + (y*2+wall.y1+wall.y2)*config.WINDOW.width] = {x1=x + wall.x1, y1=y + wall.y1, x2=x + wall.x2, y2=y + wall.y2, col=v and config.ROOM_COLOUR.colour or config.LOCKED_EXIT.colour, wid=wallwidth, styl=(room.borderpen or (miniwin.pen_solid+0x0200))}
       end      
    else
       WindowCircleOp (win, miniwin.circle_rectangle, left, top, right, bottom, 
@@ -695,11 +687,13 @@ local function draw_room (uid, x, y)
    WindowScrollwheelHandler (win, uid, "mapper.zoom_map")
 end -- draw_room
 
+
 local function draw_zone_exit (exit)
    local x1 = math.floor(exit[1]-HALF_ROOM+wallwidth)
    local y1 = math.floor(exit[2]-HALF_ROOM+wallwidth)
    local x2 = math.ceil(exit[1]+HALF_ROOM-wallwidth)
    local y2 = math.ceil(exit[2]+HALF_ROOM-wallwidth)
+   local uid = exit[3]
 
    if x1 < 0 or y1 < 0 or x2 > config.WINDOW.width or y2 > config.WINDOW.height then
       return
@@ -707,8 +701,20 @@ local function draw_zone_exit (exit)
 
    WindowCircleOp (win, miniwin.circle_rectangle,
       x1, y1, x2, y2,
-      0x00FF00, miniwin.pen_solid, wallwidth,  -- pen
+      config.DIFFERENT_AREA_COLOUR.colour, miniwin.pen_solid, wallwidth,  -- pen
       0x0, miniwin.brush_null)  -- opaque, no brush
+
+   WindowAddHotspot(win, uid,  
+      x1, y1, x2, y2,   -- rectangle
+      "",  -- mouseover
+      "",  -- cancelmouseover
+      "",  -- mousedown
+      "",  -- cancelmousedown
+      "mapper.mouseup_room",  -- mouseup
+      rooms[uid].hovermessage,
+      miniwin.cursor_hand, 0)  -- hand cursor
+
+   WindowScrollwheelHandler (win, uid, "mapper.zoom_map")
 
 end --  draw_zone_exit 
 
@@ -736,6 +742,9 @@ function halt_drawing(halt)
    dont_draw = halt
 end
 
+
+room_descs = {}
+
 function draw (uid)
    if not uid then
       maperror "Cannot draw map right now, I don't know where you are - try: LOOK"
@@ -752,13 +761,14 @@ function draw (uid)
    local start_time = utils.timer ()
    
    -- start with initial room
-   rooms = { [uid] = get_room (uid) }
-   
-   -- lookup current room
-   local room = rooms [uid]
+   local room = room_descs[uid]
+   if not room then
+      room_descs[uid] = get_room(uid)
+      room = room_descs[uid]
+   end
    
    room = room or { name = "<Unknown room>", area = "<Unknown area>" }
-   last_visited [uid] = os.time ()
+   last_visited[uid] = os.time ()
 
    current_area = room.area
    
@@ -1012,9 +1022,6 @@ function init (t)
    room_click = t.room_click   -- RH mouse-click function
    timing = t.timing           -- true for timing info
    show_completed = t.show_completed  -- true to show "Speedwalk completed." message
-   show_other_areas = t.show_other_areas  -- true to show other areas
-   show_up_down = t.show_up_down        -- true to show up or down
-   show_area_exits = t.show_area_exits  -- true to show area exits
    speedwalk_prefix = t.speedwalk_prefix  -- how to speedwalk (prefix)
    
    -- force some config defaults if not supplied
