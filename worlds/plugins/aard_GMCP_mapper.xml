@@ -1493,10 +1493,52 @@ function map_purgeroom (uid, new_area)
    end
 end
 
+
 function map_clearcache() 
    mapper.rooms = {}
    mapper.mapprint ("Cleared local room cache.")
 end
+
+
+function load_area_from_database (area)
+   assert (area, "No area supplied to load_area_from_database")
+   if not mapper.rooms then
+      -- this shouldn't even be possible. what the hell.
+      mapper.rooms = {}
+   end
+
+   local lastuid = -1
+   local newrooms = {}
+   for row in db:nrows(string.format("SELECT rooms.*,exits.dir,exits.touid,exits.level FROM rooms,exits where rooms.area=%s and rooms.uid=exits.fromuid;", fixsql(area))) do
+      if lastuid ~= row.uid then
+         table.insert(newrooms, row.uid)
+         mapper.rooms[row.uid] = {
+         name = row.name,
+         area = row.area,
+         building = row.building,
+         terrain = row.terrain,
+         info = row.info,
+         notes = row.notes,
+         x = row.x or 0,
+         y = row.y or 0,
+         z = row.z or 0,
+         noportal = row.noportal,
+         norecall = row.norecall,
+         exits = {[row.dir]=tostring(row.touid)},
+         exit_locks = {[row.dir]=tostring(row.level)}
+         }
+      else
+         mapper.rooms[row.uid].exits[row.dir] = tostring(row.touid)
+         mapper.rooms[row.uid].exit_locks[row.dir] = tostring(row.level)
+      end
+      lastuid = row.uid
+   end   -- finding room
+  
+   for bmrow in db:nrows(string.format ("SELECT * FROM bookmarks WHERE uid in ('%s')", table.concat(newrooms,"','"))) do
+      mapper.rooms[bmrow.uid].notes = bmrow.notes
+   end   -- finding room
+
+end -- load_area_from_database
 
 function load_room_from_database (uid)
    local room
@@ -1526,21 +1568,19 @@ function load_room_from_database (uid)
       }
       
       for exitrow in db:nrows(string.format ("SELECT * FROM exits WHERE fromuid = %s", fixsql (u))) do
-         room.exits [exitrow.dir] = tostring (exitrow.touid)
-         room.exit_locks [exitrow.dir] = tostring(exitrow.level)
+         room.exits[exitrow.dir] = tostring (exitrow.touid)
+         room.exit_locks[exitrow.dir] = tostring(exitrow.level)
       end -- for each exit
-      
    end   -- finding room
 
    if room then
       if not mapper.rooms then
-         print("AHHHHHHHHHHH WTF")
          -- this shouldn't even be possible. what the hell.
          mapper.rooms = {}
       end
-      mapper.rooms [u] = room
+      mapper.rooms[u] = room
       for row in db:nrows(string.format ("SELECT * FROM bookmarks WHERE uid = %s", fixsql (u))) do
-         mapper.rooms [u].notes = row.notes
+         mapper.rooms[u].notes = row.notes
       end   -- finding room
         
       return room
@@ -1655,13 +1695,15 @@ function get_room (uid)
    if not ourroom then
       ourroom = load_room_from_database (uid)
       mapper.rooms [uid] = ourroom -- cache for later
-   end -- not in cache
-  
-   if not ourroom then
-      return nil
-   end -- if
 
-   local room = copytable.deep (ourroom)
+      if not ourroom then
+         return nil
+      end -- if
+
+      load_area_from_database(ourroom.area)
+   end -- not in cache
+
+   local room = copytable.deep(ourroom)
    room.bordercolour = configs.ROOM_COLOUR.colour
    if areas[room.area] then
       room.texture = areas[room.area].texture
@@ -1670,11 +1712,7 @@ function get_room (uid)
       end
       room.area = areas[room.area].name or string.format ("%s", room.area or "<unknown>")
    end
-   
-   if uid == current_room then
-      current_area = room.area
-   end -- if
-  
+     
    -- build hover message  
    local environmentname = room.terrain
    if tonumber (environmentname) then
@@ -1737,9 +1775,6 @@ function get_room (uid)
    room.fillcolour = 0xff0000
    room.fillbrush = 1 -- no fill
 
---   room.fillcolour = 0xff0000
---   room.fillbrush = 1 -- no fill
---   room.borderpenwidth = nil
    -- special room fill colours
    local special_room = false
    if room.info and room.info ~= "" then
@@ -1786,7 +1821,7 @@ function get_room (uid)
       end
    end -- if environmentname
 
-   return room      
+   return room
       
 end -- get_room
 
@@ -3506,10 +3541,6 @@ function findpath(src, dst, noportals, norecalls)
       depth = depth - 1
       ftd = room_sets[depth][next_room]
       next_room = ftd.touid
--- this caching is probably not noticeably useful, so disable it for now
---      if not mapper.rooms[ftd.touid] then -- if not in memory yet, get it
---         mapper.rooms[ftd.touid] = load_room_from_database (ftd.touid)
---      end
       table.insert(path, {dir=ftd.dir, uid=ftd.touid})
    end -- while
    return path, found_depth

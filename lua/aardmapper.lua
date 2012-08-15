@@ -759,7 +759,7 @@ function draw (uid)
    
    -- timing
    local start_time = utils.timer ()
-   
+   room_descs = {}
    -- start with initial room
    local room = room_descs[uid]
    if not room then
