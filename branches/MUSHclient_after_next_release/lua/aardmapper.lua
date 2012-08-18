@@ -592,25 +592,22 @@ local function draw_room (uid, x, y)
             
             -- if another room (not where this one leads to) is already there, fade out
             if drawn_coords[next_coords] and drawn_coords[next_coords] ~= exit_uid then
-               local fadepattern = 8
-               local fadefillcolor = room.fillcolour
-               local fadepencolor = 0xFFFFFF
                if dir == "e" then
                   WindowCircleOp (win, miniwin.circle_rectangle, math.ceil(x+HALF_ROOM/2), top, right, bottom, 
-                     fadepencolor, miniwin.pen_null, 0,  -- no pen
-                     fadefillcolor, fadepattern)  -- brush
+                     0xFFFFFF, miniwin.pen_null, 0,  -- no pen
+                     room.fillcolour, 8)  -- brush
                elseif dir == "w" then
                   WindowCircleOp (win, miniwin.circle_rectangle, left, top, math.ceil(x+1-HALF_ROOM/2), bottom, 
-                     fadepencolor, miniwin.pen_null, 0,  -- no pen
-                     fadefillcolor, fadepattern)  -- brush
+                     0xFFFFFF, miniwin.pen_null, 0,  -- no pen
+                     room.fillcolour, 8)  -- brush
                elseif dir == "n" then
                   WindowCircleOp (win, miniwin.circle_rectangle, left, top, right, math.ceil(y+1-HALF_ROOM/2), 
-                     fadepencolor, miniwin.pen_null, 0,  -- no pen
-                     fadefillcolor, fadepattern)  -- brush
+                     0xFFFFFF, miniwin.pen_null, 0,  -- no pen
+                     room.fillcolour, 8)  -- brush
                elseif dir == "s" then
                   WindowCircleOp (win, miniwin.circle_rectangle, left, math.ceil(y-1+HALF_ROOM/2), right, bottom, 
-                     fadepencolor, miniwin.pen_null, 0,  -- no pen
-                     fadefillcolor, fadepattern)  -- brush
+                     0xFFFFFF, miniwin.pen_null, 0,  -- no pen
+                     room.fillcolour, 8)  -- brush
                end
             elseif exit_uid == uid then 
                -- here if room leads back to itself
@@ -818,7 +815,7 @@ function draw (uid)
    WindowScrollwheelHandler (win, "zzz_zoom", "mapper.zoom_map")
    
    -- set up for initial room, in middle
-   drawn, drawn_coords, rooms_to_be_drawn, area_exits = {}, {}, {}, {}, {}
+   drawn, drawn_coords, rooms_to_be_drawn, area_exits = {}, {}, {}, {}
    depth = 0
 
    -- insert initial room
