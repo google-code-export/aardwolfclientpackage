@@ -11,7 +11,9 @@ http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarsunst
 
 == What other display options are there? ==
 
-Note: Because of a quirk with the colored gauges, all right clicks must be in the black or text area. Right clicks won't work inside the gauge areas. There are many display customization options accessible through the right-click menu.
+There are many display customization options accessible through the right-click menu.
+
+Note: Because of a quirk with the colored gauges, all right clicks must be in the black or text area. Right clicks won't work inside the gauge areas.
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/healthbarsright.png
 
