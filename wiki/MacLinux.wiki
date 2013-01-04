@@ -43,7 +43,7 @@ If you're really adventurous, you can also try...
 
 [http://wiki.winehq.org/MacOSX/Installing]
 
-==== Last Resort Option for Macs ====
+==== Last Resort Option for Macs (very simple to set up, but old and buggy) If You Can't Figure Out PlayOnMac/Wineskin ====
 
 Probably the _simplest_ method to get Wine is as follows:
  # Download Wine_1.2.2.dmg from [http://aardwolfclientpackage.googlecode.com/files/Wine_1.2.2.dmg] (note: this is a rather old version of Wine, but finding standalone precompiled Wine binaries for Mac OS is difficult. This is why I recommend Wineskin or PlayOnMac instead.)
