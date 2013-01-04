@@ -37,7 +37,7 @@ Requirements:
  * (maybe) X11 (this is already installed by default on Snow Leopard and Leopard. If you are running Tiger, you can install X11 from your Tiger installation DVD using the "Optional Installs.mpkg" file. This may also be installed for you by other packages.)
 
 
-Either [http://www.playonmac.com/en/] or [http://wineskin.urgesoftware.com/] are really good options for getting Wine running on your Mac.
+Either [http://www.playonmac.com/] or [http://wineskin.urgesoftware.com/] are really good options for getting Wine running on your Mac.
 
 If you're really adventurous, you can also try...
 
