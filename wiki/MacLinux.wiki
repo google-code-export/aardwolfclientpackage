@@ -46,7 +46,7 @@ If you're really adventurous, you can also try...
 ==== Last Resort Option for Macs (very simple to set up, but old and buggy) If You Can't Figure Out !PlayOnMac/Wineskin ====
 
 Probably the _simplest_ method to get Wine is as follows:
- # Download Wine_1.2.2.dmg from [http://aardwolfclientpackage.googlecode.com/files/Wine_1.2.2.dmg] (note: this is a rather old version of Wine, but finding standalone precompiled Wine binaries for Mac OS is difficult. This is why I recommend Wineskin or PlayOnMac instead.)
+ # Download Wine_1.2.2.dmg from [http://aardwolfclientpackage.googlecode.com/files/Wine_1.2.2.dmg] (note: this is a rather old version of Wine, but finding standalone precompiled Wine binaries for Mac OS is difficult. This is why I recommend Wineskin or !PlayOnMac instead.)
  # Find the file you just downloaded. It should look like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winedmg.png" align="center">
  # Double click on the file and you should see a disk icon mounted on your desktop that looks like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winemounted.png" align="center">
  # Double click on that icon and you should see a window that looks like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winewindow.png" align="center">
