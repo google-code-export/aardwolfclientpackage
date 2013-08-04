@@ -10,6 +10,11 @@ Probably something like this
 
 http://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/gmcpmapper.png
 
+== What do the different room colors mean? ==
+Some special rooms have colors that tell whether they are a bank, shop, guild, questor, etc. You can see (and redefine) these color settings in the configuration options as explained below in "Are there any configuration options?"
+
+The rest of the room colors are based on terrain. Right-clicking on a room gives you the option to change the color assigned to its terrain. Keep in mind that this will change the color of all rooms of that terrain type.
+
 == Are there any configuration options? ==
 Oh, yeah. Tons of them! See that little box in the top left corner of the mapper that looks like `[*]`? Click on that to bring up a display configuration menu. (Click on the `[x]` to close it again.)
 
