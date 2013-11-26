@@ -46,7 +46,7 @@ If you're really adventurous, you can also try...
 ==== Last Resort Option for Macs (very simple to set up, but old and buggy) If You Can't Figure Out !PlayOnMac/Wineskin ====
 
 Probably the _simplest_ method to get Wine is as follows:
- # Download a standalone Wine app from [http://aardwolfclientpackage.googlecode.com/downloads/]
+ # Download a standalone Wine app from [https://code.google.com/p/aardwolfclientpackage/downloads]
  # Find the file you just downloaded. It should look something like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winedmg.png" align="center">
  # Double click on the file and you should see a disk icon mounted on your desktop that looks like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winemounted.png" align="center">
  # Double click on that icon and you should see a window that looks like this: <img src="https://aardwolfclientpackage.googlecode.com/svn/trunk/wiki_images/winewindow.png" align="center">
