@@ -101,12 +101,9 @@ end
 
 -- Something went wrong when trying to check for updates
 function errorMessage(msg)
-   -- if utils.inputbox(msg,"ERROR: "..window_title,version_url,nil,nil,{ok_button="Ok, Show Me", cancel_button="Maybe Later", read_only=true, no_default=true}) then
-   --    browse(version_url)
-   -- end
    ColourNote("white","red","Aardwolf MUSHclient Package Update Check Error:")
    ColourNote("white","red",msg)
-   ColourNote("white","red",version_url)
+   ColourNote("white","red",download_url)
 end
 
 loaded = false
@@ -188,7 +185,7 @@ end
 function showUpdate()
    if local_version and latest_version then -- sanity check
       if local_version < latest_version then
-         final_update_list = (string.match(update_list,"(.*)r"..local_version.." snapshot") or "<ERROR! Please don't modify your AardwolfPackageChanges.txt file>\r\n").."\r\nGet it from: "..version_url
+         final_update_list = (string.match(update_list,"(.*)r"..local_version.." snapshot") or "<ERROR! Please don't modify your AardwolfPackageChanges.txt file>\r\n").."\r\nGet it from: "..download_url
          final_update_list = convertHTMLcodesToStandardText(final_update_list)
          message = "There's a new Aardwolf MUSHclient Package development snapshot available. You currently have version r"..local_version.." and the newest version is r"..latest_version..".\n\nThe major differences between your version and the latest version are:"
          updateDialog(message,final_update_list)
