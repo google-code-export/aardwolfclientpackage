@@ -1,6 +1,6 @@
 Aardwolf Client Package Major Changes List
 
-r1789 snapshot
+r1790 snapshot
 - misc change: google code is eliminating downloads, so move update checking and package download to a new temporary location at whube.com
 
 r1783 snapshot
