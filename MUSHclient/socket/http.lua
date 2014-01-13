@@ -312,9 +312,7 @@ function trequest(reqt)
         code, status = h:receivestatusline()
     end
     headers = h:receiveheaders()
-    -- at this point we should have a honest reply from the server
-    -- we can't redirect if we already used the source, so we report the error 
-    if shouldredirect(nreqt, code, headers) and not nreqt.source then
+    if shouldredirect(nreqt, code, headers) then
         h:close()
         return tredirect(reqt, headers.location)
     end
