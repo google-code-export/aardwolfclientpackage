@@ -1,5 +1,5 @@
-#summary This project is migrating to GitHub.
+#summary This project is migrating to `GitHub`.
 
-=This project is migrating to GitHub.=
+=This project is migrating to `GitHub`.=
 
 To file an issue report, please visit: https://github.com/fiendish/aardwolfclientpackage/issues
