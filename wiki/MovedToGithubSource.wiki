@@ -1,0 +1,2 @@
+#summary This project is migrating to Github.
+For project source, please visit https://github.com/fiendish/aardwolfclientpackage
