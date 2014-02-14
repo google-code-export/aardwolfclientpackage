@@ -1,4 +1,4 @@
-#summary This project is migrating to `GitHub`.
+#summary This project is migrating to GitHub.
 
 =This project is migrating to `GitHub`.=
 
