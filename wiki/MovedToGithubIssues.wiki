@@ -1,0 +1,5 @@
+#summary This project is migrating to Github.
+
+=This project is migrating to Github.=
+
+To file an issue report, please visit: https://github.com/fiendish/aardwolfclientpackage/issues
