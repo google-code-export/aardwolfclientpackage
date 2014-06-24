@@ -5,7 +5,7 @@ This plugin handles keeping track of the Z ordering of the miniwindow plugins in
 <wiki:toc max_depth="3" />
 
 == What is Z-order? ==
-See the Wikipedia entry on Z-order here: https://secure.wikimedia.org/wikipedia/en/wiki/Z-order
+See the Wikipedia entry on Z-order here: https://en.wikipedia.org/wiki/Z-order
 
 == How do I make the included miniwindows change ordering? ==
 
