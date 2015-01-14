@@ -1,6 +1,8 @@
-#summary This project is migrating to GitHub.
+#summary This project has migrated to GitHub.
 
-=This project is migrating to `GitHub`.=
+=This project has migrated to `GitHub`.=
+
+The documentation is here for now, but...
 
 The latest development snapshot is now at https://github.com/fiendish/aardwolfclientpackage/archive/MUSHclient.zip
 
