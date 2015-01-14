@@ -14,4 +14,4 @@ board personal
 note write fiendish
 }}}
 
-*Bug reports and feature requests*, no matter how trivial, should be submitted by going to [https://github.com/fiendish/aardwolfclientpackage/issues Issues page] and filing a New Issue.
+*Bug reports and feature requests*, no matter how trivial, should be submitted by going to [https://code.google.com/p/aardwolfclientpackage/wiki/MovedToGithubIssues Issues page] and filing a New Issue.
